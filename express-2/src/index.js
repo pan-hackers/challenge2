@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //app.use(morgan('combined'));
-app.use(express.static('public'));
+app.use('/static', express.static(__dirname + '/public'));
 
 /* Own middlewares */
 
