@@ -7,7 +7,8 @@ const companySchema = new mongoose.Schema({
     },
     GCP: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     role: {
         type: String,
@@ -15,7 +16,7 @@ const companySchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        required: true
+        required: false
     }
 });
 

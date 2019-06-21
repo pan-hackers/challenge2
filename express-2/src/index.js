@@ -7,8 +7,6 @@ import express from 'express';
 import helmet from 'helmet';
 //import morgan from 'morgan';
 
-import jwt from 'express-jwt';
-
 import helpers from './helpers';
 import middlewares from './middlewares';
 import routes from './routes';
@@ -30,6 +28,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 /* Own APIs */
 app.use('/api/users', routes.user);
 app.use('/api/messages', routes.message);
+app.use('/api/companies', routes.company);
+app.use('/api/locations', routes.location);
+app.use('/api/consumableUnits', routes.consumableUnit);
 app.use('/api/blockchain', routes.blockchain);
 
 // Application global error handler

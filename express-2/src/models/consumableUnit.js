@@ -1,12 +1,14 @@
 import mongoose from 'mongoose';
 
 const consumableUnit = new mongoose.Schema({
-    GTIN: {
+    name: {
         type: String,
         required: true
     },
-    
-    tradeUnit: { type: mongoose.Schema.Types.ObjectId, ref: 'TradeUnit' },
+    GTIN: {
+        type: String,
+        required: true
+    }
 });
 
 const ConsumableUnit = mongoose.model('Consumable Unit', consumableUnit);

@@ -8,7 +8,8 @@ const tradeUnitSchema = new mongoose.Schema({
     GLN: {
         type: String,
         required: true
-    }
+    },
+    consumableUnits: [ { type: mongoose.Schema.Types.ObjectId, ref: 'ConsumableUnit' } ]
 });
 
 const TradeUnit = mongoose.model('TradeUnit', tradeUnitSchema);
