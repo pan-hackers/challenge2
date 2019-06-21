@@ -14,7 +14,6 @@ import middlewares from './middlewares';
 import routes from './routes';
 
 import { connectDb } from './models';
-import { LEDGER } from './services';
 
 const app = express();
 
@@ -27,11 +26,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(morgan('combined'));
 
 /* Own middlewares */
-//app.use(middlewares.auth);
 
 /* Own APIs */
 app.use('/api/users', routes.user);
-app.use('/api/samples', routes.sample);
 app.use('/api/messages', routes.message);
 app.use('/api/blockchain', routes.blockchain);
 
