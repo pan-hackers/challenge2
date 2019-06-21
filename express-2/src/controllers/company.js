@@ -28,7 +28,7 @@ class Company {
     const query = {};
 
     if (req.params.gcp) {
-      query.gcp = req.params.gcp;
+      query.GCP = req.params.gcp;
     }
 
     models.Company.findOne(query, (err, company) => {
@@ -43,12 +43,19 @@ class Company {
     });
   }
 
-  static create(req, res) {
+  static create(req, res, next) {
     helpers.LOGGER.info("post - '/' - called");
     const company = new models.Company(req.body);
 
-    company.save();
-    return res.status(201).json(message);
+    helpers.LOGGER.info(`company modeled: ${JSON.stringify(company)}`);
+    company.save((err, c) => {
+      if (err) {
+        next(boom.badImplementation(err));
+      } 
+      
+      helpers.LOGGER.info(`shit`);
+      return res.status(201).json(c);
+    });
   }
 }
 
