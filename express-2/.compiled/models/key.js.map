@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/models/key.js"],"names":["TokenKey"],"mappings":";;;;;;AAAA,IAAMA,QAAQ,GAAG,4BAAjB;eAEeA,Q","sourcesContent":["const TokenKey = 'djghhhhuuwiwuewieuwieuriwu';\n\nexport default TokenKey;\n"],"file":"key.js"}

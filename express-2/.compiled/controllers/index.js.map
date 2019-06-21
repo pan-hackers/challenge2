@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/controllers/index.js"],"names":["message","user"],"mappings":";;;;;;;AAAA;;AACA;;;;eAEe;AACbA,EAAAA,OAAO,EAAPA,mBADa;AAEbC,EAAAA,IAAI,EAAJA;AAFa,C","sourcesContent":["import message from './message';\nimport user from './user';\n\nexport default {\n  message,\n  user\n};\n"],"file":"index.js"}

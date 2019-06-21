@@ -1,0 +1,46 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "lint": "eslint . --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "./node_modules/.bin/babel src --out-dir .compiled --source-maps"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@hapi/boom": "^7.4.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "helmet": "^3.18.0",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^4.3.0",
+    "mongoose": "^5.5.12",
+    "morgan": "^1.9.1",
+    "sha1": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.17.3",
+    "nodemon": "^1.19.1"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "250"
+  }
+}
