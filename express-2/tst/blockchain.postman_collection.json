@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "locations.create",
+			"name": "consumableUnits.create",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -24,10 +24,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Luxembourg\",\n\t\"GLN\": \"7611111010101\",\n\t\"location\": \"Luxembourg\",\n\t\"company\": \"5d0d30c51b73ad22f88e8b94\"\n}"
+					"raw": "{\n\t\"name\": \"Pharma-Product-1\",\n\t\"GTIN\": \"76111119999999\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/locations/",
+					"raw": "http://localhost:3000/api/consumableUnits/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -35,7 +35,7 @@
 					"port": "3000",
 					"path": [
 						"api",
-						"locations",
+						"consumableUnits",
 						""
 					]
 				}
@@ -43,7 +43,7 @@
 			"response": []
 		},
 		{
-			"name": "consumableUnits.create",
+			"name": "locations.create",
 			"request": {
 				"method": "POST",
 				"header": [
