@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="12px" viewBox="0 0 19 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>IconContactsActive</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="IconContactsActive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group"></g>
+        <path d="M10.5308143,7.51450782 C11.2706319,7.18350863 12.0870103,7 12.94499,7 C15.8798337,7 18.3279091,9.1471996 18.8899801,12 L13.2248366,12 C12.8715803,10.1888249 11.926127,8.60101933 10.5308143,7.51450782 Z" id="Combined-Shape" fill="#373C8C"></path>
+        <circle id="Oval-2" fill="#373C8C" cx="13" cy="3" r="3"></circle>
+        <path d="M9.43689571e-16,12 C0.56207096,9.1471996 3.0101464,7 5.94499004,7 C8.87983368,7 11.3279091,9.1471996 11.8899801,12 L0,12 Z" id="Combined-Shape" fill="#373C8C"></path>
+        <circle id="Oval-2" fill="#373C8C" cx="6" cy="3" r="3"></circle>
+    </g>
+</svg>

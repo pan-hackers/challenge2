@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="15px" viewBox="0 0 24 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>IoT Blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="IoT-Blue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Page-1" stroke="#373C8C" stroke-width="3">
+            <path d="M0,6.44537275 C2.39542204,2.58407778 6.66916008,0.00919126516 11.547519,2.58636172e-05 C16.4527827,-0.00943519604 20.7575649,2.5775733 23.1597871,6.4654775" id="Stroke-1"></path>
+            <path d="M3,10.7373498 C4.76064407,7.89903186 7.90201153,6.00681993 11.4877531,6.00001979 C15.0933038,5.992924 18.2571413,7.89459699 20.0231072,10.7524283" id="Stroke-3"></path>
+            <path d="M7,14.4093294 C7.89525277,12.9659265 9.49298922,12.0032637 11.3166085,12.0000114 C13.1505757,11.9961679 14.7598429,12.9632656 15.6580522,14.4167208" id="Stroke-5"></path>
+        </g>
+    </g>
+</svg>

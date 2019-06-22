@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerOffloadGrey</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30,80.3795653 C30.4797197,80.3795653 43.2772033,64.9137759 52.3388983,51.8882117 C56.0121662,46.6081415 57.3579102,39.5885064 57.3579102,35.6691867 C57.3579102,20.5598301 45.1093566,8.31127655 30,8.31127655 C14.8906434,8.31127655 2.64208984,20.5598301 2.64208984,35.6691867 C2.64208984,39.6353159 4.4295186,46.6706728 8.211998,51.8882117 C18.9639732,66.7194491 29.522287,80.3795653 30,80.3795653 Z" id="path-1"></path>
+        <filter x="-11.0%" y="-8.3%" width="121.9%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerOffloadGrey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#C8C8C8" cx="29.5791016" cy="79.4666667" r="6.93333333"></circle>
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <circle id="Path" stroke="#C8C8C8" fill="#FFFFFF" cx="30" cy="35.6691867" r="22.4245165"></circle>
+        <g id="Group-Copy-3" transform="translate(30.000000, 35.170898) scale(-1, 1) translate(-30.000000, -35.170898) translate(18.000000, 23.170898)" fill="#C7C7C7">
+            <polygon id="Fill-1" points="10.9565217 18.9750164 23.4782609 18.9750164 23.4782609 13.0434783 10.9565217 13.0434783"></polygon>
+            <polygon id="Fill-2" points="22.6133842 13.2255302 22.4197356 13.3880381 17.2173913 9.03207311 17.4115633 8.86956522"></polygon>
+            <polygon id="Fill-3" points="12.1936486 13.3875 12 13.2249921 17.2018209 8.86956522 17.3954695 9.03153501"></polygon>
+            <polygon id="Fill-3" points="1.98402478 4.17556984 1.04347826 4.17556984 7.82608696 0 7.82608696 0.567676581"></polygon>
+            <polygon id="Fill-3" points="20.7984923 4.18672541 19.6355386 4.18672541 9.39441667 0.544516318 9.39441667 0.0155798738"></polygon>
+            <polygon id="Fill-3" points="0.556792868 15.1290356 0 15.1290356 7.82608696 2.60869565 7.82608696 3.61383605"></polygon>
+            <polygon id="Fill-4" points="16.173913 5.73913043 16.173913 7.20682514 16.7571884 7.91126224 17.6941597 7.91126224 18.2860443 7.20682514 18.2860443 5.73913043"></polygon>
+            <path d="M17.3985761,7.30434783 L17.3985761,7.80344151 C17.3985761,7.80344151 17.7737951,8.03520132 17.7737951,8.5018909 C17.7737951,8.9689327 17.2952654,9.21231572 16.9928661,9.21231572 C16.9928661,9.21231572 16.4350597,9.25634303 16.173913,8.87453813 L16.271843,8.66919471 C16.271843,8.66919471 16.6675089,8.97738594 16.9928661,8.84530399 C17.3182233,8.71322203 17.3964238,8.22222937 16.7837336,8.09014741 L16.7650802,7.30434783 L17.3985761,7.30434783 Z" id="Fill-5"></path>
+            <rect id="Rectangle-9" x="0" y="4.17391304" width="23.4782609" height="1.56521739"></rect>
+            <polygon id="Rectangle-9" points="7.82608696 3.55271368e-15 9.39130435 3.55271368e-15 9.39130435 20.9130504 8.60869565 23.5106523 7.82608696 20.9130504"></polygon>
+            <polygon id="Rectangle-9-Copy" points="0 15.1304348 1.56521739 15.1304348 1.56521739 20.8968036 0.782608696 23.4887708 0 20.8968036"></polygon>
+            <polygon id="Rectangle-9-Copy-2" points="0 15.1304348 9.39130435 15.1304348 9.39130435 16.6956522 0 16.6956522"></polygon>
+        </g>
+    </g>
+</svg>

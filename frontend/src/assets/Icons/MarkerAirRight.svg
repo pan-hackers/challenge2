@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerAirRight</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M26,67.8694239 C26.4559088,67.8694239 38.6181892,53.3047071 47.2301068,41.0380424 C50.721052,36.0656012 52,29.4549463 52,25.7639752 C52,11.5349246 40.3594035,0 26,0 C11.6405965,0 0,11.5349246 0,25.7639752 C0,29.4990285 1.69870972,36.1244893 5.2934457,41.0380424 C15.5117465,55.0051776 25.5459983,67.8694239 26,67.8694239 Z" id="path-1"></path>
+        <filter x="-11.5%" y="-8.8%" width="123.1%" height="117.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerAirRight" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(4.000000, 11.000000)">
+            <circle id="Oval" fill="#373C8C" cx="26" cy="68.4666667" r="6.93333333"></circle>
+            <g id="ToAddress">
+                <g id="Marker">
+                    <g id="Oval">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <ellipse id="Path" stroke="#ACAFD1" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" cx="26" cy="25.7639752" rx="21.3114754" ry="21.1180124"></ellipse>
+                </g>
+                <g id="Airport" transform="translate(11.266667, 16.466667)" fill="#373C8C">
+                    <g id="Group">
+                        <path d="M30.3610801,4.17847099 L28.8465913,3.88670165 C28.2170601,3.76563361 27.563598,3.82779115 26.9716727,4.06482475 L19.1633378,7.19728641 L7.13240699,0 L5.54710207,0.807584148 L13.91171,9.30368481 L7.1245928,12.0265561 L1.50472103,7.17873192 L0,7.57858116 L3.43482733,13.5062766 L0.368243966,14.7364393 L1.88615145,16 L8.31723439,15.9921143 L28.5828622,7.83648856 C29.2104398,7.58507523 29.7359444,7.1495086 30.0836761,6.59380164 L30.8880499,5.30704781 C31.1674074,4.85895689 30.8987944,4.28284 30.3610801,4.17847099" id="Fill-4"></path>
+                        <polygon id="Fill-6" points="19.5185185 14.1579543 21.0050091 16 22.962963 15.5897869 22.9530329 12.5714286"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

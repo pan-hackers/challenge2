@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>UnvalidEDILightOrange</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UnvalidEDILightOrange" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-13" fill="#FFAA00" x="17" y="13" width="27" height="35" rx="5"></rect>
+        <path d="M35,13 L43.6862318,21.1914203 L39.1868034,21.1914203 C36.3956011,21.2418178 35,20.0854251 35,17.7222423 C35,15.3590594 35,13.7849787 35,13 Z" id="Path-4" fill="#FFFFFF"></path>
+        <text id="EDI" font-family="Roboto-Black, Roboto" font-size="12" font-weight="700" fill="#FFFFFF">
+            <tspan x="21.90625" y="36">EDI</tspan>
+        </text>
+        <circle id="Oval-3" stroke="#FFFFFF" stroke-width="2" fill="#FFAA00" cx="41.5" cy="44.5" r="8.5"></circle>
+        <path d="M44.198859,40.4677553 C44.7162569,40.8748369 44.8079931,41.6272285 44.4037576,42.1482692 L40.3831767,47.3581284 C39.9789412,47.879169 39.2318097,47.9715511 38.7144118,47.5644695 C38.197014,47.157388 38.1052778,46.4049963 38.5095133,45.8839557 L42.5300942,40.6740965 C42.9343297,40.1530558 43.6814612,40.0606738 44.198859,40.4677553 Z" id="Rectangle" fill="#FFFFFF" transform="translate(41.456635, 44.016112) rotate(4.000000) translate(-41.456635, -44.016112) "></path>
+        <path d="M38.3809428,40.7525648 C38.8639513,40.3052185 39.6214305,40.3323118 40.0728199,40.8130792 L44.5895797,45.5991616 C45.0409691,46.079929 45.0153367,46.8323138 44.5323281,47.27966 C44.0493195,47.7270063 43.2918403,47.6999131 42.840451,47.2191457 L38.3236912,42.4330632 C37.8723018,41.9522958 37.8979342,41.199911 38.3809428,40.7525648 Z" id="Rectangle" fill="#FFFFFF"></path>
+    </g>
+</svg>

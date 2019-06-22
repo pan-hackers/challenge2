@@ -1,0 +1,187 @@
+<div *ngIf='header' class="shipment-route-header">{{header}}</div>
+<div [ngClass]="showGreenGap ? 'shipment-route-gap-green' : 'shipment-route-gap-grey'"
+    *ngIf="scrollElements.length > 0&& width > 1">&nbsp;</div>
+<div id="scrollbarPreview" *ngIf="scrollElements.length > 0 && width > 1">
+    <ng-container *ngFor="let item of scrollElements.slice(0,scrollElements.length-1); let i = index">
+        <div class="shipment-milestone" [class.first-milestone]="i == 0">
+            <div class="cargo-stream" title="{{i}} : {{item.title}}">
+                <div class="cargo-stream-bullet-container {{i < latestActualMilestone? 'green' : 'grey'}}-container"
+                    style="height: 100%">
+                    <div class="cargo-stream-bullet" [class.green-bullet]=" (item.actualTime !== undefined &&
+                  item.actualTime !== null) ||
+                i < latestActualMilestone" [class.grey-bullet]="(item.actualTime === undefined ||
+                  item.actualTime === null) &&
+                i >= latestActualMilestone
+              ">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <div class="shipment-milestone"></div>
+</div>
+<div class="shipment-route-milestone-container" *ngIf="scrollElements.length > 0">
+    <div class="shipment-milestone" [class.first-milestone]="i == 0"
+        *ngFor="let item of scrollElements.slice(0,scrollElements.length-1); let i = index">
+        <div class="cargo-stream">
+            <div class="cargo-stream-icon">
+                &nbsp;
+                <img src="{{getMilestoneIconPath(item, i)}}" *ngIf="item.iconTag !== undefined && item.iconTag !== null"
+                    class="milestone-icon" />
+            </div>
+            <div class="cargo-stream-bullet-container {{i < latestActualMilestone? 'green' : 'grey'}}-container">
+                <div class="cargo-stream-bullet" [class.green-bullet]="
+              (item.actualTime !== undefined && item.actualTime !== null) ||
+              i < latestActualMilestone
+            " [class.grey-bullet]="
+              (item.actualTime === undefined || item.actualTime === null) &&
+              i >= latestActualMilestone
+            ">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="cargo-stream-label">
+                <div class="milestone-label">
+                    <div class="milestone-label-title">
+                        {{ item.milestoneTitle }}
+                    </div>
+                </div>
+                <div class="milestone-info">
+                    <div class="milestone-info-label">Location</div>
+                    <div class="milestone-info-data">
+                        {{
+              item.actualLocText
+              ? item.actualLocText
+              : !item.estimatedLocText
+              ? '--'
+              : item.estimatedLocText
+              }}
+                    </div>
+                </div>
+                <div class="milestone-info" [class.green-label]="
+              item.actualLoc !== undefined && item.actualLoc !== null
+            ">
+                    <div class="milestone-info-label">Scheduled</div>
+                    <div class="milestone-info-data">
+                        {{
+              item.scheduledTime == null
+              ? '--'
+              : (item.scheduledTime | slice: 0:16).replace('T', ' ')
+              }}
+                    </div>
+                </div>
+                <div class="milestone-info">
+                    <div class="milestone-info-label">Estimated</div>
+                    <div class="milestone-info-data">
+                        {{
+              item.estimatedTime == null
+              ? '--'
+              : (item.estimatedTime | slice: 0:16).replace('T', ' ')
+              }}
+                    </div>
+                </div>
+                <div class="milestone-info">
+                    <div class="milestone-info-label">Actual</div>
+                    <div class="milestone-info-data" [class.green-label]="
+                item.actualLoc !== undefined && item.actualLoc !== null
+              ">
+                        {{
+              item.actualTime == null
+              ? '--'
+              : (item.actualTime | slice: 0:16).replace('T', ' ')
+              }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="shipment-route-footer">
+    <div class="shipment-milestone" *ngIf="fixedElement" id="timeline-footer-milestone">
+        <div >
+            <div class="cargo-stream-icon last-icon">
+                &nbsp;
+
+                <img src="{{getMilestoneIconPath(fixedElement, this.details.length -1)}}" *ngIf="
+              fixedElement.iconTag !== undefined &&
+              fixedElement.iconTag !== null
+            " class="milestone-icon" />
+            </div>
+            <div class="cargo-stream-bullet-container last-bullet-container {{ (this.details.length === latestActualMilestone) ? ((latestActualMilestone === 1) ? 'transparent' : 'green') : 'grey'}}-container"
+                id="este">
+                <div class="cargo-stream-bullet last-bullet" [class.green-bullet]="
+              fixedElement.actualTime !== undefined &&
+              fixedElement.actualTime !== null
+            " [class.grey-bullet]="
+              fixedElement.actualTime === undefined ||
+              fixedElement.actualTime === null
+            ">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="cargo-stream-label last-label">
+                <div class="milestone-label">
+                    <div class="milestone-label-title">
+                        {{ fixedElement.milestoneTitle }}
+                    </div>
+                </div>
+
+                <div class="milestone-info">
+                    <div class="milestone-info-label">Location</div>
+                    <div class="milestone-info-data">
+                        {{
+              fixedElement.actualLocText
+              ? fixedElement.actualLocText
+              : !fixedElement.estimatedLocText
+              ? '--'
+              : fixedElement.estimatedLocText
+              }}
+                    </div>
+                </div>
+                <div class="milestone-info">
+                    <div class="milestone-info-label">Scheduled</div>
+                    <div class="milestone-info-data">
+                        {{
+              fixedElement.scheduledTime == null
+              ? '--'
+              : (fixedElement.scheduledTime | slice: 0:16).replace(
+              'T',
+              '
+              '
+              )
+              }}
+                    </div>
+                </div>
+                <div class="milestone-info">
+                    <div class="milestone-info-label">Estimated</div>
+                    <div class="milestone-info-data">
+                        {{
+              fixedElement.estimatedTime == null
+              ? '--'
+              : (fixedElement.estimatedTime | slice: 0:16).replace(
+              'T',
+              '
+              '
+              )
+              }}
+                    </div>
+                </div>
+                <div class="milestone-info">
+                    <div class="milestone-info-label">Actual</div>
+                    <div class="milestone-info-data" [class.green-label]="fixedElement.actualTime !== null">
+                        {{
+              fixedElement.actualTime == null
+              ? '--'
+              : (fixedElement.actualTime | slice: 0:16).replace(
+              'T',
+              ' '
+              )
+              }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>ImportDoorGreen</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ImportDoorGreen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(16.000000, 14.000000)" fill="#00C300">
+            <polygon id="Fill-1" points="20.725488 15.24704 28.500968 15.24704 28.500968 9.65816"></polygon>
+            <polygon id="Fill-2" points="20.725372 15.247388 20.725372 9.658508 12.949892 15.247388"></polygon>
+            <polygon id="Fill-3" points="13.541724 15.247388 13.541724 9.658508 5.766244 15.247388"></polygon>
+            <polygon id="Fill-4" points="2.368836 15.24704 0.000116 28.6114 28.501316 28.6114 28.501316 15.24704"></polygon>
+            <polygon id="Fill-5" points="1.458352 0.000464 0.000232 28.035344 7.588952 28.035344 6.130832 0.000464"></polygon>
+        </g>
+        <rect id="Rectangle" stroke="#FFFFFF" fill="#00C300" x="28.5" y="37.5" width="22" height="8"></rect>
+        <path d="M50.5,38.8493803 L50.5,47.5 L55.5,47.5 L55.5,41.624621 L50.5,38.8493803 Z" id="Rectangle-Copy" stroke="#FFFFFF" fill="#00C300"></path>
+        <ellipse id="Oval" fill="#00C300" cx="33.0714286" cy="47.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        <ellipse id="Oval" fill="#00C300" cx="36.0714286" cy="47.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        <ellipse id="Oval" fill="#FFFFFF" cx="50.8952896" cy="47" rx="1.8952896" ry="2"></ellipse>
+        <ellipse id="Oval" fill="#00C300" cx="51.0714286" cy="47.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+    </g>
+</svg>

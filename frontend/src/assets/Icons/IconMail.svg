@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="14px" viewBox="0 0 17 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>IconMail</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="IconMail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0.0112096063,1.83541025 L8.54684926,10.2245838 L16.9734589,1.83541025 L16.9734589,11.9138609 C16.9513216,12.6566606 16.6215527,13.0280604 15.9841521,13.0280604 C15.3467516,13.0280604 10.3549912,13.0280604 1.00887079,13.0280604 C0.343763333,12.9960529 0.0112096063,12.6646624 0.0112096063,12.033889 C0.0112096063,11.4031156 0.0112096063,8.00362269 0.0112096063,1.83541025 Z" id="Fill-6" fill="#FFFFFF"></path>
+        <polygon id="Path" fill="#FFFFFF" points="8.5 8.442 0 0 17 0 8.5 8.442 8.5 8.442"></polygon>
+    </g>
+</svg>

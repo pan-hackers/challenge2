@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerExportImportStationRed</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30,80.3795653 C30.4797197,80.3795653 43.2772033,64.9137759 52.3388983,51.8882117 C56.0121662,46.6081415 57.3579102,39.5885064 57.3579102,35.6691867 C57.3579102,20.5598301 45.1093566,8.31127655 30,8.31127655 C14.8906434,8.31127655 2.64208984,20.5598301 2.64208984,35.6691867 C2.64208984,39.6353159 4.4295186,46.6706728 8.211998,51.8882117 C18.9639732,66.7194491 29.522287,80.3795653 30,80.3795653 Z" id="path-1"></path>
+        <filter x="-11.0%" y="-8.3%" width="121.9%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerExportImportStationRed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#D91A26" cx="29.5791016" cy="79.4666667" r="6.93333333"></circle>
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <circle id="Path" stroke="#D91A26" fill="#FFFFFF" cx="30" cy="35.6691867" r="22.4245165"></circle>
+        <g id="Page-1-Copy" transform="translate(19.000000, 23.120117)" fill="#D91A26">
+            <polygon id="Fill-1" points="0 7.14570476 0 21.7044667 3.00142857 21.7044667 3.00142857 11.7950381 18.5931429 11.7950381 18.6371429 21.7044667 21.648 21.7044667 21.648 7.14570476 10.824 0.000942857143"></polygon>
+            <polygon id="Fill-2" points="4.37380952 21.7043619 7.97133333 21.7043619 7.97133333 18.1068381 4.37380952 18.1068381"></polygon>
+            <polygon id="Fill-3" points="4.3727619 16.9104571 7.97028571 16.9104571 7.97028571 13.313981 4.3727619 13.313981"></polygon>
+            <polygon id="Fill-4" points="9.22638095 21.7043619 12.8239048 21.7043619 12.8239048 18.1068381 9.22638095 18.1068381"></polygon>
+        </g>
+    </g>
+</svg>

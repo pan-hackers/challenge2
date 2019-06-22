@@ -1,1 +1,24 @@
-<app-main></app-main>
+<kendo-splitter orientation="vertical">
+  <kendo-splitter-pane>
+    <kendo-splitter>
+
+      <kendo-splitter-pane [collapsible]="true" size="30%">
+        <app-main class="pane-content"></app-main>
+      </kendo-splitter-pane>
+
+      <kendo-splitter-pane>
+      </kendo-splitter-pane>
+
+      <kendo-splitter-pane [collapsible]="true" size="30%">
+      </kendo-splitter-pane>
+
+    </kendo-splitter>
+  </kendo-splitter-pane>
+</kendo-splitter>
+
+=======
+<!--The content below is only a placeholder and can be replaced.-->
+<kosmos-shipment-detail-route></kosmos-shipment-detail-route>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src 'self'">
+
+<router-outlet></router-outlet>

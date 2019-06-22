@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>ConnectionAirportGreenLeft</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="26.7530194 9.73992521 26.7530194 0.313366425 0.000243485956 0.313366425 0.000243485956 9.73992521 26.7530194 9.73992521"></polygon>
+        <polygon id="path-3" points="0 34.3306676 26.7530194 34.3306676 26.7530194 0.000365228934 0 0.000365228934"></polygon>
+    </defs>
+    <g id="ConnectionAirportGreenLeft" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(30.391728, 29.652732) scale(-1, 1) translate(-30.391728, -29.652732) translate(17.000000, 12.000000)">
+            <path d="M21.8041674,6.89138301 L8.49400757,6.7562483 C8.49400757,6.7562483 5.91670873,6.01118128 4.33283259,4.84853584 L3.25784209,2.33210849 L3.81299007,2.04722992 L6.75551785,4.70853142 L10.5088539,4.78035977 L8.93471715,0.492572089 L9.89526925,0.000730457868 L15.4138784,4.80957809 L21.7676445,4.89845046 C21.7676445,4.89845046 23.4343058,5.22837393 23.4963947,5.96857124 C23.4963947,5.96857124 23.1518621,6.69415939 21.8041674,6.89138301 Z" id="Fill-1" fill="#00C300"></path>
+            <g id="Group-5" transform="translate(0.000000, 20.938940)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-4"></g>
+                <polygon id="Fill-3" fill="#00C300" mask="url(#mask-2)" points="22.1002463 9.73992521 4.6532601 9.73992521 0.000243485956 0.313366425 26.7532629 0.313366425"></polygon>
+            </g>
+            <polygon id="Fill-6" fill="#00C300" points="19.9827707 21.9500154 6.77000526 21.9500154 3.24798091 14.8122246 23.5060124 14.8122246"></polygon>
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <g id="Clip-9"></g>
+            <polygon id="Fill-8" fill="#00C300" mask="url(#mask-4)" points="9.74065567 34.3306676 17.0111463 34.3306676 17.0111463 30.4750675 9.74065567 30.4750675"></polygon>
+            <polygon id="Fill-10" fill="#00C300" mask="url(#mask-4)" points="12.6150074 21.0984233 14.138012 21.0984233 14.138012 10.6553107 12.6150074 10.6553107"></polygon>
+            <polygon id="Fill-11" fill="#00C300" mask="url(#mask-4)" points="8.15434466 11.4174217 18.5974573 11.4174217 18.5974573 9.89441705 8.15434466 9.89441705"></polygon>
+        </g>
+    </g>
+</svg>

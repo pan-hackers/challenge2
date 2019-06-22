@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>LATGreen</title>
+    <desc>Created with Sketch.</desc>
+    <g id="LATGreen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-3" fill="#00C300" cx="30.5" cy="30.5" r="17.5"></circle>
+        <circle id="Oval-3" stroke="#FFFFFF" stroke-width="2" cx="30.5" cy="30.5" r="13.5"></circle>
+        <path d="M39.0751105,25.3738022 C39.599853,26.1232122 39.417724,27.1561168 38.6683141,27.6808593 L31.2034495,32.9364307 C30.4540395,33.4611732 29.4211349,33.2790443 28.8963924,32.5296343 C28.3716499,31.7802244 28.5537789,30.7473198 29.3031888,30.2225773 L36.7680534,24.9670058 C37.5174634,24.4422633 38.550368,24.6243923 39.0751105,25.3738022 Z" id="Rectangle" fill="#FFFFFF"></path>
+        <path d="M23.7416006,27.8242453 C24.1990309,27.0319528 25.2121314,26.7604933 26.0044239,27.2179236 L31.1426116,30.1844576 C31.9349042,30.641888 32.2063636,31.6549885 31.7489333,32.447281 C31.291503,33.2395736 30.2784025,33.511033 29.4861099,33.0536027 L24.3479223,30.0870687 C23.5556297,29.6296384 23.2841703,28.6165378 23.7416006,27.8242453 Z" id="Rectangle" fill="#FFFFFF"></path>
+    </g>
+</svg>

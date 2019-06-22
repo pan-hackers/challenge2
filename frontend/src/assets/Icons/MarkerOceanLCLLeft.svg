@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerOceanLCLLeft</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M26,67.8694239 C26.4559088,67.8694239 38.6181892,53.3047071 47.2301068,41.0380424 C50.721052,36.0656012 52,29.4549463 52,25.7639752 C52,11.5349246 40.3594035,0 26,0 C11.6405965,0 0,11.5349246 0,25.7639752 C0,29.4990285 1.69870972,36.1244893 5.2934457,41.0380424 C15.5117465,55.0051776 25.5459983,67.8694239 26,67.8694239 Z" id="path-1"></path>
+        <filter x="-11.5%" y="-8.8%" width="123.1%" height="117.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerOceanLCLLeft" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(4.000000, 11.000000)">
+            <circle id="Oval" fill="#373C8C" cx="26" cy="68.4666667" r="6.93333333"></circle>
+            <g id="To">
+                <g id="Marker">
+                    <g id="Oval">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <ellipse id="Path" stroke="#ACAFD1" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" cx="26" cy="25.7639752" rx="21.3114754" ry="21.1180124"></ellipse>
+                </g>
+                <g id="Vessel" stroke-width="1" fill-rule="evenodd" transform="translate(24.934426, 25.341615) scale(-1, 1) translate(-24.934426, -25.341615) translate(12.360656, 17.739130)" fill="#373C8C">
+                    <polygon id="Path-3" points="25.147541 7.18012422 20.6093537 15.2049689 1.20213159 15.2049689 0 8.95844638 17.4542263 8.95844638 18.5307207 7.18012422"></polygon>
+                    <polygon id="Path-4" points="17.0491803 2.95652174 17.0491803 6.27218535 16.4966488 7.60248447 5.54098361 7.60248447 5.54098361 2.95652174"></polygon>
+                    <polygon id="Path-5" points="5.54098361 0 0 0 0 1.12560701 0.409474769 1.12560701 0.409474769 8.02484472 4.09430533 8.02484472 4.09430533 1.08193645 4.7993167 1.08193645"></polygon>
+                </g>
+                <rect id="Rectangle-8" fill="#FFFFFF" fill-rule="evenodd" x="28.557377" y="22.3850932" width="2.13114754" height="1.68944099"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerTakeOffToRightBlue</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M26,67.8694239 C26.4559088,67.8694239 38.6181892,53.3047071 47.2301068,41.0380424 C50.721052,36.0656012 52,29.4549463 52,25.7639752 C52,11.5349246 40.3594035,0 26,0 C11.6405965,0 0,11.5349246 0,25.7639752 C0,29.4990285 1.69870972,36.1244893 5.2934457,41.0380424 C15.5117465,55.0051776 25.5459983,67.8694239 26,67.8694239 Z" id="path-1"></path>
+        <filter x="-11.5%" y="-8.8%" width="123.1%" height="117.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerTakeOffToRightBlue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(4.000000, 11.000000)">
+            <circle id="Oval" fill="#373C8C" cx="26" cy="68.4666667" r="6.93333333"></circle>
+            <g id="ToAddress">
+                <g id="Marker">
+                    <g id="Oval">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <ellipse id="Path" stroke="#ACAFD1" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" cx="26" cy="25.7639752" rx="21.3114754" ry="21.1180124"></ellipse>
+                </g>
+            </g>
+        </g>
+        <path d="M42.8456667,35.8247047 L24.571,42.0273714 C24.571,42.0273714 20.6876667,42.2453714 17.9616667,41.4153714 L15.2816667,38.4893714 L15.905,37.834038 L21.2083333,40.0613714 L26.3776667,38.358038 L22.1663333,33.248038 L23.2436667,32.1127047 L33.1043333,36.0433714 L41.839,33.1167047 C41.839,33.1167047 44.2763333,32.7673714 44.7183333,33.7507047 C44.7183333,33.7507047 44.595,34.9073714 42.8456667,35.8247047" id="Fill-1" fill="#373C8C"></path>
+    </g>
+</svg>

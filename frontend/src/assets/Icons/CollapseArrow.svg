@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>CollapseArrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="CollapseArrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-7" stroke-opacity="0.3" stroke="#373C8C" cx="25" cy="25" r="24.5"></circle>
+        <rect id="Rectangle-9" fill="#373C8C" x="14" y="24" width="22" height="1.75" rx="0.875"></rect>
+    </g>
+</svg>

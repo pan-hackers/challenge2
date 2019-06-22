@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>IconCalendarActive</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="IconCalendarActive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,4.5 L0,2.25 C0,2.04 0.0746969697,1.8625 0.224606061,1.717 C0.373484848,1.5725 0.556363636,1.5 0.772727273,1.5 L3.09090909,1.5 L3.09090909,0 L4.63636364,0 L4.63636364,1.5 L12.3636364,1.5 L12.3636364,0 L13.9090909,0 L13.9090909,1.5 L16.2272727,1.5 C16.4436364,1.5 16.6270303,1.5725 16.7759091,1.717 C16.925303,1.8625 17,2.04 17,2.25 L17,4.5 L0,4.5 L0,4.5 L0,4.5 L0,4.5 Z" id="Path" fill="#373C8C"></path>
+        <path d="M17,15.4038996 C17,15.5574677 16.925303,15.6918398 16.7759091,15.8066319 C16.6270303,15.9221919 16.4436364,15.9797799 16.2272727,15.9797799 L0.772727273,15.9797799 C0.556363636,15.9797799 0.373484848,15.9221919 0.224606061,15.8066319 C0.0746969697,15.6918398 0,15.5574677 0,15.4038996 L0,6 L17,6 L17,15.4038996 Z" id="Fill-192" fill="#373C8C"></path>
+        <rect id="Rectangle" fill="#FFFFFF" x="1" y="7" width="3" height="2"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="5" y="7" width="3" height="2"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="9" y="7" width="3" height="2"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="13" y="7" width="3" height="2"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="1" y="10" width="3" height="2"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="5" y="10" width="3" height="2"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="9" y="10" width="3" height="2"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="13" y="10" width="3" height="2"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="1" y="13" width="3" height="2"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="5" y="13" width="3" height="2"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="9" y="13" width="3" height="2"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="13" y="13" width="3" height="2"></rect>
+    </g>
+</svg>

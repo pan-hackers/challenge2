@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>FirstControlTowerTruckDarkOrange</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="20.7048283 0.34708923 20.7048283 7.20456993 0.403334486 7.20456993 0.403334486 0.34708923 20.7048283 0.34708923"></polygon>
+        <polygon id="path-3" points="0 34.4878378 40.1837047 34.4878378 40.1837047 0.000486971912 0 0.000486971912"></polygon>
+    </defs>
+    <g id="FirstControlTowerTruckDarkOrange" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(9.000000, 12.000000)">
+            <g id="Group-3" transform="translate(19.478876, 22.313540)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+            </g>
+            <polygon id="Fill-4" fill="#FF7300" points="22.100368 20.7839612 4.65216442 20.7839612 0.000365228934 11.3586198 26.7521672 11.3586198"></polygon>
+            <polygon id="Fill-6" fill="#FF7300" points="19.9828924 12.0549897 6.770127 12.0549897 3.24810265 4.91719888 23.5061342 4.91719888"></polygon>
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <g id="Clip-9"></g>
+            <polygon id="Fill-8" fill="#FF7300" mask="url(#mask-4)" points="9.7418731 34.4878378 17.0123637 34.4878378 17.0123637 18.4567224 9.7418731 18.4567224"></polygon>
+            <polygon id="Fill-10" fill="#FF7300" mask="url(#mask-4)" points="12.6150074 11.2032758 14.1367946 11.2032758 14.1367946 0.760163154 12.6150074 0.760163154"></polygon>
+            <polygon id="Fill-11" fill="#FF7300" mask="url(#mask-4)" points="8.15434466 1.5222742 18.5974573 1.5222742 18.5974573 -0.000730457868 8.15434466 -0.000730457868"></polygon>
+        </g>
+        <g id="Group" transform="translate(13.000000, 40.000000)">
+            <rect id="Rectangle" stroke="#FFFFFF" fill="#FF7300" x="0.5" y="0.5" width="22" height="8"></rect>
+            <path d="M22.5,1.84938034 L22.5,10.5 L27.5,10.5 L27.5,4.62462098 L22.5,1.84938034 Z" id="Rectangle-Copy" stroke="#FFFFFF" fill="#FF7300"></path>
+            <ellipse id="Oval" fill="#FF7300" cx="5.07142857" cy="10.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+            <ellipse id="Oval" fill="#FF7300" cx="8.07142857" cy="10.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+            <ellipse id="Oval" fill="#FFFFFF" cx="22.8952896" cy="10" rx="1.8952896" ry="2"></ellipse>
+            <ellipse id="Oval" fill="#FF7300" cx="23.0714286" cy="10.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        </g>
+    </g>
+</svg>

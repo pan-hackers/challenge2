@@ -22,7 +22,7 @@ class Populate {
       return res.status(201).json(objs);
     });
   }
-
+  
   static populateLocations(req, res, next) {
     helpers.LOGGER.info("populateLocations - '/' - called");
 
@@ -43,6 +43,62 @@ class Populate {
     helpers.LOGGER.info(`datas.consumableUnitData - ${JSON.stringify(datas.consumableUnitData)}`);
 
     models.ConsumableUnit.insertMany(datas.consumableUnitData, (err, objs) => {
+      if (err) {
+        next(boom.badRequest(err));
+      }
+
+      return res.status(201).json(objs);
+    });
+  }
+
+  static populateMilestoneARR(req, res, next) {
+    helpers.LOGGER.info("populateCompanies - '/' - called");
+
+    helpers.LOGGER.info(`datas.companyData - ${JSON.stringify(datas.milestoneDataARR)}`);
+
+    models.Company.insertMany(datas.companyDataARR, (err, objs) => {
+      if (err) {
+        next(boom.badRequest(err));
+      }
+
+      return res.status(201).json(objs);
+    });
+  }
+
+  static populateMilestoneDEP(req, res, next) {
+    helpers.LOGGER.info("populateCompanies - '/' - called");
+
+    helpers.LOGGER.info(`datas.companyData - ${JSON.stringify(datas.milestoneDataDEP)}`);
+
+    models.Company.insertMany(datas.companyDataDEP, (err, objs) => {
+      if (err) {
+        next(boom.badRequest(err));
+      }
+
+      return res.status(201).json(objs);
+    });
+  }
+
+  static populateMilestonePOD(req, res, next) {
+    helpers.LOGGER.info("populateCompanies - '/' - called");
+
+    helpers.LOGGER.info(`datas.companyData - ${JSON.stringify(datas.milestoneDataPOD)}`);
+
+    models.Company.insertMany(datas.companyDataPOD, (err, objs) => {
+      if (err) {
+        next(boom.badRequest(err));
+      }
+
+      return res.status(201).json(objs);
+    });
+  }
+
+  static populateMilestonePUP(req, res, next) {
+    helpers.LOGGER.info("populateCompanies - '/' - called");
+
+    helpers.LOGGER.info(`datas.companyData - ${JSON.stringify(datas.milestoneDataPUP)}`);
+
+    models.Company.insertMany(datas.companyDataPUP, (err, objs) => {
       if (err) {
         next(boom.badRequest(err));
       }

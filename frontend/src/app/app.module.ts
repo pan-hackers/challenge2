@@ -5,18 +5,27 @@ import { GridModule } from '@progress/kendo-angular-grid';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ShipmentDetailRouteComponent} from './shipment-detail-route/shipment-detail-route.component'
 import { MainComponent } from './main/main.component';
+import { LayoutModule } from '@progress/kendo-angular-layout';
+import { ScanComponent } from './scan/scan.component';
+import { ConsoleComponent } from './console/console.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    ShipmentDetailRouteComponent,
+    MainComponent,
+    ScanComponent,
+    ConsoleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GridModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

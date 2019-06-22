@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerExportStationRed</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30,80.3795653 C30.4797197,80.3795653 43.2772033,64.9137759 52.3388983,51.8882117 C56.0121662,46.6081415 57.3579102,39.5885064 57.3579102,35.6691867 C57.3579102,20.5598301 45.1093566,8.31127655 30,8.31127655 C14.8906434,8.31127655 2.64208984,20.5598301 2.64208984,35.6691867 C2.64208984,39.6353159 4.4295186,46.6706728 8.211998,51.8882117 C18.9639732,66.7194491 29.522287,80.3795653 30,80.3795653 Z" id="path-1"></path>
+        <filter x="-11.0%" y="-8.3%" width="121.9%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerExportStationRed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#D91A26" cx="29.5791016" cy="79.4666667" r="6.93333333"></circle>
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <circle id="Path" stroke="#D91A26" fill="#FFFFFF" cx="29.8876953" cy="35.7783989" r="22.4245165"></circle>
+        <g id="Group-15" transform="translate(16.500000, 22.965495)" fill="#D91A26">
+            <g id="Group-14-Copy-2" transform="translate(0.185691, 0.994856)">
+                <path d="M18.8530344,16.7280685 L16.1443744,15.2246318 L16.1443744,14.8042539 L18.8530344,14.8042539 L18.8530344,16.7280685 Z M20.2458303,17.5097623 L20.2458303,17.5011372 L19.5268956,17.1020939 L19.5268956,14.8011023 L22.2355556,14.8011023 L22.2355556,17.5097623 L20.2458303,17.5097623 Z M5.98410358,4.17715623 L16.1492367,0.583788745 L25.6630605,4.17715623 L25.6630605,17.5217781 L23.6088289,17.4748661 L23.5682365,6.49522836 L8.03525813,6.54214036 L8.03525813,14.1278113 L5.98410358,14.1278113 L5.98410358,4.17715623 Z M9.36992861,11.4184288 L12.0785886,11.4184288 L12.0785886,14.1270889 L9.36992861,14.1270889 L9.36992861,11.4184288 Z M12.7557536,11.4184288 L15.4644137,11.4184288 L15.4644137,14.1270889 L12.7557536,14.1270889 L12.7557536,11.4184288 Z M16.1415787,11.4184288 L18.8502387,11.4184288 L18.8502387,14.1270889 L16.1415787,14.1270889 L16.1415787,11.4184288 Z M19.5268956,11.4184288 L22.2355556,11.4184288 L22.2355556,14.1270889 L19.5268956,14.1270889 L19.5268956,11.4184288 Z M9.36992861,8.0326038 L12.0785886,8.0326038 L12.0785886,10.7412638 L9.36992861,10.7412638 L9.36992861,8.0326038 Z" id="Combined-Shape"></path>
+                <g id="Group-Copy-6" transform="translate(0.672330, 14.553144)">
+                    <rect id="Rectangle" x="0.0135577621" y="0.257666578" width="14.7859925" height="4.9118938"></rect>
+                    <path d="M16.6570894,6.14042161 C16.485356,5.6022345 16.0141815,5.20932406 15.4526011,5.18227414 L15.4526011,1.40152392 L18.1779084,2.9797137 L18.1779084,6.14042161 L16.6570894,6.14042161 Z" id="Combined-Shape"></path>
+                    <ellipse id="Oval" cx="2.8750142" cy="6.68267417" rx="1" ry="1"></ellipse>
+                    <ellipse id="Oval" cx="4.98973278" cy="6.68267417" rx="1" ry="1"></ellipse>
+                    <ellipse id="Oval-Copy-2" cx="15.2219727" cy="6.68267417" rx="1" ry="1"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
