@@ -3,6 +3,7 @@ import helpers from '../helpers';
 
 import models from '../models';
 import datas from '../data';
+import controllers from '.';
 
 class Populate {
   constructor() {
@@ -94,25 +95,20 @@ class Populate {
 
             objs[j].shipment = s;
 
-            // time to save the milestone
-            objs[j].save((err, o) => {
-              if (err) {
-                next(boom.badImplementation(err));
-              }
-            });
+            helpers.LOGGER.debug(`After saving the shipment`);
 
+            // time to save the milestone
+            await objs[j].save();
+
+            helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
+              
+            controllers.blockchain.createMilestone1(JSON.stringify(objs[j]));
+        
             // Now I attach the milsetones to the shipment and save it
             s.milestones.push(objs[j]);
-            s.save((err, o) => {
-              if (err) {
-                next(boom.badImplementation(err));
-              }
-            });
+            await s.save();
           });
         }
-
-        // now public to the blockchain the milestone
-        // objs[j] goes to the blockchain
 
         return res.status(201).json({});
       });
@@ -162,25 +158,20 @@ class Populate {
 
             objs[j].shipment = s;
 
-            // time to save the milestone
-            objs[j].save((err, o) => {
-              if (err) {
-                next(boom.badImplementation(err));
-              }
-            });
+            helpers.LOGGER.debug(`After saving the shipment`);
 
+            // time to save the milestone
+            await objs[j].save();
+
+            helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
+              
+            controllers.blockchain.createMilestone1(JSON.stringify(objs[j]));
+        
             // Now I attach the milsetones to the shipment and save it
             s.milestones.push(objs[j]);
-            s.save((err, o) => {
-              if (err) {
-                next(boom.badImplementation(err));
-              }
-            });
+            await s.save();
           });
         }
-
-        // now public to the blockchain the milestone
-        // objs[j] goes to the blockchain
 
         return res.status(201).json({});
       });
@@ -230,25 +221,20 @@ class Populate {
 
             objs[j].shipment = s;
 
-            // time to save the milestone
-            objs[j].save((err, o) => {
-              if (err) {
-                next(boom.badImplementation(err));
-              }
-            });
+            helpers.LOGGER.debug(`After saving the shipment`);
 
+            // time to save the milestone
+            await objs[j].save();
+
+            helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
+              
+            controllers.blockchain.createMilestone1(JSON.stringify(objs[j]));
+        
             // Now I attach the milsetones to the shipment and save it
             s.milestones.push(objs[j]);
-            s.save((err, o) => {
-              if (err) {
-                next(boom.badImplementation(err));
-              }
-            });
+            await s.save();
           });
         }
-
-        // now public to the blockchain the milestone
-        // objs[j] goes to the blockchain
 
         return res.status(201).json({});
       });
@@ -259,7 +245,6 @@ class Populate {
     helpers.LOGGER.info("populateMilestonePUP - '/' - called");
 
     helpers.LOGGER.debug(`datas.milestoneDataPUP - ${JSON.stringify(datas.milestoneDataPUP)}`);
-
     models.Shipment.findById(req.params.id, (err, s) => {
       if (err) {
         next(boom.notFound(err));
@@ -271,7 +256,7 @@ class Populate {
         }
 
         for (let j = 0; j < objs.length; j++) {
-          helpers.LOGGER.debug(`insertOne - ${JSON.stringify(datas.milestoneDataPUP)}`);
+          helpers.LOGGER.debug(`--> ${JSON.stringify(datas.milestoneDataPUP)}`);
           models.LogisticUnit.findById("5d0e29a912c93a513833048a", async (err, lu) => {
             if (err) {
               next(boom.notFound(err));
@@ -295,25 +280,20 @@ class Populate {
 
             objs[j].shipment = s;
 
-            // time to save the milestone
-            objs[j].save((err, o) => {
-              if (err) {
-                next(boom.badImplementation(err));
-              }
-            });
+            helpers.LOGGER.debug(`After saving the shipment`);
 
+            // time to save the milestone
+            await objs[j].save();
+
+            helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
+              
+            controllers.blockchain.createMilestone1(JSON.stringify(objs[j]));
+        
             // Now I attach the milsetones to the shipment and save it
             s.milestones.push(objs[j]);
-            s.save((err, o) => {
-              if (err) {
-                next(boom.badImplementation(err));
-              }
-            });
+            await s.save();
           });
         }
-
-        // now public to the blockchain the milestone
-        // objs[j] goes to the blockchain
 
         return res.status(201).json({});
       });

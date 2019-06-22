@@ -59,6 +59,8 @@ connectDb().then(async () => {
       models.Milestone.deleteMany({}),
       models.Shipment.deleteMany({}),
       models.Company.deleteMany({}),
+      models.Block.deleteMany({}),
+      models.Blockchain.deleteMany({}),
     ]);
 
     await Promise.all([

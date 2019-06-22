@@ -13,13 +13,36 @@ class Shipment {
 
     const query = {};
 
-    models.Shipment.find(query, (err, objs) => {
+    /*models.Shipment.find(query, (err, objs) => {
       if (err) {
         next(boom.badRequest(err));
       }
 
+      objs.forEach(function (obj) {
+        helpers.LOGGER.info(`shipment: ${JSON.stringify(obj, null, '\t')}`);
+      });
+
+
       return res.json(objs);
     });
+    */
+    models.Shipment.find(query)
+      .populate('milestones')
+      .exec((err, objs) => {
+        helpers.LOGGER.info(`shipments: ${JSON.stringify(objs, null, '\t')}`);
+        if (err) {
+          next(boom.badRequest(err));
+        }
+
+        objs.forEach(function (obj) {
+          helpers.LOGGER.info(`shipment: ${JSON.stringify(obj, null, '\t')}`);
+        });
+
+
+        return res.json(objs);
+      });
+
+
   }
 
   static getBySSCC(req, res, next) {
