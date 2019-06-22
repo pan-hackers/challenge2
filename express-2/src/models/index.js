@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import fs from 'fs';
 
 import TokenKey from './key';
 import User from './user';
@@ -10,7 +11,14 @@ import Coin from './coin';
 import Block from './block';
 import Blockchain from './blockchain';
 
-const connectDb = () => mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+//Specify the Amazon DocumentDB cert
+var ca = [fs.readFileSync(__dirname + "/rds-combined-ca-bundle.pem")];
+
+const connectDb = () => mongoose.connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true,
+    sslValidate: true,
+    sslCA:ca
+});
 
 const models = { User, Company, Location, ConsumableUnit, Message, Coin, Block, Blockchain };
 
