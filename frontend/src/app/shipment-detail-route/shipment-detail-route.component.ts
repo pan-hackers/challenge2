@@ -1,7 +1,6 @@
 import { Component, Input, OnInit, SimpleChange } from '@angular/core';
 import { getDirection, isMilestoneReached, checkTrackingEntityDetails } from '../_shared/constants/shipment-functions';
 
-import { etrackMilestonesData } from '../mock/shipment-milestones';
 @Component({
     selector: 'kosmos-shipment-detail-route',
     templateUrl: './shipment-detail-route.component.html',
