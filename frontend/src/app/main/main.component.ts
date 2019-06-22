@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ShipmentService } from '../shipment.service';
-import { data } from '../_mock-data/mock-data';
+
+// import { data } from '../_mock-data/mock-data';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
