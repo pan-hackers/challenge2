@@ -6,6 +6,7 @@ import logisticUnit from './logisticUnit';
 import company from './company';
 import shipment from './shipment';
 import location from './location';
+import event from './event';
 import blockchain from './blockchain';
 
 export default {
@@ -16,6 +17,7 @@ export default {
   company,
   location,
   shipment,
+  event,
   user,
   blockchain
 };
