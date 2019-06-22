@@ -4,9 +4,6 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import express from 'express';
 
-import swaggerUi from 'swagger-ui-express';
-import swaggerJsdoc from 'swagger-jsdoc';
-
 import helmet from 'helmet';
 //import morgan from 'morgan';
 

@@ -1,10 +1,8 @@
-<kendo-tabstrip *ngIf="width < 2">
+<kendo-tabstrip>
     <kendo-tabstrip-tab [title]="'Route'" [selected]="true">
         <ng-template kendoTabContent>
             <div class="shipment-route">
-                <kosmos-shipment-detail-route  
-                    [latestActualMilestone]='this.latestActualMilestone' [showGreenGap]='showGreenGap'
-                    [navigateToMilestone]="navigateToMilestone">
+                <kosmos-shipment-detail-route [showGreenGap]='showGreenGap' [navigateToMilestone]="navigateToMilestone">
                 </kosmos-shipment-detail-route>
             </div>
 
@@ -21,7 +19,7 @@
 
                 <div class="surprise-section-item">
                     <div class="row section-header">
-                        <h2>{{ trackingEntitiesDetails.shipNum }}</h2>
+                        <h2>{{ this.shipmentDetail.shipNum }}</h2>
                     </div>
 
 
@@ -30,27 +28,27 @@
                             <div class="summary-label">From</div>
                             <div class="summary-data">
                                 <!-- <span class="summary-data-big">Code Here</span> -->
-                                {{ trackingEntitiesDetails.mainFrom }}
+                                {{ this.shipmentDetail.mainFrom }}
                             </div>
                         </div>
                         <div class="summary-row">
                             <div class="summary-label">To</div>
                             <div class="summary-data">
                                 <!-- <span class="summary-data-big">Code Here</span> -->
-                                {{ trackingEntitiesDetails.mainTo }}
+                                {{ this.shipmentDetail.mainTo }}
                             </div>
                         </div>
                     </div>
                     <div class="summary-row">
                         <div class="summary-label"
-                            *ngIf="trackingEntitiesDetails.entityType === 'OCAR' ||trackingEntitiesDetails. entityType === 'OFWO' || trackingEntitiesDetails.entityType === 'OCON'">
+                            *ngIf="shipmentDetail.entityType === 'OCAR' ||shipmentDetail. entityType === 'OFWO' || shipmentDetail.entityType === 'OCON'">
                             Vessel / Voyage</div>
                         <div class="summary-label"
-                            *ngIf="trackingEntitiesDetails.entityType === 'ACAR' || trackingEntitiesDetails.entityType === 'AFWO' || trackingEntitiesDetails.entityType === 'ADIR'">
+                            *ngIf="shipmentDetail.entityType === 'ACAR' || shipmentDetail.entityType === 'AFWO' || shipmentDetail.entityType === 'ADIR'">
                             Flight Number</div>
                         <div class="summary-data">
                             {{
-                  checkTrackingEntityDetails(trackingEntitiesDetails,
+                  checkTrackingEntityDetails(this.shipmentDetail,
                   'voyageText')
                   }}
                         </div>
@@ -60,7 +58,7 @@
                             <div class="summary-label">Quantity (Packages)</div>
                             <div class="summary-data summary-data-figure">
                                 {{
-                    checkTrackingEntityDetails(trackingEntitiesDetails,
+                    checkTrackingEntityDetails(this.shipmentDetail,
                     'pieces')
                     }}
                             </div>
@@ -69,7 +67,7 @@
                             <div class="summary-label">
                                 Gross Weight ({{
                     checkTrackingEntityDetails(
-                    trackingEntitiesDetails,
+                        this.shipmentDetail,
                     'grosw'
                     ).split(' ')[1]
                     }})
@@ -77,7 +75,7 @@
                             <div class="summary-data summary-data-figure">
                                 {{
                     checkTrackingEntityDetails(
-                    trackingEntitiesDetails,
+                        this.shipmentDetail,
                     'grosw'
                     ).split(' ')[0]
                     }}
@@ -88,7 +86,7 @@
                                 Volume (
                                 {{
                     checkTrackingEntityDetails(
-                    trackingEntitiesDetails,
+                        this.shipmentDetail,
                     'volume'
                     ).split(' ')[1]
                     }})
@@ -96,7 +94,7 @@
                             <div class="summary-data summary-data-figure">
                                 {{
                     checkTrackingEntityDetails(
-                    trackingEntitiesDetails,
+                        this.shipmentDetail,
                     'volume'
                     ).split(' ')[0]
                     }}
@@ -107,7 +105,7 @@
                         <div class="summary-label">Customer Reference</div>
                         <div class="summary-data">
                             {{
-                  customerReference
+                                this.customerReference
                   }}
                         </div>
                     </div>
@@ -116,7 +114,7 @@
 
 
 
-                <div class="surprise-section-item" *ngFor="let result of checkTrackingEntityDetails(trackingEntitiesDetails,'partners');
+                <div class="surprise-section-item" *ngFor="let result of checkTrackingEntityDetails(this.shipmentDetail,'partners');
             let i = index">
                     <div class="row section-header">
                         <h2>{{ result.roleName }}</h2>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { data } from '../_mock-data/mock-data';
+import { ShipmentService } from '../shipment.service';
 
 @Component({
   selector: 'app-main',
@@ -8,19 +8,34 @@ import { data } from '../_mock-data/mock-data';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  public viewState = "main";
+  public viewState = 'main';
+  public shipmentsArray = [];
 
-  public gridData: any[] = data;
-  public onDetailButtonClick = (id) => {
-    console.log(id);
-    this.viewState="details"
-  }
-  public onBackButtonClick= ()=>{
-    
-  }
-  constructor() { }
+  constructor(
+    private readonly shipmentService: ShipmentService
+  ) { }
 
   ngOnInit() {
+    this.getShipments();
+  }
+
+  public onDetailButtonClick = (id) => {
+    console.log(id);
+    this.viewState = 'details';
+    console.log(this.viewState);
+  }
+
+  public onBackButtonClick = () => {
+
+  }
+
+  public getShipments() {
+    console.log(this.shipmentService);
+    this.shipmentService.getAllShipments().subscribe(
+      (res) => {
+        this.shipmentsArray = res;
+      }
+    );
   }
 
 }
