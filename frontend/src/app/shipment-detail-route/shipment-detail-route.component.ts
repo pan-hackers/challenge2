@@ -66,12 +66,9 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "estimatedTime": "2019-02-01T05:55:00Z",
         "iconTag": "ImportStation"
     }];
-
     public scrollElements;
     @Input() public latestActualMilestone;
     @Input() public showGreenGap: boolean;
-    @Input() public header: string;
-    @Input() public navigateToMilestone: Function;
     public finished: boolean;
     public previewLegLength: number = 30;
     public iconUrl: string = 'assets/Icons/';
@@ -139,6 +136,12 @@ export class ShipmentDetailRouteComponent implements OnInit {
             }
         }
         return iconPath;
+    }
+    public fillarray = (array) => {
+        while(array.length<4){
+            array.push({})
+        }
+        return array
     }
 
 

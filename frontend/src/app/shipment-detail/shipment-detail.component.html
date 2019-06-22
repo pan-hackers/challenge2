@@ -1,137 +1,154 @@
-<kendo-tabstrip>
-    <kendo-tabstrip-tab [title]="'Route'" [selected]="true">
-        <ng-template kendoTabContent>
-            <div class="shipment-route">
-                <kosmos-shipment-detail-route [showGreenGap]='showGreenGap' [navigateToMilestone]="navigateToMilestone">
-                </kosmos-shipment-detail-route>
+<div class="page-content">
+    <div class="component-header">
+        <button class="button-go-back" (click)="onBackButtonClick()">
+            <div class="button-go-back-image">
+                <img src="assets/Icons/BackIconNegative.svg" />
             </div>
+            <div class="button-go-back-text">Go Back</div>
+        </button>
+        <h2>Details
+            <span>&nbsp;{{ this.shipmentDetail.shipNum }}</span></h2>
+    </div>
+    <kendo-tabstrip>
+        <kendo-tabstrip-tab [title]="'Route'" [selected]="true">
+            <ng-template kendoTabContent>
+                <div class="shipment-route">
+                    <kosmos-shipment-detail-route [showGreenGap]='showGreenGap'>
+                    </kosmos-shipment-detail-route>
+                </div>
 
-        </ng-template>
-    </kendo-tabstrip-tab>
-    <kendo-tabstrip-tab [title]="'Sensors'">
-        <ng-template kendoTabContent>
-            <kosmos-sensor-detail></kosmos-sensor-detail>
-        </ng-template>
-    </kendo-tabstrip-tab>
-    <kendo-tabstrip-tab [title]="'Details'">
-        <ng-template kendoTabContent>
-            <div class="surprise-section shipment-details">
+            </ng-template>
+        </kendo-tabstrip-tab>
+        <kendo-tabstrip-tab [title]="'Sensors'">
+            <ng-template kendoTabContent>
+                <kosmos-sensor-detail></kosmos-sensor-detail>
+            </ng-template>
+        </kendo-tabstrip-tab>
+        <kendo-tabstrip-tab [title]="'Details'">
+            <ng-template kendoTabContent>
+                <div class="surprise-section shipment-details">
 
-                <div class="surprise-section-item">
-                    <div class="row section-header">
-                        <h2>{{ this.shipmentDetail.shipNum }}</h2>
-                    </div>
+                    <div class="surprise-section-item">
+                        <div class="row section-header">
+                            <h2>{{ this.shipmentDetail.shipNum }}</h2>
+                        </div>
 
 
-                    <div class="summary-row-group">
-                        <div class="summary-row">
-                            <div class="summary-label">From</div>
-                            <div class="summary-data">
-                                <!-- <span class="summary-data-big">Code Here</span> -->
-                                {{ this.shipmentDetail.mainFrom }}
+                        <div class="summary-row-group">
+                            <div class="summary-row">
+                                <div class="summary-label">From</div>
+                                <div class="summary-data">
+                                    <!-- <span class="summary-data-big">Code Here</span> -->
+                                    {{ this.shipmentDetail.mainFrom }}
+                                </div>
+                            </div>
+                            <div class="summary-row">
+                                <div class="summary-label">To</div>
+                                <div class="summary-data">
+                                    <!-- <span class="summary-data-big">Code Here</span> -->
+                                    {{ this.shipmentDetail.mainTo }}
+                                </div>
                             </div>
                         </div>
                         <div class="summary-row">
-                            <div class="summary-label">To</div>
+                            <div class="summary-label"
+                                *ngIf="shipmentDetail.entityType === 'OCAR' ||shipmentDetail. entityType === 'OFWO' || shipmentDetail.entityType === 'OCON'">
+                                Vessel / Voyage</div>
+                            <div class="summary-label"
+                                *ngIf="shipmentDetail.entityType === 'ACAR' || shipmentDetail.entityType === 'AFWO' || shipmentDetail.entityType === 'ADIR'">
+                                Flight Number</div>
                             <div class="summary-data">
-                                <!-- <span class="summary-data-big">Code Here</span> -->
-                                {{ this.shipmentDetail.mainTo }}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="summary-row">
-                        <div class="summary-label"
-                            *ngIf="shipmentDetail.entityType === 'OCAR' ||shipmentDetail. entityType === 'OFWO' || shipmentDetail.entityType === 'OCON'">
-                            Vessel / Voyage</div>
-                        <div class="summary-label"
-                            *ngIf="shipmentDetail.entityType === 'ACAR' || shipmentDetail.entityType === 'AFWO' || shipmentDetail.entityType === 'ADIR'">
-                            Flight Number</div>
-                        <div class="summary-data">
-                            {{
+                                {{
                   checkTrackingEntityDetails(this.shipmentDetail,
                   'voyageText')
                   }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="summary-row-group">
-                        <div class="summary-row summary-row-no-border-left">
-                            <div class="summary-label">Quantity (Packages)</div>
-                            <div class="summary-data summary-data-figure">
-                                {{
+                        <div class="summary-row-group">
+                            <div class="summary-row summary-row-no-border-left">
+                                <div class="summary-label">Quantity (Packages)</div>
+                                <div class="summary-data summary-data-figure">
+                                    {{
                     checkTrackingEntityDetails(this.shipmentDetail,
                     'pieces')
                     }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="summary-row">
-                            <div class="summary-label">
-                                Gross Weight ({{
+                            <div class="summary-row">
+                                <div class="summary-label">
+                                    Gross Weight ({{
                     checkTrackingEntityDetails(
                         this.shipmentDetail,
                     'grosw'
                     ).split(' ')[1]
                     }})
-                            </div>
-                            <div class="summary-data summary-data-figure">
-                                {{
+                                </div>
+                                <div class="summary-data summary-data-figure">
+                                    {{
                     checkTrackingEntityDetails(
                         this.shipmentDetail,
                     'grosw'
                     ).split(' ')[0]
                     }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="summary-row">
-                            <div class="summary-label">
-                                Volume (
-                                {{
+                            <div class="summary-row">
+                                <div class="summary-label">
+                                    Volume (
+                                    {{
                     checkTrackingEntityDetails(
                         this.shipmentDetail,
                     'volume'
                     ).split(' ')[1]
                     }})
-                            </div>
-                            <div class="summary-data summary-data-figure">
-                                {{
+                                </div>
+                                <div class="summary-data summary-data-figure">
+                                    {{
                     checkTrackingEntityDetails(
                         this.shipmentDetail,
                     'volume'
                     ).split(' ')[0]
                     }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary-row-group">
+                            <div class="summary-row">
+                                <div class="summary-label">GTIN</div>
+                                <div class="summary-data">
+                                    xxxxxxxxxxxxxx
+                                </div>
+
+                                <div class="summary-label">SSCC</div>
+                                <div class="summary-data">
+                                    xxxxxxxxxxxxxx
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="summary-row">
-                        <div class="summary-label">Customer Reference</div>
-                        <div class="summary-data">
-                            {{
-                                this.customerReference
-                  }}
-                        </div>
-                    </div>
-                </div>
 
 
 
 
-                <div class="surprise-section-item" *ngFor="let result of checkTrackingEntityDetails(this.shipmentDetail,'partners');
+                    <div class="surprise-section-item" *ngFor="let result of checkTrackingEntityDetails(this.shipmentDetail,'partners');
             let i = index">
-                    <div class="row section-header">
-                        <h2>{{ result.roleName }}</h2>
+                        <div class="row section-header">
+                            <h2>{{ result.roleName }}</h2>
+                        </div>
+                        <div class="summary-row">
+                            <div class="summary-label">Company Name</div>
+                            <div class="summary-data">{{ result.name }}</div>
+                        </div>
+                        <div class="summary-row">
+                            <div class="summary-label">Address</div>
+                            <div class="summary-data">{{ result.address }}</div>
+                        </div>
                     </div>
-                    <div class="summary-row">
-                        <div class="summary-label">Company Name</div>
-                        <div class="summary-data">{{ result.name }}</div>
-                    </div>
-                    <div class="summary-row">
-                        <div class="summary-label">Address</div>
-                        <div class="summary-data">{{ result.address }}</div>
-                    </div>
+
+
                 </div>
+            </ng-template>
+        </kendo-tabstrip-tab>
 
-
-            </div>
-        </ng-template>
-    </kendo-tabstrip-tab>
-
-</kendo-tabstrip>
+    </kendo-tabstrip>
+</div>
