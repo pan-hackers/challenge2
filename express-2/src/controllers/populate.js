@@ -73,8 +73,14 @@ class Populate {
 
         for (let j = 0; j < objs.length; j++) {
           models.LogisticUnit.findById("5d0e29a912c93a513833048a")
-            .populate('tradeUnits')
-            .populate('tradeUnits.consumableUnits')
+            .populate({
+              path: 'tradeUnits',
+              model: 'TradeUnit',
+              populate: {
+                path: 'consumableUnits',
+                model: 'ConsumableUnit'
+              }
+            })
             .exec(async (err, lu) => {
               if (err) {
                 next(boom.notFound(err));
@@ -140,8 +146,14 @@ class Populate {
         for (let j = 0; j < objs.length; j++) {
           models.LogisticUnit
             .findById("5d0e29a912c93a513833048a")
-            .populate('tradeUnits')
-            .populate('tradeUnits.consumableUnits')
+            .populate({
+              path: 'tradeUnits',
+              model: 'TradeUnit',
+              populate: {
+                path: 'consumableUnits',
+                model: 'ConsumableUnit'
+              }
+            })
             .exec(async (err, lu) => {
               if (err) {
                 next(boom.notFound(err));
@@ -207,8 +219,14 @@ class Populate {
         for (let j = 0; j < objs.length; j++) {
           models.LogisticUnit
             .findById("5d0e29a912c93a513833048a")
-            .populate('tradeUnits')
-            .populate('tradeUnits.consumableUnits')
+            .populate({
+              path: 'tradeUnits',
+              model: 'TradeUnit',
+              populate: {
+                path: 'consumableUnits',
+                model: 'ConsumableUnit'
+              }
+            })
             .exec(async (err, lu) => {
               if (err) {
                 next(boom.notFound(err));
@@ -270,8 +288,14 @@ class Populate {
           helpers.LOGGER.debug(`--> ${JSON.stringify(datas.milestoneDataPUP)}`);
           models.LogisticUnit
             .findById("5d0e29a912c93a513833048a")
-            .populate('tradeUnits')
-            .populate('tradeUnits.consumableUnits')
+            .populate({
+              path: 'tradeUnits',
+              model: 'TradeUnit',
+              populate: {
+                path: 'consumableUnits',
+                model: 'ConsumableUnit'
+              }
+            })
             .exec(async (err, lu) => {
               if (err) {
                 next(boom.notFound(err));
