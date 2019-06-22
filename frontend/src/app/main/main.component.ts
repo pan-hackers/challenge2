@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ShipmentService } from '../shipment.service';
-
+import { data } from '../_mock-data/mock-data';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -10,7 +10,7 @@ import { ShipmentService } from '../shipment.service';
 export class MainComponent implements OnInit {
   public viewState = 'main';
   public shipmentsArray = [];
-
+  public shipNum="LHR 12312312"
   constructor(
     private readonly shipmentService: ShipmentService
   ) { }
@@ -26,7 +26,7 @@ export class MainComponent implements OnInit {
   }
 
   public onBackButtonClick = () => {
-
+    this.viewState = 'main';
   }
 
   public getShipments() {
@@ -34,8 +34,12 @@ export class MainComponent implements OnInit {
     this.shipmentService.getAllShipments().subscribe(
       (res) => {
         this.shipmentsArray = res;
+        if (this.shipmentsArray === undefined || this.shipmentsArray.length === 0) {
+          this.shipmentsArray = data;
+        }
       }
     );
+    
   }
 
 }

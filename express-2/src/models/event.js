@@ -21,7 +21,10 @@ const eventSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // shipment: { type: mongoose.Schema.Types.ObjectId, ref: 'Shipment' },
+    temperature: {
+        type: Number,
+        required: false
+    },
     logisticUnit: { type: mongoose.Schema.Types.ObjectId, ref: 'LogisticUnit' },
 });
 
