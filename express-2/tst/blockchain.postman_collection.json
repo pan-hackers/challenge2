@@ -43,6 +43,212 @@
 			"response": []
 		},
 		{
+			"name": "consumableUnits.getAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/consumableUnits/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"consumableUnits",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consumableUnits.getByGTIN",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/consumableUnits/76111119999999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"consumableUnits",
+						"76111119999999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tradeUnits.create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Box of Pharma-Product-1\",\n\t\"GTIN\": \"76111119999110\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tradeUnits/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tradeUnits",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tradeUnits.getAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/tradeUnits/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tradeUnits",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tradeUnits.getByGTIN",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/tradeUnits/76111119999110",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tradeUnits",
+						"76111119999110"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tradeUnits.attachCU",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"GTIN\": \"76111119999999\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tradeUnits/76111119999110",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tradeUnits",
+						"76111119999110"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "locations.create",
 			"request": {
 				"method": "POST",
@@ -380,6 +586,43 @@
 						"api",
 						"users",
 						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logisticUnits.create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Pallet of Box of Pharma-Product-1\",\n\t\"GTIN\": \"76111119110110\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/logisticUnits/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"logisticUnits",
+						""
 					]
 				}
 			},
