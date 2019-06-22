@@ -8,8 +8,8 @@ import { ShipmentService } from '../shipment.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  shipmentsArray = [];
+  public viewState = 'main';
+  public shipmentsArray = [];
 
   constructor(
     private readonly shipmentService: ShipmentService
@@ -19,7 +19,17 @@ export class MainComponent implements OnInit {
     this.getShipments();
   }
 
-  getShipments() {
+  public onDetailButtonClick = (id) => {
+    console.log(id);
+    this.viewState = 'details';
+    console.log(this.viewState);
+  }
+
+  public onBackButtonClick = () => {
+
+  }
+
+  public getShipments() {
     console.log(this.shipmentService);
     this.shipmentService.getAllShipments().subscribe(
       (res) => {

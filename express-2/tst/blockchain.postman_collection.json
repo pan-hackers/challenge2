@@ -249,6 +249,184 @@
 			"response": []
 		},
 		{
+			"name": "tradeUnits.attachShipment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"SSCC\": \"7611111SSCC01\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tradeUnits/76111119999110/shipment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tradeUnits",
+						"76111119999110",
+						"shipment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logisticUnits.create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Pallet of Box of Pharma-Product-1\",\n\t\"GTIN\": \"76111119110110\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/logisticUnits/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"logisticUnits",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logisticUnits.getAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/logisticUnits/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"logisticUnits",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logisticUnits.getByGTIN",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/logisticUnits/76111119110110",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"logisticUnits",
+						"76111119110110"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logisticUnits.attachTU",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"GTIN\": \"76111119999110\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/logisticUnits/76111119110110",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"logisticUnits",
+						"76111119110110"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "locations.create",
 			"request": {
 				"method": "POST",
@@ -592,7 +770,7 @@
 			"response": []
 		},
 		{
-			"name": "logisticUnits.create",
+			"name": "shipment.create",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -610,10 +788,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Pallet of Box of Pharma-Product-1\",\n\t\"GTIN\": \"76111119110110\"\n}"
+					"raw": "{\n\t\"status\": \"Planning\",\n\t\"SSCC\": \"7611111SSCC01\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/logisticUnits/",
+					"raw": "http://localhost:3000/api/shipments/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -621,8 +799,312 @@
 					"port": "3000",
 					"path": [
 						"api",
-						"logisticUnits",
+						"shipments",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shipments.getAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/shipments/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"shipments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shipments.getBySSCC",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/shipments/7611111SSCC01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"shipments",
+						"7611111SSCC01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.cleanAll",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/populates/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populates",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.populateAll",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/populates/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populates",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.populateCompanies",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/populates/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populates",
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.populateConsumableUnits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/populates/consumableUnits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populates",
+						"consumableUnits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.populateLocations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/populates/locations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populates",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.populateTradeUnits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/populates/tradeUnits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populates",
+						"tradeUnits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.populateLogisticUnits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/populates/tradeUnits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populates",
+						"tradeUnits"
 					]
 				}
 			},

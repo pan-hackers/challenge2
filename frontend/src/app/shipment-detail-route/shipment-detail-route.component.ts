@@ -8,7 +8,7 @@ import { getDirection, isMilestoneReached, checkTrackingEntityDetails } from '..
 })
 
 export class ShipmentDetailRouteComponent implements OnInit {
-    public details = [{
+    public milestones = [{
         "milestoneTitle": "CUV - Nas Couves",
         "milestoneType": "APUP",
         "scheduledLoc": "GBLON",
@@ -67,11 +67,6 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "iconTag": "ImportStation"
     }];
 
-
-
-
-
-
     public scrollElements;
     @Input() public latestActualMilestone;
     @Input() public showGreenGap: boolean;
@@ -100,13 +95,15 @@ export class ShipmentDetailRouteComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-        this.scrollElements = this.details.map((item, index, arr) => {
+        this.scrollElements = this.milestones.map((item, index) => {
             if (item.actualTime !== undefined && item.actualTime !== null) {
                 this.latestActualMilestone = index;
             }
             return item;
         });
-        this.fixedElement = this.scrollElements[length - 1];
+        this.fixedElement = this.scrollElements[this.scrollElements.length - 1];
+        //public fixedElement = this.milestones.slice(0, this.milestones.length - 1);
+        console.log(this.fixedElement)
     }
 
     public getMilestoneIconPath(milestoneDetail, index): string {
@@ -119,15 +116,15 @@ export class ShipmentDetailRouteComponent implements OnInit {
         // if last milestone use direction of previous one
         let direction: string = '';
 
-        if (index < this.details.length - 1) {
-            const nextMilestone = this.details[index + 1];
+        if (index < this.milestones.length - 1) {
+            const nextMilestone = this.milestones[index + 1];
 
             if (this.milestonesWithDirection.indexOf(milestoneDetail.milestoneType) > -1) {
                 if (this.milestonesWithDirection.indexOf(nextMilestone.milestoneType) > -1) {
                     direction = getDirection(milestoneDetail, nextMilestone);
                 } else {
                     //get previous milestone
-                    direction = getDirection(this.details[index - 1], milestoneDetail);
+                    direction = getDirection(this.milestones[index - 1], milestoneDetail);
                 }
                 iconPath = this.iconUrl + milestoneDetail.iconTag +
                     milestoneStatus + direction + '.svg';
@@ -136,7 +133,7 @@ export class ShipmentDetailRouteComponent implements OnInit {
             //last milestone
             if (this.milestonesWithDirection.indexOf(milestoneDetail.milestoneType) > -1) {
                 //get previous milestone
-                direction = getDirection(this.details[index - 1], milestoneDetail);
+                direction = getDirection(this.milestones[index - 1], milestoneDetail);
                 iconPath = this.iconUrl + milestoneDetail.iconTag +
                     milestoneStatus + direction + '.svg';
             }

@@ -2,8 +2,8 @@ import { Component, Input, OnInit, SimpleChange } from '@angular/core';
 import { getDirection, isMilestoneReached, checkTrackingEntityDetails } from '../_shared/constants/shipment-functions';
 
 @Component({
-    selector: 'sensor-detail-detail-route',
-    templateUrl: './sensor-detail-route.component.html',
+    selector: 'kosmos-sensor-detail',
+    templateUrl: './sensor-detail.component.html',
     styleUrls: ['./sensor-detail.component.css']
 })
 
