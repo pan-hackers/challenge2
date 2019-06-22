@@ -106,6 +106,55 @@ class TradeUnit {
       }
     });
   }
+
+  static attachShipment(req, res, next) {
+    helpers.LOGGER.info("post - '/:gtin/shipment' - called");
+  
+    const query = {};
+  
+    if (req.params.gtin) {
+      query.GTIN = req.params.gtin;
+    }
+  
+    models.TradeUnit.findOne(query, (err, tu) => {
+      if (err) {
+        next(boom.badRequest(err));
+      }
+  
+      if (tu) {
+        if (req.body.SSCC) {
+          helpers.LOGGER.debug(`--> ${req.body.SSCC}`);
+
+          const query1 = {};
+          query1.SSCC = req.body.SSCC;
+  
+          models.Shipment.findOne(query1, (err, s) => {
+            if (err) {
+              next(boom.badRequest(err));
+            }
+            helpers.LOGGER.debug(`--> ${s}`);
+            if (s) {
+              tu.shipment = s;
+              tu.save((err, t) => {
+                if (err) {
+                  next(boom.badRequest(err));
+                }
+                helpers.LOGGER.info(`--> ${t}`);
+  
+                return res.status(201).json(t);
+              });
+            } else {
+              helpers.LOGGER.info(`--> shipment not found`);
+              next(boom.notFound('Shipment not found'));
+            }
+          });
+        }
+      } else {
+        next(boom.notFound('TradeUnit not found'));
+      }
+    });
+  }
+  
 }
 
 export default TradeUnit;
