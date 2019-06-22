@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShipmentDetailRouteComponent} from './shipment-detail-route/shipment-detail-route.component'
 import { MainComponent } from './main/main.component';
+import { LayoutModule } from '@progress/kendo-angular-layout';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { MainComponent } from './main/main.component';
     BrowserModule,
     AppRoutingModule,
     GridModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
