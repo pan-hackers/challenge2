@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { data } from '../_mock-data/mock-data';
+import { ShipmentService } from '../shipment.service';
 
 @Component({
   selector: 'app-main',
@@ -9,11 +9,23 @@ import { data } from '../_mock-data/mock-data';
 })
 export class MainComponent implements OnInit {
 
-  public gridData: any[] = data;
+  shipmentsArray = [];
 
-  constructor() { }
+  constructor(
+    private readonly shipmentService: ShipmentService
+  ) { }
 
   ngOnInit() {
+    this.getShipments();
+  }
+
+  getShipments() {
+    console.log(this.shipmentService);
+    this.shipmentService.getAllShipments().subscribe(
+      (res) => {
+        this.shipmentsArray = res;
+      }
+    );
   }
 
 }
