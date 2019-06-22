@@ -1,44 +1,34 @@
 <div class="page-content-blue">
-<div class="top">
-    <div class="title-dot title-dot-green">&nbsp;</div><div class="title-text">Track<span>...</span></div>
-    <div class="intro">This is the tracking app for customers, managed by the freight forwarder (Panalpina) including data shared by the carrier (CargoLux).</div>
-</div>
-<div class="page" *ngIf="viewState==='main'">
-  <div class="page-content">
-    <div class="component-header">
-      <h2>Shipments</h2>
-    </div>
-    <div class="grid-wrapper">
-      <kendo-grid [data]="shipmentsArray">
-        <kendo-grid-column field="sscc" title="AWB" width="60"></kendo-grid-column>
-        <kendo-grid-column field="from" title="From" width="100"></kendo-grid-column>
-        <kendo-grid-column field="to" title="To" width="100"></kendo-grid-column>
-        <kendo-grid-column field="date" title="Date" width="100"></kendo-grid-column>
-        <kendo-grid-column title="" width="60" class="column-with-button">
-          <ng-template kendoGridCellTemplate let-dataItem>
-            <button (click)="onDetailButtonClick(dataItem.id)" class="button-status button-radial-out" title="Go to detail view">Track</button>
-          </ng-template>
-        </kendo-grid-column>
-      </kendo-grid>
-    </div>
+  <div class="top">
+    <div class="title-dot title-dot-green">&nbsp;</div>
+    <div class="title-text">Track<span>...</span></div>
+    <div class="intro">This is the tracking app for customers, managed by the freight forwarder (Panalpina) including
+      data
+      shared by the carrier (CargoLux).</div>
   </div>
-</div>
-
-<div class="page" *ngIf="viewState==='details'">
-  <div class="page-content">
-    <div class="component-header"> 
-      <button class="button-go-back" (click)="onBackButtonClick()" >
-      <div class="button-go-back-image">
-        <img src="assets/Icons/BackIconNegative.svg" />
+  <div class="page" *ngIf="viewState==='main'">
+    <div class="page-content">
+      <div class="component-header">
+        <h2>Shipments</h2>
       </div>
-      <div class="button-go-back-text">Go Back</div>
-    </button>
-      <h2>Track
-          <span>&nbsp;{{ shipNum }}</span></h2>
-    </div>
-    <div class="grid-wrapper">
-      <kosmos-shipment-detail></kosmos-shipment-detail>
+      <div class="grid-wrapper">
+        <kendo-grid [data]="shipmentsArray">
+          <kendo-grid-column field="sscc" title="AWB" width="60"></kendo-grid-column>
+          <kendo-grid-column field="from" title="From" width="100"></kendo-grid-column>
+          <kendo-grid-column field="to" title="To" width="100"></kendo-grid-column>
+          <kendo-grid-column field="date" title="Date" width="100"></kendo-grid-column>
+          <kendo-grid-column title="" width="60" class="column-with-button">
+            <ng-template kendoGridCellTemplate let-dataItem>
+              <button (click)="onDetailButtonClick(dataItem.id)" class="button-status button-radial-out"
+                title="Go to detail view">Track</button>
+            </ng-template>
+          </kendo-grid-column>
+        </kendo-grid>
+      </div>
     </div>
   </div>
-</div>
+
+  <div class="page" *ngIf="viewState==='details'">
+      <kosmos-shipment-detail [onBack]="onBackButtonClick"></kosmos-shipment-detail>
+  </div>
 </div>

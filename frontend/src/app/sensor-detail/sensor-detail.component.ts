@@ -41,7 +41,7 @@ export class SensorDetailComponent implements OnInit {
     public generateMainLine = (eventArray) => {
         eventArray.map((event) => {
             if(event!==undefined){
-                this.mainLine.push(event.value);
+                this.mainLine.push(event.celsius);
             }
         });
     }
