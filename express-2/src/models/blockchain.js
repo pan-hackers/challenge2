@@ -6,7 +6,7 @@ import Block from './block';
 
 const blockchainSchema = new mongoose.Schema({
   chain: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Block' }],
-  currentTransactions: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Coin' }]
+  milestone: { type: mongoose.Schema.Types.ObjectId, ref: 'Milestone' }
 }, { timestamps: true });
 
 blockchainSchema.pre('save', function (next) {
@@ -44,7 +44,7 @@ blockchainSchema.methods.newBlock = function () {
 
     block = new Block({
       index: index,
-      data: this.currentTransactions,
+      data: this.milestone,
       prevHash: index,
       proofOfWork: 100
     });
@@ -54,18 +54,14 @@ blockchainSchema.methods.newBlock = function () {
 
     block = new Block({
       index: index,
-      data: this.currentTransactions,
+      data: this.milestone,
       prevHash: prevHash,
       proofOfWork: this.proofOfWork(prevProof)
     });
   }
 
   this.chain.push(block);
-  this.currentTransactions = [];
-};
-
-blockchainSchema.methods.newTransaction = function (data) {
-  this.currentTransactions.push(data);
+  this.milestone = {};
 };
 
 blockchainSchema.methods.proofOfWork = function (lastProof) {
@@ -99,10 +95,9 @@ blockchainSchema.methods.chainIsValid = function () {
 blockchainSchema.statics.load = async function (next) {
   let bc = await this.findOne({})
     .populate('chain')
-    .populate('currentTransactions')
-    .populate('currentTransactions')
+    .populate('milestone')
     .populate('chain.data')
-    .populate('currentTransactions.data')
+    .populate('milestone.data')
     .exec((err, blockchain) => {
       if (err) {
         next(boom.badImplementation(err));

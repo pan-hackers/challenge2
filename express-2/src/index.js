@@ -10,10 +10,12 @@ import helmet from 'helmet';
 import helpers from './helpers';
 import middlewares from './middlewares';
 import routes from './routes';
+import datas from './data';
 
 import models from './models';
 
 import { connectDb } from './models';
+import controllers from './controllers';
 
 const app = express();
 
@@ -57,6 +59,14 @@ connectDb().then(async () => {
       models.Milestone.deleteMany({}),
       models.Shipment.deleteMany({}),
       models.Company.deleteMany({}),
+    ]);
+
+    await Promise.all([
+      models.Company.insertMany(datas.companyData),
+      models.Location.insertMany(datas.locationData),
+      models.ConsumableUnit.insertMany(datas.consumableUnitData),
+      models.TradeUnit.insertMany(datas.tradeUnitData),
+      models.LogisticUnit.insertMany(datas.logisticUnitData),
     ]);
   }
 

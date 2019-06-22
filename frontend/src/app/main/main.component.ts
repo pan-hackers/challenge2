@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ShipmentService } from '../shipment.service';
-
+import { data } from '../_mock-data/mock-data';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -36,6 +36,9 @@ export class MainComponent implements OnInit {
         this.shipmentsArray = res;
       }
     );
+    if (this.shipmentsArray === undefined || this.shipmentsArray.length === 0) {
+      this.shipmentsArray = data;
+    }
   }
 
 }
