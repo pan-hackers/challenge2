@@ -10,6 +10,13 @@ import { MainComponent } from './main/main.component';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { ScanComponent } from './scan/scan.component';
 import { ConsoleComponent } from './console/console.component';
+import { ShipmentDetailComponent } from './shipment-detail/shipment-detail.component';
+import { SensorDetailComponent } from './sensor-detail/sensor-detail.component';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs';
+
+
+
 
 
 @NgModule({
@@ -18,14 +25,17 @@ import { ConsoleComponent } from './console/console.component';
     ShipmentDetailRouteComponent,
     MainComponent,
     ScanComponent,
-    ConsoleComponent
+    ConsoleComponent,
+    ShipmentDetailComponent,
+    SensorDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GridModule,
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

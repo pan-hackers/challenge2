@@ -8,9 +8,16 @@ import { data } from '../_mock-data/mock-data';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+  public viewState = "main";
 
   public gridData: any[] = data;
-
+  public onDetailButtonClick = (id) => {
+    console.log(id);
+    this.viewState="details"
+  }
+  public onBackButtonClick= ()=>{
+    
+  }
   constructor() { }
 
   ngOnInit() {
