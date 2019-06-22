@@ -5,6 +5,10 @@ const shipmentSchema = new mongoose.Schema({
         type: String,
         required: false
     },
+    awb: {
+      type: String,
+      required: true
+    },
     from: {
         type: String,
         required: true

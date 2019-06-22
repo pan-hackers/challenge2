@@ -4,6 +4,8 @@ import { ShipmentService } from '../shipment.service';
 import { data } from '../_mock-data/mock-data';
 import { Store } from '@ngrx/store';
 import { updateShipments } from '../_shared/actions/';
+
+// import { data } from '../_mock-data/mock-data';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -39,17 +41,17 @@ export class MainComponent implements OnInit {
 }
 
   public getShipments() {
-  this.shipmentsArray = data;
-  /**this.shipmentService.getAllShipments().subscribe(
-     (res) => {
-       // if (this.shipmentsArray === undefined || this.shipmentsArray.length === 0) {
-       //   this.shipmentsArray = data;
-       // } else {
-       this.shipmentsArray = res;
-       console.log(res);
-       // }
-     }
-   ); */
-}
+    // this.shipmentsArray = data;
+    this.shipmentService.getAllShipments().subscribe(
+      (res) => {
+        // if (this.shipmentsArray === undefined || this.shipmentsArray.length === 0) {
+        //   this.shipmentsArray = data;
+        // } else {
+        this.shipmentsArray = res;
+        console.log(res);
+        // }
+      }
+    );
+  }
 
 }

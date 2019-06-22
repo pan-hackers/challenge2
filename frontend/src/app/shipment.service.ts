@@ -39,4 +39,9 @@ export class ShipmentService {
     const url = `${this.baseURL}populates/shipments/${id}/milestones/${scanType}`;
     return this.http.post<any>(url, null);
   }
+
+  getBlockChain(): Observable<any> {
+    const url = `${this.baseURL}blockchain`;
+    return this.http.get<any>(url);
+  }
 }

@@ -5,25 +5,37 @@
     Cargolux) at each milestone.</div>
 </div>
 <div class="scan-page">
-
   <div class="scan-button-container">
-    <button class="scan-button" (click)="addShipment()">Scan SSCC </button>
+    <button class="scan-button" (click)="addShipment()" [disabled]="shipmentID !== undefined"
+      [ngClass]="shipmentID !== undefined ? 'scan-button-disabled' : ''">Scan SSCC </button>
     to create a shipment
   </div>
   <div class="scan-button-container">
-    <button class="scan-button" (click)="addMilestone('pup')">Scan SSCC + GTIN </button>
+    <button class="scan-button" (click)="addMilestone('pup')" [disabled]="pup"
+      [ngClass]="pup ? 'scan-button-disabled' : ''">
+      Scan SSCC + GTIN
+    </button>
     to update PUP
   </div>
   <div class="scan-button-container">
-    <button class="scan-button" (click)="addMilestone('dep')">Scan SSCC + GTIN </button>
+    <button class="scan-button" (click)="addMilestone('dep')" [disabled]="dep"
+      [ngClass]="dep ? 'scan-button-disabled' : ''">
+      Scan SSCC + GTIN
+    </button>
     to update DEP
   </div>
   <div class="scan-button-container">
-    <button class="scan-button" (click)="addMilestone('arr')">Scan SSCC + GTIN </button>
+    <button class="scan-button" (click)="addMilestone('arr')" [disabled]="arr"
+      [ngClass]="arr ? 'scan-button-disabled' : ''">
+      Scan SSCC + GTIN
+    </button>
     to update ARR
   </div>
   <div class="scan-button-container">
-    <button class="scan-button" (click)="addMilestone('pod')">Scan SSCC + GTIN </button>
+    <button class="scan-button" (click)="addMilestone('pod')" [disabled]="pod"
+      [ngClass]="pod ? 'scan-button-disabled' : ''">
+      Scan SSCC + GTIN
+    </button>
     to update POD
   </div>
 </div>
