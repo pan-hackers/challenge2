@@ -56,7 +56,7 @@ class Populate {
 
     helpers.LOGGER.info(`datas.companyData - ${JSON.stringify(datas.milestoneDataARR)}`);
 
-    models.Company.insertMany(datas.companyDataARR, (err, objs) => {
+    models.Milestone.insertMany(datas.milestoneDataARR, (err, objs) => {
       if (err) {
         next(boom.badRequest(err));
       }
@@ -70,7 +70,7 @@ class Populate {
 
     helpers.LOGGER.info(`datas.companyData - ${JSON.stringify(datas.milestoneDataDEP)}`);
 
-    models.Company.insertMany(datas.companyDataDEP, (err, objs) => {
+    models.Milestone.insertMany(datas.milestoneDataDEP, (err, objs) => {
       if (err) {
         next(boom.badRequest(err));
       }
@@ -84,7 +84,7 @@ class Populate {
 
     helpers.LOGGER.info(`datas.companyData - ${JSON.stringify(datas.milestoneDataPOD)}`);
 
-    models.Company.insertMany(datas.companyDataPOD, (err, objs) => {
+    models.Milestone.insertMany(datas.milestoneDataPOD, (err, objs) => {
       if (err) {
         next(boom.badRequest(err));
       }
@@ -98,7 +98,7 @@ class Populate {
 
     helpers.LOGGER.info(`datas.companyData - ${JSON.stringify(datas.milestoneDataPUP)}`);
 
-    models.Company.insertMany(datas.companyDataPUP, (err, objs) => {
+    models.Milestone.insertMany(datas.milestoneDataPUP, (err, objs) => {
       if (err) {
         next(boom.badRequest(err));
       }
