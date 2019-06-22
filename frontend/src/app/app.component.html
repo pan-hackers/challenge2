@@ -1,19 +1,20 @@
+<div class="splitter-container">
 <kendo-splitter orientation="vertical">
   <kendo-splitter-pane>
     <kendo-splitter>
-      <kendo-splitter-pane [collapsible]="true" size="30%">
+      <kendo-splitter-pane [collapsible]="false" size="30%">
         <app-main class="pane-content"></app-main>
       </kendo-splitter-pane>
-      <kendo-splitter-pane [collapsible]="true">
+      <kendo-splitter-pane [collapsible]="false">
         <app-scan class="pane-content"></app-scan>
       </kendo-splitter-pane>
-      <kendo-splitter-pane [collapsible]="true">
+      <kendo-splitter-pane [collapsible]="false" size="30%">
         <app-console class="pane-content"></app-console>
       </kendo-splitter-pane>
     </kendo-splitter>
   </kendo-splitter-pane>
 </kendo-splitter>
-
+</div>
 <!--The content below is only a placeholder and can be replaced.-->
 <meta http-equiv="Content-Security-Policy"
   content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src 'self'">

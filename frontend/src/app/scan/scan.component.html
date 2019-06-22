@@ -1,11 +1,27 @@
 <div class="top">
-  <div class="title-text">scan</div><div class="title-dot title-dot-blue">&nbsp;</div>
+    <div class="title-dot title-dot-blue">&nbsp;</div><div class="title-text">Scan GS1 codes</div>
+    <div class="intro">This is to mock up the scanning activites of GS1 codes, performed by the operator (Panalpina + Cargolux) at each milestone.</div>
 </div>
 <div class="scan-page">
 
-  <div class="scan-button-container"><button class="scan-button">Scan SSCC</button> to create a shipment</div>
-  <div class="scan-button-container"><button class="scan-button">Scan SSCC + GTIN</button> to update PUP</div>
-  <div class="scan-button-container"><button class="scan-button">Scan SSCC + GTIN</button> to update DEP</div>
-  <div class="scan-button-container"><button class="scan-button">Scan SSCC + GTIN</button> to update ARR</div>
-  <div class="scan-button-container"><button class="scan-button">Scan SSCC + GTIN</button> to update POD</div>
+  <div class="scan-button-container">
+    <button class="scan-button">Scan SSCC </button>
+    to create a shipment
+  </div>
+  <div class="scan-button-container">
+    <button class="scan-button" (click)="getShipments()">Scan SSCC + GTIN </button>
+    to update PUP
+  </div>
+  <div class="scan-button-container">
+    <button class="scan-button" (click)="getShipment()">Scan SSCC + GTIN </button>
+    to update DEP
+  </div>
+  <div class="scan-button-container">
+    <button class="scan-button" (click)="addShipment()">Scan SSCC + GTIN </button>
+    to update ARR
+  </div>
+  <div class="scan-button-container">
+    <button class="scan-button" (click)="addMilestone()">Scan SSCC + GTIN </button>
+    to update POD
+  </div>
 </div>

@@ -104,12 +104,12 @@
             <div class="cargo-stream-icon last-icon">
                 &nbsp;
 
-                <img src="{{getMilestoneIconPath(fixedElement, this.details.length -1)}}" *ngIf="
+                <img src="{{getMilestoneIconPath(fixedElement, this.milestones.length -1)}}" *ngIf="
               fixedElement.iconTag !== undefined &&
               fixedElement.iconTag !== null
             " class="milestone-icon" />
             </div>
-            <div class="cargo-stream-bullet-container last-bullet-container {{ (this.details.length === latestActualMilestone) ? ((latestActualMilestone === 1) ? 'transparent' : 'green') : 'grey'}}-container"
+            <div class="cargo-stream-bullet-container last-bullet-container {{ (this.milestones.length === latestActualMilestone) ? ((latestActualMilestone === 1) ? 'transparent' : 'green') : 'grey'}}-container"
                 id="este">
                 <div class="cargo-stream-bullet last-bullet" [class.green-bullet]="
               fixedElement.actualTime !== undefined &&
