@@ -82,7 +82,7 @@ class Populate {
                 what: "76333339800001",
                 when: new Date(),
                 where: "7644444000002",
-                why: "pallet delivered",
+                why: "pallet unloaded",
                 action: "OBSERVE",
                 temperature: Math.floor(Math.random() * Math.floor(50)),
                 logisticUnit: lu
@@ -150,7 +150,7 @@ class Populate {
                 what: "76333339800001",
                 when: new Date(),
                 where: "7644444000002",
-                why: "pallet delivered",
+                why: "pallet loaded",
                 action: "OBSERVE",
                 temperature: Math.floor(Math.random() * Math.floor(50)),
                 logisticUnit: lu
@@ -283,7 +283,7 @@ class Populate {
                 what: "76333339800001",
                 when: new Date(),
                 where: "7633333000001",
-                why: "pallet arrived",
+                why: "pallet prepared",
                 action: "OBSERVE",
                 temperature: Math.floor(Math.random() * Math.floor(50)),
                 logisticUnit: lu
