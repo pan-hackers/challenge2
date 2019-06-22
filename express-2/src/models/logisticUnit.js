@@ -10,10 +10,7 @@ const logisticUnitSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    SSCC: {
-        type: String,
-        required: false
-    },
+    shipment: { type: mongoose.Schema.Types.ObjectId, ref: 'Shipment' },
     tradeUnits: [ { type: mongoose.Schema.Types.ObjectId, ref: 'TradeUnit' } ]
 });
 

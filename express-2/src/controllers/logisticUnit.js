@@ -59,7 +59,7 @@ class LogisticUnit {
     });
   }
 
-  static attachLU(req, res, next) {
+  static attachTU(req, res, next) {
     helpers.LOGGER.info("post - '/:gtin' - called");
 
     const query = {};
@@ -95,8 +95,56 @@ class LogisticUnit {
                 return res.status(201).json(t);
               });
             } else {
-              helpers.LOGGER.info(`--> consumable unit not found`);
-              next(boom.notFound('ConsumableUnit not found'));
+              helpers.LOGGER.info(`--> trade unit not found`);
+              next(boom.notFound('TradeUnit not found'));
+            }
+          });
+        }
+      } else {
+        next(boom.notFound('LogisticUnit not found'));
+      }
+    });
+  }
+
+  static attachShipment(req, res, next) {
+    helpers.LOGGER.info("post - '/:gtin/shipment' - called");
+  
+    const query = {};
+  
+    if (req.params.gtin) {
+      query.GTIN = req.params.gtin;
+    }
+  
+    models.LogisticUnit.findOne(query, (err, lu) => {
+      if (err) {
+        next(boom.badRequest(err));
+      }
+  
+      if (lu) {
+        if (req.body.SSCC) {
+          helpers.LOGGER.debug(`--> ${req.body.SSCC}`);
+
+          const query1 = {};
+          query1.SSCC = req.body.SSCC;
+  
+          models.Shipment.findOne(query1, (err, s) => {
+            if (err) {
+              next(boom.badRequest(err));
+            }
+            helpers.LOGGER.debug(`--> ${s}`);
+            if (s) {
+              lu.shipment = s;
+              lu.save((err, t) => {
+                if (err) {
+                  next(boom.badRequest(err));
+                }
+                helpers.LOGGER.debug(`--> ${t}`);
+  
+                return res.status(201).json(t);
+              });
+            } else {
+              helpers.LOGGER.debug(`--> shipment not found`);
+              next(boom.notFound('Shipment not found'));
             }
           });
         }

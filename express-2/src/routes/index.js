@@ -5,6 +5,7 @@ import message from './message';
 import consumableUnit from './consumableUnit';
 import tradeUnit from './tradeUnit';
 import logisticUnit from './logisticUnit';
+import shipment from './shipment';
 import blockchain from './blockchain';
 
 export default {
@@ -15,5 +16,6 @@ export default {
   consumableUnit,
   tradeUnit,
   logisticUnit,
+  shipment,
   blockchain
 };

@@ -4,6 +4,7 @@ import consumableUnit from './consumableUnit';
 import tradeUnit from './tradeUnit';
 import logisticUnit from './logisticUnit';
 import company from './company';
+import shipment from './shipment';
 import location from './location';
 import blockchain from './blockchain';
 
@@ -14,6 +15,7 @@ export default {
   logisticUnit,
   company,
   location,
+  shipment,
   user,
   blockchain
 };
