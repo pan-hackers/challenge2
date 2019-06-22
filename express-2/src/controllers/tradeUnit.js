@@ -59,7 +59,7 @@ class TradeUnit {
     });
   }
 
-  // router.put('/:gtin', middlewares.auths.verifyToken, controllers.tradeUnit.modify);
+  // router.put('/:gtin', controllers.tradeUnit.modify);
   static attachCU(req, res, next) {
     helpers.LOGGER.info("post - '/:gtin' - called");
 

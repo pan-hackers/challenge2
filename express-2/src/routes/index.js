@@ -1,4 +1,3 @@
-import user from './user';
 import company from './company';
 import location from './location';
 import message from './message';
@@ -13,7 +12,6 @@ import blockchain from './blockchain';
 
 export default {
   message,
-  user,
   company,
   location,
   consumableUnit,

@@ -3,12 +3,12 @@ import mongoose from 'mongoose';
 import helpers from '../helpers';
 
 import boom from '@hapi/boom';
-import Coin from './coin';
+import Milestone from './milestone';
 
 const blockSchema = new mongoose.Schema({
   index: { type: Number, unique: true },
   timestamp: Number,
-  data: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Coin' }],
+  data: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Milestone' }],
   prevHash: String,
   proofOfWork: Number,
   hash: String

@@ -5,10 +5,10 @@ import controllers from '../controllers';
 
 const router = Router();
 
-router.get('/', middlewares.auths.verifyToken, controllers.tradeUnit.getAll);
-router.get('/:gtin', middlewares.auths.verifyToken, controllers.tradeUnit.getByGTIN);
-router.post('/', middlewares.auths.verifyToken, controllers.tradeUnit.create);
-router.post('/:gtin', middlewares.auths.verifyToken, controllers.tradeUnit.attachCU);
-router.post('/:gtin/shipment', middlewares.auths.verifyToken, controllers.tradeUnit.attachShipment);
+router.get('/', controllers.tradeUnit.getAll);
+router.get('/:gtin', controllers.tradeUnit.getByGTIN);
+router.post('/', controllers.tradeUnit.create);
+router.post('/:gtin', controllers.tradeUnit.attachCU);
+router.post('/:gtin/shipment', controllers.tradeUnit.attachShipment);
 
 export default router;

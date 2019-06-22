@@ -5,8 +5,8 @@ import controllers from '../controllers';
 
 const router = Router();
 
-router.get('/', middlewares.auths.verifyToken, controllers.shipment.getAll);
-router.get('/:sscc', middlewares.auths.verifyToken, controllers.shipment.getBySSCC);
-router.post('/', middlewares.auths.verifyToken, controllers.shipment.create);
+router.get('/', controllers.shipment.getAll);
+router.get('/:sscc', controllers.shipment.getBySSCC);
+router.post('/', controllers.shipment.create);
 
 export default router;

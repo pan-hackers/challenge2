@@ -29,7 +29,6 @@ app.use('/static', express.static(__dirname + '/public'));
 /* Own middlewares */
 
 /* Own APIs */
-app.use('/api/users', routes.user);
 app.use('/api/messages', routes.message);
 app.use('/api/companies', routes.company);
 app.use('/api/locations', routes.location);
