@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>HelpActive</title>
+    <desc>Created with Sketch.</desc>
+    <g id="HelpActive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-3" fill="#373C8C" cx="12" cy="12" r="12"></circle>
+        <path d="M7.00833225,9.66865644 C6.86658983,5.88955215 8.53326553,4 12.0083594,4 C15.4834532,4 17.2147667,5.67770203 17.2022999,9.0331061 C17.1206622,10.339294 16.5042985,11.424972 15.3532087,12.2901403 C14.6262842,12.8365026 14.169252,13.608096 13.9821122,14.6049207 L10.9845203,14.6049207 C10.8579686,13.0480042 11.2980762,11.9328115 12.3048428,11.2593424 C13.3116095,10.5858734 13.9100397,9.8437946 14.1001332,9.0331061 C14.2018131,7.67563425 13.5602859,6.99689832 12.1755516,6.99689832 C10.7908173,6.99689832 10.066517,7.88748436 10.0026508,9.66865644 L7.00833225,9.66865644 Z" id="Path-2" fill="#FFFFFF"></path>
+        <circle id="Oval-2" fill="#FFFFFF" cx="12.5" cy="14.5" r="1.5"></circle>
+        <circle id="Oval-2" fill="#FFFFFF" cx="12.5" cy="18.5" r="1.5"></circle>
+        <circle id="Oval-2" fill="#FFFFFF" cx="8.5" cy="9.5" r="1.5"></circle>
+    </g>
+</svg>

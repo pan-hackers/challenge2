@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="19px" viewBox="0 0 26 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>IconBaseData</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="IconBaseData" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Base-Data" transform="translate(-0.000000, 0.000000)" fill="#FFFFFF">
+            <path d="M0.951068862,14.5095356 L0.951068862,1.6360489 L5.2,1.6360489 C5.2,1.1888622 5.35733333,0.804390708 5.67146667,0.482089075 C5.98613333,0.160878142 6.36213333,0 6.8,0 L11.6,0 C12.0368,0 12.4128,0.160878142 12.7274667,0.482089075 C13.0421333,0.804390708 13.2,1.1888622 13.2,1.6360489 L21.2,1.6360489 L21.2,4.90814669 L4.84681471,4.90814669 L0.951068862,14.5095356 Z" id="Fill-115"></path>
+            <polygon id="Path-2" points="24.272985 6 20.1567879 17.0009814 1.01398039 17.0009814 5.64046623 6"></polygon>
+        </g>
+    </g>
+</svg>

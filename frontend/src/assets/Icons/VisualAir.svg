@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>VisualAir</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="VisualAir" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#F0F0F0" cx="60" cy="60" r="60"></circle>
+        <g id="Airport" transform="translate(15.000000, 32.000000)" fill="#373C8C">
+            <g id="Group">
+                <path d="M92.0626298,12.7965674 L87.470309,11.9030238 C85.5614082,11.5322529 83.5799425,11.7226104 81.7850722,12.4485258 L58.1081857,22.0416896 L21.6272986,0 L16.820245,2.47322645 L42.1838949,28.4925347 L21.603604,36.8313281 L4.56270248,21.9848665 L0,23.2094048 L10.4152829,41.3629722 L1.11661073,45.1303453 L5.71929795,49 L25.2200011,48.9758502 L86.6706143,23.9992462 C88.5735915,23.2292929 90.1670572,21.8953701 91.2214695,20.1935175 L93.6605383,16.2528339 C94.5076223,14.8805555 93.6931185,13.1161975 92.0626298,12.7965674" id="Fill-4"></path>
+                <polygon id="Fill-6" points="59.1851852 43.3587351 63.6926084 49 69.6296296 47.7437223 69.599519 38.5"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

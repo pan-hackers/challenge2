@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerImportPortGrey</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30,80.3795653 C30.4797197,80.3795653 43.2772033,64.9137759 52.3388983,51.8882117 C56.0121662,46.6081415 57.3579102,39.5885064 57.3579102,35.6691867 C57.3579102,20.5598301 45.1093566,8.31127655 30,8.31127655 C14.8906434,8.31127655 2.64208984,20.5598301 2.64208984,35.6691867 C2.64208984,39.6353159 4.4295186,46.6706728 8.211998,51.8882117 C18.9639732,66.7194491 29.522287,80.3795653 30,80.3795653 Z" id="path-1"></path>
+        <filter x="-11.0%" y="-8.3%" width="121.9%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerImportPortGrey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#C8C8C8" cx="29.5791016" cy="79.4666667" r="6.93333333"></circle>
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <circle id="Path" stroke="#C8C8C8" fill="#FFFFFF" cx="30" cy="35.6691867" r="22.4245165"></circle>
+        <g id="Group-8" transform="translate(14.000000, 28.663940)" fill="#C8C8C8">
+            <rect id="Rectangle-8" x="6.86569149" y="6.91888298" width="6.12765957" height="2.72340426"></rect>
+            <rect id="Rectangle-8" x="0.0571808511" y="3.51462766" width="6.12765957" height="2.72340426"></rect>
+            <rect id="Rectangle-8" x="6.86569149" y="3.51462766" width="6.12765957" height="2.72340426"></rect>
+            <path d="M19.8018617,5.55718085 L13.6742021,5.55718085 L13.6742021,3.51462766 L19.8018617,3.51462766 L19.8018617,5.55718085 Z" id="Combined-Shape"></path>
+            <rect id="Rectangle-8" x="0.0571808511" y="0.11037234" width="6.12765957" height="2.72340426"></rect>
+            <rect id="Rectangle-8" x="0.0571808511" y="6.91888298" width="6.12765957" height="2.72340426"></rect>
+            <rect id="Rectangle" x="13.6824302" y="6.24887363" width="14.2814162" height="4.74427401"></rect>
+            <path d="M29.804858,11.930878 C29.6389851,11.4110566 29.1838895,11.0315544 28.6414732,11.0054275 L28.6414732,7.35369652 L31.3877821,8.87803011 L31.3877821,11.930878 L29.804858,11.930878 Z" id="Combined-Shape"></path>
+            <ellipse id="Oval" cx="16.4462386" cy="12.454626" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval" cx="18.4887918" cy="12.454626" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval-Copy-2" cx="28.3718536" cy="12.454626" rx="1" ry="1"></ellipse>
+        </g>
+    </g>
+</svg>

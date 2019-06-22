@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerAirLeft</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30,78.8483013 C30.5260486,78.8483013 44.559449,61.9275274 54.4962771,47.6765492 C58.5242908,41.8997425 60,34.219717 60,29.931677 C60,13.4008683 46.5685425,0 30,0 C13.4314575,0 0,13.4008683 0,29.931677 C0,34.2709301 1.96004967,41.9681566 6.10782197,47.6765492 C17.8981691,63.903074 29.4761519,78.8483013 30,78.8483013 Z" id="path-1"></path>
+        <filter x="-10.0%" y="-7.6%" width="120.0%" height="115.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerAirLeft" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#373C8C" cx="30" cy="79" r="8"></circle>
+        <g id="ToAddress">
+            <g id="Marker">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <ellipse id="Path" stroke="#ACAFD1" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" cx="30" cy="29.931677" rx="24.5901639" ry="24.5341615"></ellipse>
+            </g>
+            <g id="Airport" transform="translate(31.000000, 28.333333) scale(-1, 1) translate(-31.000000, -28.333333) translate(13.000000, 19.000000)" fill="#373C8C">
+                <g id="Group">
+                    <path d="M35.2580284,4.96193431 L33.4992673,4.61545821 C32.7681989,4.47168991 32.0093397,4.54550199 31.3219425,4.82697939 L22.2541988,8.54677761 L8.28279522,0 L6.44179595,0.959006175 L16.1555342,11.0481257 L8.27372067,14.2815354 L1.74741797,8.52474415 L0,8.99956513 L3.98883174,16.0387035 L0.427638154,17.4995216 L2.19036943,19 L9.65872381,18.9906358 L33.1930012,9.30583017 C33.921801,9.00727684 34.5320645,8.49004146 34.9358819,7.83013945 L35.8699934,6.30211927 C36.1944085,5.77001131 35.8824709,5.0858725 35.2580284,4.96193431" id="Fill-4"></path>
+                    <polygon id="Fill-6" points="22.6666667 16.8125707 24.3929138 19 26.6666667 18.5128719 26.655135 14.9285714"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

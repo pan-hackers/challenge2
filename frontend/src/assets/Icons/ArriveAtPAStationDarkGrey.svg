@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>ArriveAtPAStationDarkGrey</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ArriveAtPAStationDarkGrey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(14.000000, 19.000000)">
+            <polygon id="Fill-1" fill="#969696" points="23 13.9700777 23 25 24.7719246 25 24.7719246 15.9248421 38.1903508 15.8860672 38.2254172 24.9612251 40 25 40 13.9700777 31.7813223 11"></polygon>
+            <rect id="Rectangle-2" fill="#FFFFFF" x="3" y="9" width="23" height="17"></rect>
+            <polygon id="Fill-1" fill="#969696" points="0 5.30648728 0 25.0130902 3.02903211 25.0130902 3.02903211 8.79896564 25.9672794 8.72968858 26.027224 24.9438131 29.0608002 25.0130902 29.0608002 5.30648728 15.011309 0"></polygon>
+            <rect id="Rectangle-8" fill="#969696" x="10" y="21" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#969696" x="5" y="16" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#969696" x="10" y="16" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#969696" x="15" y="21" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#969696" x="20" y="21" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#969696" x="20" y="16" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#969696" x="15" y="16" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#969696" x="5" y="11" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#969696" x="5" y="21" width="4" height="4"></rect>
+        </g>
+        <rect id="Rectangle" stroke="#FFFFFF" fill="#969696" x="6.5" y="39.5" width="22" height="8"></rect>
+        <path d="M28.5,40.8493803 L28.5,49.5 L33.5,49.5 L33.5,43.624621 L28.5,40.8493803 Z" id="Rectangle-Copy" stroke="#FFFFFF" fill="#969696"></path>
+        <ellipse id="Oval" fill="#969696" cx="11.0714286" cy="49.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        <ellipse id="Oval" fill="#969696" cx="14.0714286" cy="49.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        <ellipse id="Oval" fill="#FFFFFF" cx="28.8952896" cy="49" rx="1.8952896" ry="2"></ellipse>
+        <ellipse id="Oval" fill="#969696" cx="29.0714286" cy="49.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        <g id="Page-1" transform="translate(37.000000, 30.000000)"></g>
+    </g>
+</svg>

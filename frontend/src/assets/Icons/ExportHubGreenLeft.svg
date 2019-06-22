@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>ExportHubGreenLeft</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ExportHubGreenLeft" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(14.000000, 19.000000)">
+            <polygon id="Fill-1" fill="#00C300" points="0 5.30648728 0 25.0130902 3.02903211 25.0130902 3.02903211 8.79896564 25.9672794 8.72968858 26.027224 24.9438131 29.0608002 25.0130902 29.0608002 5.30648728 15.011309 0"></polygon>
+            <rect id="Rectangle-8" fill="#D91A26" x="10" y="21" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#00C300" x="5" y="16" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#00C300" x="10" y="16" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#00C300" x="15" y="21" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#00C300" x="20" y="21" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#00C300" x="20" y="16" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#00C300" x="15" y="16" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#00C300" x="5" y="11" width="4" height="4"></rect>
+            <rect id="Rectangle-8" fill="#D91A26" x="5" y="21" width="4" height="4"></rect>
+        </g>
+        <rect id="Rectangle" stroke="#FFFFFF" fill="#00C300" x="6.5" y="39.5" width="22" height="8"></rect>
+        <path d="M28.5,40.8493803 L28.5,49.5 L33.5,49.5 L33.5,43.624621 L28.5,40.8493803 Z" id="Rectangle-Copy" stroke="#FFFFFF" fill="#00C300"></path>
+        <ellipse id="Oval" fill="#00C300" cx="11.0714286" cy="49.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        <ellipse id="Oval" fill="#00C300" cx="14.0714286" cy="49.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        <ellipse id="Oval" fill="#FFFFFF" cx="28.8952896" cy="49" rx="1.8952896" ry="2"></ellipse>
+        <ellipse id="Oval" fill="#00C300" cx="29.0714286" cy="49.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        <path d="M24.8041674,13.891383 L11.4940076,13.7562483 C11.4940076,13.7562483 8.91670873,13.0111813 7.33283259,11.8485358 L6.25784209,9.33210849 L6.81299007,9.04722992 L9.75551785,11.7085314 L13.5088539,11.7803598 L11.9347172,7.49257209 L12.8952692,7.00073046 L18.4138784,11.8095781 L24.7676445,11.8984505 C24.7676445,11.8984505 26.4343058,12.2283739 26.4963947,12.9685712 C26.4963947,12.9685712 26.1518621,13.6941594 24.8041674,13.891383 Z" id="Fill-1" fill="#00C300" transform="translate(16.377118, 10.446057) scale(-1, 1) translate(-16.377118, -10.446057) "></path>
+    </g>
+</svg>

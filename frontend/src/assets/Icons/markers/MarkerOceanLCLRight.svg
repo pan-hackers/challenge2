@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerOceanLCLRight</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30,78.8483013 C30.5260486,78.8483013 44.559449,61.9275274 54.4962771,47.6765492 C58.5242908,41.8997425 60,34.219717 60,29.931677 C60,13.4008683 46.5685425,0 30,0 C13.4314575,0 0,13.4008683 0,29.931677 C0,34.2709301 1.96004967,41.9681566 6.10782197,47.6765492 C17.8981691,63.903074 29.4761519,78.8483013 30,78.8483013 Z" id="path-1"></path>
+        <filter x="-10.0%" y="-7.6%" width="120.0%" height="115.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerOceanLCLRight" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#373C8C" cx="30" cy="79" r="8"></circle>
+        <g id="ToAddress">
+            <g id="Marker">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <ellipse id="Path" stroke="#ACAFD1" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" cx="30" cy="29.931677" rx="24.5901639" ry="24.5341615"></ellipse>
+            </g>
+            <g id="Group" transform="translate(29.000000, 29.500000) scale(-1, 1) translate(-29.000000, -29.500000) translate(14.000000, 20.000000)">
+                <g id="Vessel" transform="translate(14.770492, 9.440994) scale(-1, 1) translate(-14.770492, -9.440994) translate(0.262295, 0.608696)" fill="#373C8C">
+                    <polygon id="Path-3" points="29.0163934 8.34161491 23.7800235 17.6645963 1.38707491 17.6645963 0 10.4076068 20.1394919 10.4076068 21.3816008 8.34161491"></polygon>
+                    <polygon id="Path-4" points="19.6721311 3.43478261 19.6721311 7.28680357 19.0345947 8.83229814 6.39344262 8.83229814 6.39344262 3.43478261"></polygon>
+                    <polygon id="Path-5" points="6.39344262 0 0 0 0 1.30769049 0.472470888 1.30769049 0.472470888 9.32298137 4.72419846 9.32298137 4.72419846 1.25695558 5.53767312 1.25695558"></polygon>
+                </g>
+                <rect id="Rectangle-8" fill="#FFFFFF" x="18.9508197" y="6.00621118" width="2.45901639" height="1.96273292"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

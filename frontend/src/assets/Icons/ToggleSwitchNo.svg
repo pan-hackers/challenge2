@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="20px" viewBox="0 0 40 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ToggleSwitchNo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ToggleSwitchNo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10.0000052,0 L30,0 L30,20 L10,20 C4.4771525,20 0,15.5228475 0,10 C0,4.4771525 4.4771525,0 10,0 Z" id="Combined-Shape" fill="#C8C8C8"></path>
+        <circle id="Oval" fill="#C8C8C8" cx="30" cy="10" r="10"></circle>
+        <circle id="Oval" stroke="#C8C8C8" fill="#FFFFFF" cx="10" cy="10" r="9.5"></circle>
+        <text id="NO" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="8" font-weight="400" fill="#FFFFFF">
+            <tspan x="22" y="12">NO</tspan>
+        </text>
+    </g>
+</svg>

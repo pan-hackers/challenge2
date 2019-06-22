@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>LastAirportGreenLeft</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 34.4878378 37.5771876 34.4878378 37.5771876 0.000486971912 0 0.000486971912"></polygon>
+    </defs>
+    <g id="LastAirportGreenLeft" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(30.000000, 29.500000) scale(-1, 1) translate(-30.000000, -29.500000) translate(11.000000, 12.000000)">
+            <path d="M17.2478147,29.9027537 L4.23836003,27.0868387 C4.23836003,27.0868387 1.86437196,25.8389731 0.547112943,24.3817097 L0.000486971912,21.6997119 L0.600679853,21.532924 L2.94788447,24.7323295 L6.60991325,25.5589643 L5.93180486,21.0422998 L6.97148989,20.7525515 L11.4090214,26.5767356 L17.614261,27.9451266 C17.614261,27.9451266 19.1798757,28.6025387 19.0922208,29.3403012 C19.0922208,29.3403012 18.6076837,29.9806692 17.2478147,29.9027537 Z" id="Fill-1" fill="#00C300"></path>
+            <polygon id="Fill-3" fill="#00C300" points="32.9246579 20.7839612 15.4764543 20.7839612 10.8246551 11.3586198 37.5764571 11.3586198"></polygon>
+            <polygon id="Fill-5" fill="#00C300" points="30.8059649 12.0549897 17.5944169 12.0549897 14.0711751 4.91719888 34.3304241 4.91719888"></polygon>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-8"></g>
+            <polygon id="Fill-7" fill="#00C300" mask="url(#mask-2)" points="20.5660413 34.4878378 27.8353145 34.4878378 27.8353145 18.4567224 20.5660413 18.4567224"></polygon>
+            <polygon id="Fill-9" fill="#00C300" mask="url(#mask-2)" points="23.4391755 11.2032758 24.9609628 11.2032758 24.9609628 0.760163154 23.4391755 0.760163154"></polygon>
+            <polygon id="Fill-10" fill="#00C300" mask="url(#mask-2)" points="18.9785128 1.5222742 29.4216255 1.5222742 29.4216255 -0.000730457868 18.9785128 -0.000730457868"></polygon>
+        </g>
+    </g>
+</svg>

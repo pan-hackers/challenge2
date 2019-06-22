@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>ValidEDIDarkGrey</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ValidEDIDarkGrey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-13" fill="#969696" x="17" y="13" width="27" height="35" rx="5"></rect>
+        <path d="M35,13 L43.6862318,21.1914203 L39.1868034,21.1914203 C36.3956011,21.2418178 35,20.0854251 35,17.7222423 C35,15.3590594 35,13.7849787 35,13 Z" id="Path-4" fill="#FFFFFF"></path>
+        <text id="EDI" font-family="Roboto-Black, Roboto" font-size="12" font-weight="700" fill="#FFFFFF">
+            <tspan x="21.90625" y="36">EDI</tspan>
+        </text>
+        <circle id="Oval-3" stroke="#FFFFFF" stroke-width="2" fill="#969696" cx="41.5" cy="44.5" r="8.5"></circle>
+        <path d="M46.3637661,40.7104891 C46.8811639,41.1175707 46.9729002,41.8699624 46.5686646,42.391003 L42.5480837,47.6008622 C42.1438482,48.1219028 41.3967168,48.2142849 40.8793189,47.8072033 C40.361921,47.4001218 40.2701848,46.6477301 40.6744203,46.1266895 L44.6950012,40.9168303 C45.0992368,40.3957897 45.8463682,40.3034076 46.3637661,40.7104891 Z" id="Rectangle" fill="#FFFFFF"></path>
+        <path d="M36.3228933,44.371373 C36.672483,43.7987483 37.446742,43.6025526 38.0522492,43.9331577 L41.9790934,46.0772024 C42.5846006,46.4078074 42.7920627,47.1400198 42.442473,47.7126445 C42.0928832,48.2852692 41.3186242,48.4814649 40.7131171,48.1508599 L36.7862728,46.0068151 C36.1807657,45.6762101 35.9733036,44.9439977 36.3228933,44.371373 Z" id="Rectangle" fill="#FFFFFF"></path>
+    </g>
+</svg>

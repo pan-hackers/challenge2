@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MainCarriageAirDarkGreyLeft</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="44.154 0.0006 44.154 14.911 0 14.911 0 0 44.154 0 0.0001 0.0006 0.0001 14.9113841 44.1551 14.9113841 44.1551 0.0006"></polygon>
+    </defs>
+    <g id="MainCarriageAirDarkGreyLeft" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(30.500000, 30.500000) scale(-1, 1) translate(-30.500000, -30.500000) translate(8.000000, 23.000000)">
+            <path d="M41.3461,5.5686 L13.9341,14.8726 C13.9341,14.8726 8.1091,15.1996 4.0201,13.9546 L0.0001,9.5656 L0.9351,8.5826 L8.8901,11.9236 L16.6441,9.3686 L10.3271,1.7036 L11.9431,0.0006 L26.7341,5.8966 L39.8361,1.5066 C39.8361,1.5066 43.4921,0.9826 44.1551,2.4576 C44.1551,2.4576 43.9701,4.1926 41.3461,5.5686" id="Fill-1" fill="#969696"></path>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-2"></g>
+        </g>
+    </g>
+</svg>
