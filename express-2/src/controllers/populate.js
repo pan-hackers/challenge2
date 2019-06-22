@@ -72,42 +72,45 @@ class Populate {
         }
 
         for (let j = 0; j < objs.length; j++) {
-          models.LogisticUnit.findById("5d0e29a912c93a513833048a", async (err, lu) => {
-            if (err) {
-              next(boom.notFound(err));
-            }
+          models.LogisticUnit.findById("5d0e29a912c93a513833048a")
+            .populate('tradeUnits')
+            .populate('tradeUnits.consumableUnits')
+            .exec(async (err, lu) => {
+              if (err) {
+                next(boom.notFound(err));
+              }
 
-            for (let i = 0; i < 10; i++) {
-              // create the event
-              const ev = new models.Event({
-                what: "76333339800001",
-                when: new Date(),
-                where: "7644444000002",
-                why: "pallet unloaded",
-                action: "OBSERVE",
-                temperature: Math.floor(Math.random() * Math.floor(50)),
-                logisticUnit: lu
-              });
+              for (let i = 0; i < 10; i++) {
+                // create the event
+                const ev = new models.Event({
+                  what: "76333339800001",
+                  when: new Date(),
+                  where: "7644444000002",
+                  why: "pallet unloaded",
+                  action: "OBSERVE",
+                  temperature: Math.floor(Math.random() * Math.floor(50)),
+                  logisticUnit: lu
+                });
 
-              await ev.save();
-              objs[j].events.push(ev);
-            }
+                await ev.save();
+                objs[j].events.push(ev);
+              }
 
-            objs[j].shipment = s;
+              objs[j].shipment = s;
 
-            helpers.LOGGER.debug(`After saving the shipment`);
+              helpers.LOGGER.debug(`After saving the shipment`);
 
-            // time to save the milestone
-            await objs[j].save();
+              // time to save the milestone
+              await objs[j].save();
 
-            helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
-              
-            controllers.blockchain.createMilestone1(JSON.stringify(objs[j]));
-        
-            // Now I attach the milsetones to the shipment and save it
-            s.milestones.push(objs[j]);
-            await s.save();
-          });
+              helpers.LOGGER.debug(`--> ${JSON.stringify(s._id)}`);
+
+              controllers.blockchain.createMilestone1(JSON.stringify(objs[j]), s._id);
+
+              // Now I attach the milsetones to the shipment and save it
+              s.milestones.push(objs[j]);
+              await s.save();
+            });
         }
 
         return res.status(201).json({});
@@ -135,42 +138,46 @@ class Populate {
         }
 
         for (let j = 0; j < objs.length; j++) {
-          models.LogisticUnit.findById("5d0e29a912c93a513833048a", async (err, lu) => {
-            if (err) {
-              next(boom.notFound(err));
-            }
+          models.LogisticUnit
+            .findById("5d0e29a912c93a513833048a")
+            .populate('tradeUnits')
+            .populate('tradeUnits.consumableUnits')
+            .exec(async (err, lu) => {
+              if (err) {
+                next(boom.notFound(err));
+              }
 
-            for (let i = 0; i < 10; i++) {
-              // create the event
-              const ev = new models.Event({
-                what: "76333339800001",
-                when: new Date(),
-                where: "7644444000002",
-                why: "pallet loaded",
-                action: "OBSERVE",
-                temperature: Math.floor(Math.random() * Math.floor(50)),
-                logisticUnit: lu
-              });
+              for (let i = 0; i < 10; i++) {
+                // create the event
+                const ev = new models.Event({
+                  what: "76333339800001",
+                  when: new Date(),
+                  where: "7644444000002",
+                  why: "pallet loaded",
+                  action: "OBSERVE",
+                  temperature: Math.floor(Math.random() * Math.floor(50)),
+                  logisticUnit: lu
+                });
 
-              await ev.save();
-              objs[j].events.push(ev);
-            }
+                await ev.save();
+                objs[j].events.push(ev);
+              }
 
-            objs[j].shipment = s;
+              objs[j].shipment = s;
 
-            helpers.LOGGER.debug(`After saving the shipment`);
+              helpers.LOGGER.debug(`After saving the shipment`);
 
-            // time to save the milestone
-            await objs[j].save();
+              // time to save the milestone
+              await objs[j].save();
 
-            helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
-              
-            controllers.blockchain.createMilestone1(JSON.stringify(objs[j]));
-        
-            // Now I attach the milsetones to the shipment and save it
-            s.milestones.push(objs[j]);
-            await s.save();
-          });
+              helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
+
+              controllers.blockchain.createMilestone1(JSON.stringify(objs[j]), s._id);
+
+              // Now I attach the milsetones to the shipment and save it
+              s.milestones.push(objs[j]);
+              await s.save();
+            });
         }
 
         return res.status(201).json({});
@@ -198,42 +205,46 @@ class Populate {
         }
 
         for (let j = 0; j < objs.length; j++) {
-          models.LogisticUnit.findById("5d0e29a912c93a513833048a", async (err, lu) => {
-            if (err) {
-              next(boom.notFound(err));
-            }
+          models.LogisticUnit
+            .findById("5d0e29a912c93a513833048a")
+            .populate('tradeUnits')
+            .populate('tradeUnits.consumableUnits')
+            .exec(async (err, lu) => {
+              if (err) {
+                next(boom.notFound(err));
+              }
 
-            for (let i = 0; i < 10; i++) {
-              // create the event
-              const ev = new models.Event({
-                what: "76333339800001",
-                when: new Date(),
-                where: "7644444000002",
-                why: "pallet delivered",
-                action: "OBSERVE",
-                temperature: Math.floor(Math.random() * Math.floor(50)),
-                logisticUnit: lu
-              });
+              for (let i = 0; i < 10; i++) {
+                // create the event
+                const ev = new models.Event({
+                  what: "76333339800001",
+                  when: new Date(),
+                  where: "7644444000002",
+                  why: "pallet delivered",
+                  action: "OBSERVE",
+                  temperature: Math.floor(Math.random() * Math.floor(50)),
+                  logisticUnit: lu
+                });
 
-              await ev.save();
-              objs[j].events.push(ev);
-            }
+                await ev.save();
+                objs[j].events.push(ev);
+              }
 
-            objs[j].shipment = s;
+              objs[j].shipment = s;
 
-            helpers.LOGGER.debug(`After saving the shipment`);
+              helpers.LOGGER.debug(`After saving the shipment`);
 
-            // time to save the milestone
-            await objs[j].save();
+              // time to save the milestone
+              await objs[j].save();
 
-            helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
-              
-            controllers.blockchain.createMilestone1(JSON.stringify(objs[j]));
-        
-            // Now I attach the milsetones to the shipment and save it
-            s.milestones.push(objs[j]);
-            await s.save();
-          });
+              helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
+
+              controllers.blockchain.createMilestone1(JSON.stringify(objs[j]), s._id);
+
+              // Now I attach the milsetones to the shipment and save it
+              s.milestones.push(objs[j]);
+              await s.save();
+            });
         }
 
         return res.status(201).json({});
@@ -257,42 +268,46 @@ class Populate {
 
         for (let j = 0; j < objs.length; j++) {
           helpers.LOGGER.debug(`--> ${JSON.stringify(datas.milestoneDataPUP)}`);
-          models.LogisticUnit.findById("5d0e29a912c93a513833048a", async (err, lu) => {
-            if (err) {
-              next(boom.notFound(err));
-            }
+          models.LogisticUnit
+            .findById("5d0e29a912c93a513833048a")
+            .populate('tradeUnits')
+            .populate('tradeUnits.consumableUnits')
+            .exec(async (err, lu) => {
+              if (err) {
+                next(boom.notFound(err));
+              }
 
-            for (let i = 0; i < 10; i++) {
-              // create the event
-              const ev = new models.Event({
-                what: "76333339800001",
-                when: new Date(),
-                where: "7633333000001",
-                why: "pallet prepared",
-                action: "OBSERVE",
-                temperature: Math.floor(Math.random() * Math.floor(50)),
-                logisticUnit: lu
-              });
+              for (let i = 0; i < 10; i++) {
+                // create the event
+                const ev = new models.Event({
+                  what: "76333339800001",
+                  when: new Date(),
+                  where: "7633333000001",
+                  why: "pallet prepared",
+                  action: "OBSERVE",
+                  temperature: Math.floor(Math.random() * Math.floor(50)),
+                  logisticUnit: lu
+                });
 
-              await ev.save();
-              objs[j].events.push(ev);
-            }
+                await ev.save();
+                objs[j].events.push(ev);
+              }
 
-            objs[j].shipment = s;
+              objs[j].shipment = s;
 
-            helpers.LOGGER.debug(`After saving the shipment`);
+              helpers.LOGGER.debug(`After saving the shipment`);
 
-            // time to save the milestone
-            await objs[j].save();
+              // time to save the milestone
+              await objs[j].save();
 
-            helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
-              
-            controllers.blockchain.createMilestone1(JSON.stringify(objs[j]));
-        
-            // Now I attach the milsetones to the shipment and save it
-            s.milestones.push(objs[j]);
-            await s.save();
-          });
+              helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
+
+              controllers.blockchain.createMilestone1(JSON.stringify(objs[j]), s._id);
+
+              // Now I attach the milsetones to the shipment and save it
+              s.milestones.push(objs[j]);
+              await s.save();
+            });
         }
 
         return res.status(201).json({});

@@ -62,13 +62,12 @@ class Blockchain {
     });
   };
 
-  static createMilestone1(milestoneAsJson, next) {
+  static createMilestone1(milestoneAsJson, shipmentId) {
     helpers.LOGGER.info("createMilestone - '/' - called");
 
     models.Blockchain
       .findOne({})
       .populate('chain')
-      .populate('milestone')
       .populate('chain.data')
       .exec((err, blockchain) => {
         if (err) {
@@ -82,9 +81,8 @@ class Blockchain {
         helpers.LOGGER.debug('adding the milestone');
         blockchain.milestone = milestoneAsJson;
         helpers.LOGGER.debug('creating new block');
-        blockchain.newBlock();
-        //blockchain.milestone = {};
-
+        blockchain.newBlock(shipmentId);
+        
         helpers.LOGGER.debug(`--> ${JSON.stringify(blockchain)}`);
 
         blockchain.save((err, b) => {
@@ -112,7 +110,6 @@ class Blockchain {
     models.Blockchain
       .findOne({})
       .populate('chain')
-      .populate('milestone')
       .populate('chain.data')
       .exec((err, blockchain) => {
         if (err) {
@@ -161,6 +158,22 @@ class Blockchain {
         return res.status(200).json(b);
       }
     });
+  }
+
+  static getOne(req, res, next) {
+    helpers.LOGGER.info("getOne - '/' - called");
+
+    models.Blockchain
+      .findOne({})
+      .populate('chain')
+      .populate('chain.data')
+      .exec((err, blockchain) => {
+        if (err) {
+          next(boom.badImplementation(err));
+        }
+
+        return res.status(200).json(blockchain);
+      });
   }
 
 }
