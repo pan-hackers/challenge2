@@ -13,7 +13,8 @@ export class MainComponent implements OnInit {
   public gridData: any[] = data;
   public onDetailButtonClick = (id) => {
     console.log(id);
-    this.viewState="details"
+    this.viewState="details";
+    console.log(this.viewState);
   }
   public onBackButtonClick= ()=>{
     

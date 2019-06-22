@@ -1,24 +1,40 @@
-<div class="top">
-  <div class="title-text">track</div><div class="title-dot title-dot-green">&nbsp;</div>
+<div class="top" *ngIf="viewState==='main'">
+  <div class="title-text">track</div>
+  <div class="title-dot title-dot-green">&nbsp;</div>
 </div>
-<div class="page">
+<div class="page" *ngIf="viewState==='main'">
   <div class="page-content">
     <div class="component-header">
       <h2>Shipments</h2>
     </div>
-    <div class="map-container"></div>
     <div class="grid-wrapper">
-      <kendo-grid [data]="gridData" *ngIf="viewState==='main'">
+      <kendo-grid [data]="gridData">
         <kendo-grid-column field="sscc" title="SSCC" width="180"></kendo-grid-column>
         <kendo-grid-column field="from" title="From" width="180"></kendo-grid-column>
         <kendo-grid-column field="to" title="To" width="180"></kendo-grid-column>
         <kendo-grid-column field="date" title="Date" width="180"></kendo-grid-column>
         <kendo-grid-column title="" width="80">
           <ng-template kendoGridCellTemplate let-dataItem>
-            <button (click)="onDetailButtonClick(dataItem.id)" class="button-status button-radial-out" title="Go to detail view">Details</button>
+            <button (click)="onDetailButtonClick(dataItem.id)" class="button-status button-radial-out"
+              title="Go to detail view">Details</button>
           </ng-template>
         </kendo-grid-column>
       </kendo-grid>
+    </div>
+  </div>
+</div>
+
+<div class="top" *ngIf="viewState==='details'">
+  <div class="title-text">Details</div>
+  <div class="title-dot title-dot-green">&nbsp;</div>
+</div>
+<div class="page" *ngIf="viewState==='details'">
+  <div class="page-content">
+    <div class="component-header">
+      <h2>Details</h2>
+    </div>
+    <div class="grid-wrapper">
+      <kosmos-shipment-detail></kosmos-shipment-detail>
     </div>
   </div>
 </div>
