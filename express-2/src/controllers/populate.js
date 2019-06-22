@@ -3,6 +3,7 @@ import helpers from '../helpers';
 
 import models from '../models';
 import datas from '../data';
+import { model } from 'mongoose';
 
 class Populate {
   constructor() {
@@ -94,18 +95,18 @@ class Populate {
   }
 
   static populateMilestonePUP(req, res, next) {
-    helpers.LOGGER.info("populateCompanies - '/' - called");
+    helpers.LOGGER.info("populateMilestonePUP - '/' - called");
 
-    helpers.LOGGER.info(`datas.companyData - ${JSON.stringify(datas.milestoneDataPUP)}`);
+    helpers.LOGGER.info(`datas.milestoneDataPUP - ${JSON.stringify(datas.milestoneDataPUP)}`);
 
     models.Milestone.insertMany(datas.milestoneDataPUP, (err, objs) => {
       if (err) {
         next(boom.badRequest(err));
       }
 
-      var i;
-      for (i = 0; i < 10; i++) { 
-        models.Milestone.events.push({what: "gtin", when: new Date(), where: "gln", why: "pallet arrived", action: "OBSERVE"})
+
+      for (let i = 0; i < 10; i++) { 
+       objs[0].events.push( new models.Event({what: "gtin", when: new Date(), where: "gln", why: "pallet arrived", action: "OBSERVE"}))
       }
 
       return res.status(201).json(objs);
@@ -137,6 +138,28 @@ class Populate {
       }
 
       return res.status(201).json(objs);
+    });
+  }
+
+  static createShipment(req, res, next) {
+    helpers.LOGGER.info("createShipment - '/' - called");
+
+    // temporary generation of SSCC
+    const sscc = "7633333." + Math.floor(Math.random() * Math.floor(9999999999))
+
+    const shipment = models.Shipment({
+      // TODO: This should be changed with better implementation
+      "SSCC": sscc,
+      "from": "Basel",
+      "to": "Atlanta" 
+    });
+
+    shipment.save((err, o) => {
+      if (err) {
+        next(boom.badImplementation(err));
+      } else {
+        return res.status(201).json(o._id);
+      }
     });
   }
 

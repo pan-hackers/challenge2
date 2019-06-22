@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const shipmentSchema = new mongoose.Schema({
     status: {
         type: String,
-        required: true
+        required: false
     },
     from: {
         type: String,
