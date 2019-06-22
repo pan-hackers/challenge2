@@ -37,7 +37,7 @@ blockchainSchema.methods.addBlock = function (data) {
   this.chain.push(block);
 };
 
-blockchainSchema.methods.newBlock = function () {
+blockchainSchema.methods.newBlock = function (shipmentId) {
   let index = this.chain.length;
   let block;
   if (index == 0) {
@@ -45,6 +45,7 @@ blockchainSchema.methods.newBlock = function () {
     block = new Block({
       index: index,
       data: this.milestone,
+      shipmentId: shipmentId,
       prevHash: index,
       proofOfWork: 100
     });
@@ -55,6 +56,7 @@ blockchainSchema.methods.newBlock = function () {
     block = new Block({
       index: index,
       data: this.milestone,
+      shipmentId: shipmentId,
       prevHash: prevHash,
       proofOfWork: this.proofOfWork(prevProof)
     });
