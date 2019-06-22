@@ -5,6 +5,14 @@ const shipmentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    from: {
+        type: String,
+        required: true
+    },
+    to: {
+        type: String,
+        required: true
+    },
     SSCC: {
         type: String,
         required: true,
