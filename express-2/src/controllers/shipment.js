@@ -43,7 +43,7 @@ class Shipment {
     });
   }
 
-  static create(req, res) {
+  static create(req, res, next) {
     helpers.LOGGER.info("post - '/' - called");
     const obj = new models.Shipment(req.body);
 
@@ -51,9 +51,9 @@ class Shipment {
     obj.save((err, o) => {
       if (err) {
         next(boom.badImplementation(err));
-      } 
-      
-      return res.status(201).json(o);
+      } else {
+        return res.status(201).json(o);
+      }
     });
   }
 }

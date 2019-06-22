@@ -141,6 +141,28 @@ class Populate {
     });
   }
 
+  static createShipment(req, res, next) {
+    helpers.LOGGER.info("createShipment - '/' - called");
+
+    // temporary generation of SSCC
+    const sscc = "7633333." + Math.floor(Math.random() * Math.floor(9999999999))
+
+    const shipment = models.Shipment({
+      // TODO: This should be changed with better implementation
+      "SSCC": sscc,
+      "from": "Basel",
+      "to": "Atlanta" 
+    });
+
+    shipment.save((err, o) => {
+      if (err) {
+        next(boom.badImplementation(err));
+      } else {
+        return res.status(201).json(o._id);
+      }
+    });
+  }
+
   static async cleanAll(req, res, next) {
     helpers.LOGGER.info("cleanAll - '/' - called");
 
