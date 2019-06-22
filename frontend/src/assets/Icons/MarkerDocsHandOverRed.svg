@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerDocsHandOverRed</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30,80.3795653 C30.4797197,80.3795653 43.2772033,64.9137759 52.3388983,51.8882117 C56.0121662,46.6081415 57.3579102,39.5885064 57.3579102,35.6691867 C57.3579102,20.5598301 45.1093566,8.31127655 30,8.31127655 C14.8906434,8.31127655 2.64208984,20.5598301 2.64208984,35.6691867 C2.64208984,39.6353159 4.4295186,46.6706728 8.211998,51.8882117 C18.9639732,66.7194491 29.522287,80.3795653 30,80.3795653 Z" id="path-1"></path>
+        <filter x="-11.0%" y="-8.3%" width="121.9%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerDocsHandOverRed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#D91A26" cx="29.5791016" cy="79.4666667" r="6.93333333"></circle>
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <circle id="Path" stroke="#D91A26" fill="#FFFFFF" cx="29.8876953" cy="35.7783989" r="22.4245165"></circle>
+        <path d="M19.5,40.1530863 L26.1111111,40.1530863 L26.1111111,38.4136285 L26.1111111,43.6811285 L36.6111111,35.8411285 L26.1111111,27.9136285 L26.1111111,31.8552998 L19.5,31.8552998 L19.5,26.6914062 C19.5,23.9299825 21.7385763,21.6914062 24.5,21.6914062 L35.5,21.6914062 C38.2614237,21.6914062 40.5,23.9299825 40.5,26.6914062 L40.5,43.9136285 C40.5,46.6750522 38.2614237,48.9136285 35.5,48.9136285 L24.5,48.9136285 C21.7385763,48.9136285 19.5,46.6750522 19.5,43.9136285 L19.5,40.1530863 Z M33.5,21.6914063 C33.5,22.3019452 33.5,23.5262302 33.5,25.3642613 C33.5,27.2022925 34.5854676,28.101709 36.7564027,28.062511 L40.2559581,28.062511 L33.5,21.6914063 Z" id="Combined-Shape" fill="#D81F27"></path>
+    </g>
+</svg>

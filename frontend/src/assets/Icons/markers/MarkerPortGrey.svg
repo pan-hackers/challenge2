@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerPortGrey</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30,80.3795653 C30.4797197,80.3795653 43.2772033,64.9137759 52.3388983,51.8882117 C56.0121662,46.6081415 57.3579102,39.5885064 57.3579102,35.6691867 C57.3579102,20.5598301 45.1093566,8.31127655 30,8.31127655 C14.8906434,8.31127655 2.64208984,20.5598301 2.64208984,35.6691867 C2.64208984,39.6353159 4.4295186,46.6706728 8.211998,51.8882117 C18.9639732,66.7194491 29.522287,80.3795653 30,80.3795653 Z" id="path-1"></path>
+        <filter x="-11.0%" y="-8.3%" width="121.9%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerPortGrey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#C8C8C8" cx="29.5791016" cy="79.4666667" r="6.93333333"></circle>
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <circle id="Path" stroke="#C8C8C8" fill="#FFFFFF" cx="30" cy="35.6691867" r="22.4245165"></circle>
+        <g id="symbol" transform="translate(21.000000, 23.429199)">
+            <path d="M17.7568794,9.06935192 C17.7568794,13.8936981 9.95421988,23.8784192 8.87839132,23.8784192 C7.68356373,23.8784192 -9.67471728e-05,13.8936981 -9.67471728e-05,9.06935192 C-9.67471728e-05,4.24500577 3.97524459,0.332601923 8.87839132,0.332601923 C13.7825055,0.332601923 17.7568794,4.24500577 17.7568794,9.06935192" id="Fill-1" fill="#B9B9B9"></path>
+            <polygon id="Fill-4" fill="#FEFEFE" points="15.0027776 9.94881884 11.3912056 9.94881884 13.1965079 8.17253038"></polygon>
+            <polygon id="Fill-6" fill="#FEFEFE" points="6.36644772 9.94881884 2.75487575 9.94881884 4.560178 8.17253038"></polygon>
+            <path d="M13.1964111,9.90504519 C13.1964111,12.2515356 11.2634026,14.1534779 8.87858481,14.1534779 C6.493767,14.1534779 4.55979101,12.2515356 4.55979101,9.90504519" id="Stroke-8" stroke="#FEFEFE" stroke-width="1.5"></path>
+            <path d="M8.23221695,7.35887983 C7.53910721,7.06849992 7.05335265,6.39204479 7.05335265,5.6046375 C7.05335265,4.5527625 7.92020732,3.6988875 8.99023105,3.6988875 C10.0592873,3.6988875 10.9271095,4.5527625 10.9271095,5.6046375 C10.9271095,6.39152337 10.4414566,7.06760398 9.74921262,7.35830245 L9.74921262,13.7412952 L8.23221695,13.7412952 L8.23221695,7.35887983 Z M8.24372986,5.6046375 C8.24372986,6.01015673 8.57847508,6.33857019 8.98965057,6.33857019 C9.40179352,6.33857019 9.73557127,6.01015673 9.73557127,5.6046375 C9.73557127,5.19911827 9.40179352,4.87070481 8.98965057,4.87070481 C8.57847508,4.87070481 8.24372986,5.19911827 8.24372986,5.6046375 Z" id="Combined-Shape" fill="#FEFEFE"></path>
+        </g>
+    </g>
+</svg>

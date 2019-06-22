@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>LastControlTowerTruckRed</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 34.4878378 37.5771876 34.4878378 37.5771876 0.000486971912 0 0.000486971912"></polygon>
+    </defs>
+    <g id="LastControlTowerTruckRed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(11.000000, 12.000000)">
+            <polygon id="Fill-3" fill="#D81F27" points="32.9246579 20.7839612 15.4764543 20.7839612 10.8246551 11.3586198 37.5764571 11.3586198"></polygon>
+            <polygon id="Fill-5" fill="#D81F27" points="30.8059649 12.0549897 17.5944169 12.0549897 14.0711751 4.91719888 34.3304241 4.91719888"></polygon>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-8"></g>
+            <polygon id="Fill-7" fill="#D81F27" mask="url(#mask-2)" points="20.5660413 34.4878378 27.8353145 34.4878378 27.8353145 18.4567224 20.5660413 18.4567224"></polygon>
+            <polygon id="Fill-9" fill="#D81F27" mask="url(#mask-2)" points="23.4391755 11.2032758 24.9609628 11.2032758 24.9609628 0.760163154 23.4391755 0.760163154"></polygon>
+            <polygon id="Fill-10" fill="#D81F27" mask="url(#mask-2)" points="18.9785128 1.5222742 29.4216255 1.5222742 29.4216255 -0.000730457868 18.9785128 -0.000730457868"></polygon>
+        </g>
+        <g id="Group" transform="translate(6.841797, 38.000000)">
+            <rect id="Rectangle" stroke="#FFFFFF" fill="#D91A26" x="0.5" y="0.5" width="22" height="8"></rect>
+            <path d="M22.5,1.84938034 L22.5,10.5 L27.5,10.5 L27.5,4.62462098 L22.5,1.84938034 Z" id="Rectangle-Copy" stroke="#FFFFFF" fill="#D91A26"></path>
+            <ellipse id="Oval" fill="#D91A26" cx="5.07142857" cy="10.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+            <ellipse id="Oval" fill="#D91A26" cx="8.07142857" cy="10.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+            <ellipse id="Oval" fill="#FFFFFF" cx="22.8952896" cy="10" rx="1.8952896" ry="2"></ellipse>
+            <ellipse id="Oval" fill="#D91A26" cx="23.0714286" cy="10.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        </g>
+    </g>
+</svg>

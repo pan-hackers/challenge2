@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MainCarriageOceanDarkOrange</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="12.0565976 0.963 0.662817073 0.963 0.662817073 9.807075 12.0565976 9.807075 12.0565976 0.963"></polygon>
+        <polygon id="path-3" points="0 17.037225 44.9407317 17.037225 44.9407317 1.125225 0 1.125225"></polygon>
+    </defs>
+    <g id="MainCarriageOceanDarkOrange" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(8.000000, 21.000000)">
+            <path d="M37.4966341,17.037225 C37.4966341,17.037225 34.4212683,16.81785 32.616878,15.60735 C31.122,14.60835 28.8906585,14.710725 28.8906585,14.710725 C28.8906585,14.710725 27.1784634,14.710725 25.3389512,15.7311 C23.5751707,16.70985 21.9013902,16.710975 21.9013902,16.710975 C21.9013902,16.710975 20.2912683,16.8741 18.0072439,15.7851 C15.7232195,14.6961 14.6190732,14.6961 14.6190732,14.6961 C14.6190732,14.6961 13.1735854,14.532975 10.889561,15.7851 C8.60553659,17.037225 2.367,17.037225 2.367,17.037225 L0.000658536585,9.1116 L28.9213902,9.1116 L31.0978537,6.846975 L44.9402927,6.846975 L37.4966341,17.037225 Z" id="Fill-1" fill="#FF7300"></path>
+            <g id="Group-5" transform="translate(1.097561, 0.162225)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-4"></g>
+                <polygon id="Fill-3" fill="#FF7300" mask="url(#mask-2)" points="12.0565976 0.962325 9.99208537 2.742075 8.70245122 2.742075 8.70245122 9.521325 0.662817073 9.807075 0.662817073 3.3507 0.662817073 2.904075 0.662817073 0.962325"></polygon>
+            </g>
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <g id="Clip-7"></g>
+            <polygon id="Fill-6" fill="#FF7300" mask="url(#mask-4)" points="11.4508537 7.587225 27.5015854 7.587225 27.5015854 3.9861 11.4508537 3.9861"></polygon>
+        </g>
+    </g>
+</svg>

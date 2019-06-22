@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>SwitchIcon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SwitchIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-2" stroke="#D1D1D1" fill="#FFFFFF" cx="16" cy="16" r="16"></circle>
+        <g id="Group-12" transform="translate(6.000000, 6.000000)">
+            <path d="M4.95303118,6.99567381 L11.9341329,6.99567381 L10.170344,9.99567381 L4.95303118,9.99567381 L4.95303118,13.0536161 L0,8.52680806 L4.95303118,4 L4.95303118,6.99567381 Z" id="Combined-Shape" fill="#000000"></path>
+            <path d="M12.561445,10.9956738 L20.9341329,10.9956738 L19.2151509,13.9956738 L12.561445,13.9956738 L12.561445,17.0536161 L7.60841386,12.5268081 L12.561445,8 L12.561445,10.9956738 Z" id="Combined-Shape" fill="#000000" transform="translate(14.271273, 12.526808) rotate(-180.000000) translate(-14.271273, -12.526808) "></path>
+            <path d="M15.5,0.5 L4.5,19.5" id="Line-2" stroke="#D1D1D1" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

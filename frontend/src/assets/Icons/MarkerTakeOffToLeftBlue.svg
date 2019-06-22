@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerTakeOffToLeftBlue</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M26,67.8694239 C26.4559088,67.8694239 38.6181892,53.3047071 47.2301068,41.0380424 C50.721052,36.0656012 52,29.4549463 52,25.7639752 C52,11.5349246 40.3594035,0 26,0 C11.6405965,0 0,11.5349246 0,25.7639752 C0,29.4990285 1.69870972,36.1244893 5.2934457,41.0380424 C15.5117465,55.0051776 25.5459983,67.8694239 26,67.8694239 Z" id="path-1"></path>
+        <filter x="-11.5%" y="-8.8%" width="123.1%" height="117.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-3" points="29.436 0.0004 29.436 9.94066667 0 9.94066667 0 0 29.436 0 6.66666667e-05 0.0004 6.66666667e-05 9.94092271 29.4367333 9.94092271 29.4367333 0.0004"></polygon>
+    </defs>
+    <g id="MarkerTakeOffToLeftBlue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(4.000000, 11.000000)">
+            <circle id="Oval" fill="#373C8C" cx="26" cy="68.4666667" r="6.93333333"></circle>
+            <g id="ToAddress">
+                <g id="Marker">
+                    <g id="Oval">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <ellipse id="Path" stroke="#ACAFD1" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" cx="26" cy="25.7639752" rx="21.3114754" ry="21.1180124"></ellipse>
+                </g>
+            </g>
+        </g>
+        <g id="Page-1-Copy" transform="translate(30.000000, 36.112305) scale(-1, 1) translate(-30.000000, -36.112305) translate(15.000000, 30.112305)">
+            <path d="M27.8456667,5.7124 L9.571,11.9150667 C9.571,11.9150667 5.68766667,12.1330667 2.96166667,11.3030667 L0.281666667,8.37706667 L0.905,7.72173333 L6.20833333,9.94906667 L11.3776667,8.24573333 L7.16633333,3.13573333 L8.24366667,2.0004 L18.1043333,5.93106667 L26.839,3.0044 C26.839,3.0044 29.2763333,2.65506667 29.7183333,3.6384 C29.7183333,3.6384 29.595,4.79506667 27.8456667,5.7124" id="Fill-1" fill="#373C8C"></path>
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <g id="Clip-2"></g>
+        </g>
+    </g>
+</svg>

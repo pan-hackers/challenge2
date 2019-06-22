@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>RCFGreen</title>
+    <desc>Created with Sketch.</desc>
+    <g id="RCFGreen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-13" fill="#00C300" x="10" y="34" width="42" height="10" rx="5"></rect>
+        <circle id="Oval-4" fill="#FFFFFF" cx="15" cy="39" r="3"></circle>
+        <circle id="Oval-4" fill="#FFFFFF" cx="47" cy="39" r="3"></circle>
+        <circle id="Oval-4" fill="#FFFFFF" cx="39" cy="39" r="3"></circle>
+        <circle id="Oval-4" fill="#FFFFFF" cx="31" cy="39" r="3"></circle>
+        <circle id="Oval-4" fill="#FFFFFF" cx="23" cy="39" r="3"></circle>
+        <rect id="Rectangle-14" fill="#00C300" x="17" y="19" width="14" height="13"></rect>
+        <polyline id="Fill-94" fill="#00C300" points="41 28.1596386 34 28.1596386 34 22.6277809 41 22.6277809 41 20 48 25.285 41 30.5116667 41 27"></polyline>
+    </g>
+</svg>

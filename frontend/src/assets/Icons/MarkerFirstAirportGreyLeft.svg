@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerFirstAirportGreyLeft</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30,80.3795653 C30.4797197,80.3795653 43.2772033,64.9137759 52.3388983,51.8882117 C56.0121662,46.6081415 57.3579102,39.5885064 57.3579102,35.6691867 C57.3579102,20.5598301 45.1093566,8.31127655 30,8.31127655 C14.8906434,8.31127655 2.64208984,20.5598301 2.64208984,35.6691867 C2.64208984,39.6353159 4.4295186,46.6706728 8.211998,51.8882117 C18.9639732,66.7194491 29.522287,80.3795653 30,80.3795653 Z" id="path-1"></path>
+        <filter x="-11.0%" y="-8.3%" width="121.9%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-3" points="14.789163 0.247920879 14.789163 5.14612138 0.288096061 5.14612138 0.288096061 0.247920879 14.789163 0.247920879"></polygon>
+    </defs>
+    <g id="MarkerFirstAirportGreyLeft" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#C8C8C8" cx="29.5791016" cy="79.4666667" r="6.93333333"></circle>
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <circle id="Path" stroke="#C8C8C8" fill="#FFFFFF" cx="30" cy="35.6691867" r="22.4245165"></circle>
+        <g id="Page-1-Copy" transform="translate(29.500000, 35.754150) scale(-1, 1) translate(-29.500000, -35.754150) translate(15.000000, 22.754150)">
+            <g id="Group-3" transform="translate(13.913483, 16.652529)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M13.8676557,2.07754392 L4.86389285,5.13329267 C4.86389285,5.13329267 2.95078891,5.24112216 1.60813778,4.831544 L0.288096061,3.3906289 L0.595062284,3.06714041 L3.20731875,4.1645664 L5.75435577,3.32627904 L3.67950759,0.807938577 L4.21082873,0.247920879 L9.06750396,2.18537341 L13.3719878,0.743588718 C13.3719878,0.743588718 14.5728953,0.571409363 14.7902935,1.0549029 C14.7902935,1.0549029 14.7285524,1.62535572 13.8676557,2.07754392" id="Fill-1" fill="#C8C8C8" mask="url(#mask-4)"></path>
+            </g>
+            <path d="M10.0977104,1.80162443 L10.0977104,4.22657063 L16.7900958,4.22657063 L14.5190166,8.8275856 L19.1086909,8.8275856 L15.7859772,15.5599723 L12.1516884,15.5599723 L12.1516884,25.3484555 L6.95848078,25.3484555 L6.95848078,15.5599723 L3.32297458,15.5599723 L0.00026087781,8.8275856 L4.59036777,8.8275856 L2.32007332,4.22657063 L9.01071955,4.22657063 L9.01071955,1.80162443 L5.8245319,1.80162443 L5.8245319,0.713763959 L13.2838981,0.713763959 L13.2838981,1.80162443 L10.0977104,1.80162443 Z" id="Combined-Shape" fill="#C8C8C8"></path>
+        </g>
+    </g>
+</svg>

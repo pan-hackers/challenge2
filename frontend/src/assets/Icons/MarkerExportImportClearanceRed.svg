@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="87px" viewBox="0 0 60 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>MarkerExportImportClearanceRed</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M30,80.3795653 C30.4797197,80.3795653 43.2772033,64.9137759 52.3388983,51.8882117 C56.0121662,46.6081415 57.3579102,39.5885064 57.3579102,35.6691867 C57.3579102,20.5598301 45.1093566,8.31127655 30,8.31127655 C14.8906434,8.31127655 2.64208984,20.5598301 2.64208984,35.6691867 C2.64208984,39.6353159 4.4295186,46.6706728 8.211998,51.8882117 C18.9639732,66.7194491 29.522287,80.3795653 30,80.3795653 Z" id="path-1"></path>
+        <filter x="-11.0%" y="-8.3%" width="121.9%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="MarkerExportImportClearanceRed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#D91A26" cx="29.5791016" cy="79.4666667" r="6.93333333"></circle>
+        <g id="Oval">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <circle id="Path" stroke="#D91A26" fill="#FFFFFF" cx="30" cy="35.6691867" r="22.4245165"></circle>
+        <g id="Page-1" transform="translate(19.647059, 23.441406)" fill="#D91A26">
+            <g id="Group">
+                <path d="M12.1448809,5.23495537 C12.1448809,3.2000076 13.7814539,1.5511567 15.7993966,1.5511567 C17.8181683,1.5511567 19.4539123,3.2000076 19.4539123,5.23495537 C19.4539123,7.26990313 17.8181683,8.91791833 15.7993966,8.91791833 C13.7814539,8.91791833 12.1448809,7.26990313 12.1448809,5.23495537" id="Fill-1"></path>
+                <polygon id="Fill-3" points="10.5248062 5.69526306 19.3949658 5.47547198 19.4546584 1.80588034 11.3389474 0.271521368 10.5248062 1.64124596 12.3744488 3.99710541"></polygon>
+                <path d="M11.6615364,21.8120494 L19.7623242,11.0681937 C19.7623242,11.0681937 20.6436196,11.8353732 20.6436196,12.807301 L20.6436196,21.8120494 L11.6615364,21.8120494 Z" id="Fill-6"></path>
+                <polygon id="Fill-8" points="17.5297368 10.606716 10.3218513 20.4814359 10.3218513 16.4391187 7.00559383 19.0832972 1.65895778 13.8985679 5.98998999 13.8985679 7.41183536 15.2624425 12.315751 10.606716"></polygon>
+                <polygon id="Fill-10" points="6.05805617 12.9431871 1.11102915 12.9431871 8.29064365e-05 5.69509592 5.07478584 5.95165812"></polygon>
+                <polygon id="Fill-12" points="6.69850839 10.9902222 5.88685438 5.15781956 1.36928269 5.01324217 6.48792604 3.21312821 7.5101624 10.6066325"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

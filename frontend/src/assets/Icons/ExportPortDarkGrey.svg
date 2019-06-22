@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>ExportPortDarkGrey</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ExportPortDarkGrey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#FFFFFF" fill="#969696" x="6.5" y="39.5" width="22" height="8"></rect>
+        <path d="M28.5,40.8493803 L28.5,49.5 L33.5,49.5 L33.5,43.624621 L28.5,40.8493803 Z" id="Rectangle-Copy" stroke="#FFFFFF" fill="#969696"></path>
+        <ellipse id="Oval" fill="#969696" cx="11.0714286" cy="49.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        <ellipse id="Oval" fill="#969696" cx="14.0714286" cy="49.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        <ellipse id="Oval" fill="#FFFFFF" cx="28.8952896" cy="49" rx="1.8952896" ry="2"></ellipse>
+        <ellipse id="Oval" fill="#969696" cx="29.0714286" cy="49.1306225" rx="1.07142857" ry="1.13062254"></ellipse>
+        <g id="Page-1" transform="translate(33.500000, 37.000000) scale(-1, 1) translate(-33.500000, -37.000000) translate(19.000000, 30.000000)" fill="#969696">
+            <polygon id="Rectangle-8" points="10 10 19 10 19 10.4651144 13.9850389 13.367471 13.9850389 14 10 14"></polygon>
+            <rect id="Rectangle-8" x="0" y="5" width="9" height="4"></rect>
+            <rect id="Rectangle-8" x="10" y="5" width="9" height="4"></rect>
+            <polygon id="Rectangle-8" points="20 5 29 5 29 9 20 9"></polygon>
+            <rect id="Rectangle-8" x="0" y="0" width="9" height="4"></rect>
+            <rect id="Rectangle-8" x="0" y="10" width="9" height="4"></rect>
+        </g>
+    </g>
+</svg>

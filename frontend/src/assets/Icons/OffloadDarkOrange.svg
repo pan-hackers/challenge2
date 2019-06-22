@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>OffloadDarkOrange</title>
+    <desc>Created with Sketch.</desc>
+    <g id="OffloadDarkOrange" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(30.500000, 30.000000) scale(1, -1) rotate(180.000000) translate(-30.500000, -30.000000) translate(8.000000, 7.000000)" fill="#FF7300">
+            <g id="Page-1">
+                <polygon id="Fill-1" points="21 36.3687815 45 36.3687815 45 25 21 25"></polygon>
+                <polygon id="Fill-2" points="43.3423197 25.3489328 42.9711599 25.6604063 33 17.3114735 33.372163 17"></polygon>
+                <polygon id="Fill-3" points="23.3711599 25.6593749 23 25.3479014 32.9701567 17 33.3413166 17.3104421"></polygon>
+                <polygon id="Fill-3" points="3.80271415 8.00317553 2 8.00317553 15 0 15 1.08804678"></polygon>
+                <polygon id="Fill-3" points="39.8637769 8.02455704 37.6347823 8.02455704 18.0059653 1.04365628 18.0059653 0.0298614249"></polygon>
+                <polygon id="Fill-3" points="1.06718633 28.9973183 0 28.9973183 15 5 15 6.9265191"></polygon>
+                <polygon id="Fill-4" points="31 11 31 13.8130815 32.1179445 15.1632526 33.9138061 15.1632526 35.0482517 13.8130815 35.0482517 11"></polygon>
+                <path d="M33.3472709,14 L33.3472709,14.9565962 C33.3472709,14.9565962 34.0664406,15.4008025 34.0664406,16.2952909 C34.0664406,17.1904543 33.1492586,17.6569385 32.5696601,17.6569385 C32.5696601,17.6569385 31.5005311,17.7413241 31,17.0095314 L31.1876992,16.6159565 C31.1876992,16.6159565 31.9460588,17.2066564 32.5696601,16.9534993 C33.1932613,16.7003422 33.3431457,15.759273 32.1688227,15.5061159 L32.1330704,14 L33.3472709,14 Z" id="Fill-5"></path>
+            </g>
+            <rect id="Rectangle-9" x="0" y="8" width="45" height="3"></rect>
+            <polygon id="Rectangle-9" points="15 0 18 0 18 40.0833466 16.5 45.0620836 15 40.0833466"></polygon>
+            <polygon id="Rectangle-9-Copy" points="0 29 3 29 3 40.052207 1.5 45.0201441 0 40.052207"></polygon>
+            <polygon id="Rectangle-9-Copy-2" points="0 29 18 29 18 32 0 32"></polygon>
+        </g>
+    </g>
+</svg>
