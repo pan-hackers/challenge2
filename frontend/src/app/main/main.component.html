@@ -1,0 +1,28 @@
+<div class="page">
+  <div class="page-content">
+    <div class="component-header">
+      <h2>Main Page</h2>
+    </div>
+    <div class="map-container"></div>
+    <div class="grid-wrapper">
+      <kendo-grid [data]="gridData">
+        <kendo-grid-column field="id" title="Reference" width="180">
+        </kendo-grid-column>
+        <kendo-grid-column field="from" title="From" width="180">
+        </kendo-grid-column>
+        <kendo-grid-column field="to" title="To" width="180">
+        </kendo-grid-column>
+        <kendo-grid-column field="date" title="Date" width="180">
+          <!-- <ng-template kendoGridCellTemplate let-dataItem>
+            {{dataItem | date }}
+          </ng-template> -->
+        </kendo-grid-column>
+        <kendo-grid-column title="" width="80">
+          <ng-template kendoGridCellTemplate let-dataItem>
+            <button class="button-status button-radial-out" title="Go to detail view">Details</button>
+          </ng-template>
+        </kendo-grid-column>
+      </kendo-grid>
+    </div>
+  </div>
+</div>
