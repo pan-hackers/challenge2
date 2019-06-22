@@ -259,7 +259,6 @@ class Populate {
     helpers.LOGGER.info("populateMilestonePUP - '/' - called");
 
     helpers.LOGGER.debug(`datas.milestoneDataPUP - ${JSON.stringify(datas.milestoneDataPUP)}`);
-
     models.Shipment.findById(req.params.id, (err, s) => {
       if (err) {
         next(boom.notFound(err));

@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-import TokenKey from './key';
 import Company from './company';
 import Location from './location';
 import ConsumableUnit from './consumableUnit';
@@ -20,6 +19,6 @@ const models = { Company, Location, ConsumableUnit, TradeUnit,
     Event, Milestone,
     Block, Blockchain };
 
-export { connectDb, TokenKey };
+export { connectDb };
 
 export default models;
