@@ -14,6 +14,7 @@ import { ConsoleComponent } from './console/console.component';
 import { MainComponent } from './main/main.component';
 import { ScanComponent } from './scan/scan.component';
 import { SensorDetailComponent } from './sensor-detail/sensor-detail.component';
+import { ShipmentDetailRouteComponent } from './shipment-detail-route/shipment-detail-route.component';
 import { ShipmentDetailComponent } from './shipment-detail/shipment-detail.component';
 
 @NgModule({
@@ -32,7 +33,7 @@ import { ShipmentDetailComponent } from './shipment-detail/shipment-detail.compo
     GridModule,
     BrowserAnimationsModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
     ChartsModule
   ],
   providers: [],
