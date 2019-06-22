@@ -10,10 +10,6 @@ import { ShipmentService } from '../shipment.service';
 export class MainComponent implements OnInit {
   public viewState = 'main';
   public shipmentsArray = [];
-<<<<<<< Updated upstream
-  public shipNum = 'LHR 12312312';
-=======
->>>>>>> Stashed changes
   constructor(
     private readonly shipmentService: ShipmentService
   ) { }
