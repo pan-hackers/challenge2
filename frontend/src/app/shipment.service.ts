@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ShipmentService {
+  public baseURL = 'http://localhost:3000/api/v1/';
 
   constructor(
     private readonly http: HttpClient
@@ -18,24 +19,24 @@ export class ShipmentService {
   }
 
   getAllShipments(): Observable<any> {
-    const url = 'api/v1/shipments';
+    const url = `${this.baseURL}shipments`;
     return this.http.get<any>(url);
   }
 
   getSingleShimpent(sscc: string): Observable<any> {
     let params = new HttpParams();
-    const url = 'api/v1/shipments/';
+    const url = `${this.baseURL}shipments`;
     params = params.append(url, sscc);
     return this.http.get<any>(url);
   }
 
   createShipment(): Observable<any> {
-    const url = 'api/v1/populates/shipments';
+    const url = `${this.baseURL}populates/shipments`;
     return this.http.post<any>(url, null);
   }
 
   createMilestone(): Observable<any> {
-    const url = 'api/v1/pupulates/milestones';
+    const url = `${this.baseURL}populates/milestones`;
     return this.http.post<any>(url, null);
   }
 }
