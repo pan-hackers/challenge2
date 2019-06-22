@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, SimpleChange } from '@angular/core';
-import {checkTrackingEntityDetails, getDirection, isMilestoneReached} from '../_shared/constants/shipment-functions'
+import { checkTrackingEntityDetails, getDirection, isMilestoneReached } from '../_shared/constants/shipment-functions'
 @Component({
     selector: 'kosmos-shipment-detail',
     templateUrl: './shipment-detail.component.html',
@@ -7,7 +7,8 @@ import {checkTrackingEntityDetails, getDirection, isMilestoneReached} from '../_
 })
 
 export class ShipmentDetailComponent implements OnInit {
-    public checkTrackingEntityDetails= checkTrackingEntityDetails;
+    @Input() public onBack: Function;
+    public checkTrackingEntityDetails = checkTrackingEntityDetails;
     public milestones = [{
         "milestoneTitle": "CUV - Nas Couves",
         "milestoneType": "APUP",
@@ -66,38 +67,38 @@ export class ShipmentDetailComponent implements OnInit {
         "estimatedTime": "2019-02-01T05:55:00Z",
         "iconTag": "ImportStation"
     }];
-    public shipmentDetail= {
-        "id" : 4650640,
-        "entityKey" : "OFWO_121982717",
-        "utn" : "79711041343",
-        "entityType" : "OFWO",
-        "entityTypeText" : "Ocean Forwarding Entity",
-        "entitySubType" : "FCL",
-        "fileId" : 121982717,
-        "shipNum" : "YYZ041343",
-        "mainFrom" : "Montreal",
-        "mainTo" : "Southampton",
-        "exportBU" : "711",
-        "exportBUText" : "PA TORONTO (CA)",
-        "issueDate" : "2019-04-08T16:32:00Z",
-        "grosw" : "2200 KG",
-        "pieces" : 27,
-        "volume" : " ",
-        "voyageText" : "OOL MONTREAL EXPRESS / 303E",
-        "partners" : [ ],
-        "customerRefs" : [ {
-          "refType" : "HSCD",
-          "reference" : "851981"
+    public shipmentDetail = {
+        "id": 4650640,
+        "entityKey": "OFWO_121982717",
+        "utn": "79711041343",
+        "entityType": "OFWO",
+        "entityTypeText": "Ocean Forwarding Entity",
+        "entitySubType": "FCL",
+        "fileId": 121982717,
+        "shipNum": "YYZ041343",
+        "mainFrom": "Montreal",
+        "mainTo": "Southampton",
+        "exportBU": "711",
+        "exportBUText": "PA TORONTO (CA)",
+        "issueDate": "2019-04-08T16:32:00Z",
+        "grosw": "2200 KG",
+        "pieces": 27,
+        "volume": " ",
+        "voyageText": "OOL MONTREAL EXPRESS / 303E",
+        "partners": [],
+        "customerRefs": [{
+            "refType": "HSCD",
+            "reference": "851981"
         }, {
-          "refType" : "BPREFS",
-          "reference" : "WORN CORE"
+            "refType": "BPREFS",
+            "reference": "WORN CORE"
         }, {
-          "refType" : "SEALNO",
-          "reference" : "UL3174404"
-        } ],
-        "relations" : [ ],
-        "milestones" : [ ]
-       };
+            "refType": "SEALNO",
+            "reference": "UL3174404"
+        }],
+        "relations": [],
+        "milestones": []
+    };
 
     constructor() { }
 
@@ -106,5 +107,9 @@ export class ShipmentDetailComponent implements OnInit {
         console.log("hello from shipment-detail");
     }
 
+    public onBackButtonClick = () => {
+        console.log("hello from onBackButtonClick");
+        this.onBack();
+    }
 
 }
