@@ -1,56 +1,23 @@
 
 export const milestones = [
     {
-        event: "Forwarder booking",
-        category: "Door2Airport"
-    },
-    {
-        event: "Create route map",
-        category: "Door2Airport"
-    },
-    {
-        event: "Pickup from customer",
+        event: "Pickup from Shipper / Supplier ",
         code: "PUP",
-        category: "Door2Airport"
+        category: "Door2Door"
     },
     {
-        event: "Received at forwarders' warehose",
-        code: "REW",
-        category: "Door2Airport"
+        event: "Goods confirmed on Board 1st Flight",
+        code: "DEP",
+        category: "Door2Door"
     },
     {
-        event: "Truck departure Export warehouse",
-        code: "DEW",
-        note: "Optional timestamp event",
-        category: "Door2Airport"
+        event: "Arrived at Last Airport",
+        code: "ARR",
+        category: "Door2Door"
     },
     {
-        event: "Received at Export Hub warehouse",
-        code: "REH",
-        note: "Optional timestamp event",
-        category: "Door2Airport"
-    },
-    {
-        event: "Truck departure Export Hub warehouse",
-        code: "DEH",
-        note: "Optional timestamp event",
-        category: "Door2Airport"
-    },
-    {
-        event: "Transfer of electronic MAWB",
-        code: "FWB",
-        category: "Door2Airport"
-    },
-    {
-        event: "Transfer of electronic manifest",
-        code: "FHL",
-        note: "Optional timestamp event",
-        category: "Door2Airport"
-    },
-    {
-        event: "Truck arrival at Departure Airport",
-        code: "DOC",
-        note: "	Optional timestamp event",
-        category: "Door2Airport"
+        event: "Delivery to Door",
+        code: "POD",
+        category: "Door2Door"
     }
 ]
