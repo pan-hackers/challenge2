@@ -1,4 +1,4 @@
-<div class="top" *ngIf="viewState==='main'">
+<div class="top">
     <div class="title-dot title-dot-green">&nbsp;</div><div class="title-text">Track<span>...</span></div>
     <div class="intro">This is the tracking app for customers, managed by the freight forwarder (Panalpina) including data shared by the carrier (CargoLux).</div>
 </div>
@@ -9,7 +9,7 @@
     </div>
     <div class="grid-wrapper">
       <kendo-grid [data]="shipmentsArray">
-        <kendo-grid-column field="sscc" title="SSCC" width="60"></kendo-grid-column>
+        <kendo-grid-column field="sscc" title="AWB" width="60"></kendo-grid-column>
         <kendo-grid-column field="from" title="From" width="100"></kendo-grid-column>
         <kendo-grid-column field="to" title="To" width="100"></kendo-grid-column>
         <kendo-grid-column field="date" title="Date" width="100"></kendo-grid-column>
@@ -23,11 +23,6 @@
   </div>
 </div>
 
-<div class="top" *ngIf="viewState==='details'">
-    
-  <div class="title-text">Details </div> 
-  <div class="title-dot title-dot-green">&nbsp;</div>
-</div>
 <div class="page" *ngIf="viewState==='details'">
   <div class="page-content">
     <div class="component-header"> 

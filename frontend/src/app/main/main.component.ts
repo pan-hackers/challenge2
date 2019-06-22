@@ -31,6 +31,7 @@ export class MainComponent implements OnInit {
   }
 
   public getShipments() {
+    this.shipmentsArray = data;
     this.shipmentService.getAllShipments().subscribe(
       (res) => {
         if (this.shipmentsArray === undefined || this.shipmentsArray.length === 0) {
