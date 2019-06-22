@@ -52,30 +52,138 @@ class Populate {
   }
 
   static populateMilestoneARR(req, res, next) {
-    helpers.LOGGER.info("populateCompanies - '/' - called");
+    helpers.LOGGER.info("populateMilestoneARR - '/' - called");
 
-    helpers.LOGGER.info(`datas.companyData - ${JSON.stringify(datas.milestoneDataARR)}`);
+    helpers.LOGGER.debug(`datas.milestoneDataARR - ${JSON.stringify(datas.milestoneDataARR)}`);
 
-    models.Milestone.insertMany(datas.milestoneDataARR, (err, objs) => {
+    const query = {}
+    if (req.params.id) {
+      query._id = req.params.id;
+    }
+
+    models.Shipment.findOne(query, (err, s) => {
       if (err) {
-        next(boom.badRequest(err));
+        next(boom.notFound(err));
       }
+      models.Milestone.insertMany(datas.milestoneDataARR, (err, objs) => {
+        if (err) {
+          next(boom.badRequest(err));
+        }
 
-      return res.status(201).json(objs);
+        for (let j = 0; j < objs.length; j++) {
+          models.LogisticUnit.findById("5d0e29a912c93a513833048a", async (err, lu) => {
+            if (err) {
+              next(boom.notFound(err));
+            }
+
+            for (let i = 0; i < 10; i++) {
+              // create the event
+              const ev = new models.Event({
+                what: "76333339800001",
+                when: new Date(),
+                where: "7644444000002",
+                why: "pallet unloaded",
+                action: "OBSERVE",
+                temperature: Math.floor(Math.random() * Math.floor(50)),
+                logisticUnit: lu
+              });
+
+              await ev.save();
+              objs[j].events.push(ev);
+            }
+
+            objs[j].shipment = s;
+
+            // time to save the milestone
+            objs[j].save((err, o) => {
+              if (err) {
+                next(boom.badImplementation(err));
+              }
+            });
+
+            // Now I attach the milsetones to the shipment and save it
+            s.milestones.push(objs[j]);
+            s.save((err, o) => {
+              if (err) {
+                next(boom.badImplementation(err));
+              }
+            });
+          });
+        }
+
+        // now public to the blockchain the milestone
+        // objs[j] goes to the blockchain
+
+        return res.status(201).json({});
+      });
     });
   }
 
   static populateMilestoneDEP(req, res, next) {
-    helpers.LOGGER.info("populateCompanies - '/' - called");
+    helpers.LOGGER.info("populateMilestoneDEP - '/' - called");
 
-    helpers.LOGGER.info(`datas.companyData - ${JSON.stringify(datas.milestoneDataDEP)}`);
+    helpers.LOGGER.debug(`datas.milestoneDataDEP - ${JSON.stringify(datas.milestoneDataDEP)}`);
 
-    models.Milestone.insertMany(datas.milestoneDataDEP, (err, objs) => {
+    const query = {}
+    if (req.params.id) {
+      query._id = req.params.id;
+    }
+
+    models.Shipment.findOne(query, (err, s) => {
       if (err) {
-        next(boom.badRequest(err));
+        next(boom.notFound(err));
       }
+      models.Milestone.insertMany(datas.milestoneDataDEP, (err, objs) => {
+        if (err) {
+          next(boom.badRequest(err));
+        }
 
-      return res.status(201).json(objs);
+        for (let j = 0; j < objs.length; j++) {
+          models.LogisticUnit.findById("5d0e29a912c93a513833048a", async (err, lu) => {
+            if (err) {
+              next(boom.notFound(err));
+            }
+
+            for (let i = 0; i < 10; i++) {
+              // create the event
+              const ev = new models.Event({
+                what: "76333339800001",
+                when: new Date(),
+                where: "7644444000002",
+                why: "pallet loaded",
+                action: "OBSERVE",
+                temperature: Math.floor(Math.random() * Math.floor(50)),
+                logisticUnit: lu
+              });
+
+              await ev.save();
+              objs[j].events.push(ev);
+            }
+
+            objs[j].shipment = s;
+
+            // time to save the milestone
+            objs[j].save((err, o) => {
+              if (err) {
+                next(boom.badImplementation(err));
+              }
+            });
+
+            // Now I attach the milsetones to the shipment and save it
+            s.milestones.push(objs[j]);
+            s.save((err, o) => {
+              if (err) {
+                next(boom.badImplementation(err));
+              }
+            });
+          });
+        }
+
+        // now public to the blockchain the milestone
+        // objs[j] goes to the blockchain
+
+        return res.status(201).json({});
+      });
     });
   }
 
@@ -174,7 +282,7 @@ class Populate {
                 what: "76333339800001",
                 when: new Date(),
                 where: "7633333000001",
-                why: "pallet arrived",
+                why: "pallet prepared",
                 action: "OBSERVE",
                 temperature: Math.floor(Math.random() * Math.floor(50)),
                 logisticUnit: lu

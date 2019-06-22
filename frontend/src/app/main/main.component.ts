@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ShipmentService } from '../shipment.service';
 import { data } from '../_mock-data/mock-data';
+import { ShipmentService } from '../shipment.service';
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -10,7 +11,7 @@ import { data } from '../_mock-data/mock-data';
 export class MainComponent implements OnInit {
   public viewState = 'main';
   public shipmentsArray = [];
-  public shipNum="LHR 12312312"
+  public shipNum = 'LHR 12312312'
   constructor(
     private readonly shipmentService: ShipmentService
   ) { }
@@ -30,16 +31,15 @@ export class MainComponent implements OnInit {
   }
 
   public getShipments() {
-    console.log(this.shipmentService);
     this.shipmentService.getAllShipments().subscribe(
       (res) => {
-        this.shipmentsArray = res;
         if (this.shipmentsArray === undefined || this.shipmentsArray.length === 0) {
           this.shipmentsArray = data;
+        } else {
+          this.shipmentsArray = res;
         }
       }
     );
-    
   }
 
 }
