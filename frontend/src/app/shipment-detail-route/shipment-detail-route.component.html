@@ -1,26 +1,5 @@
-<div [ngClass]="showGreenGap ? 'shipment-route-gap-green' : 'shipment-route-gap-grey'"
-    *ngIf="scrollElements.length > 0">&nbsp;</div>
-<div id="scrollbarPreview" *ngIf="scrollElements.length > 0 ">
-    <ng-container *ngFor="let item of scrollElements.slice(0,scrollElements.length-1); let i = index">
-        <div class="shipment-milestone" [class.first-milestone]="i == 0">
-            <div class="cargo-stream" title="{{i}} : {{item.title}}">
-                <div class="cargo-stream-bullet-container {{i < latestActualMilestone? 'green' : 'grey'}}-container"
-                    style="height: 100%">
-                    <div class="cargo-stream-bullet" [class.green-bullet]=" (item.actualTime !== undefined &&
-                  item.actualTime !== null) ||
-                i < latestActualMilestone" [class.grey-bullet]="(item.actualTime === undefined ||
-                  item.actualTime === null) &&
-                i >= latestActualMilestone
-              ">
-                        &nbsp;
-                    </div>
-                </div>
-            </div>
-        </div>
-    </ng-container>
-    <div class="shipment-milestone"></div>
-</div>
-<div class="shipment-route-milestone-container" *ngIf="scrollElements.length > 0">
+
+<div class="shipment-route-milestone-container" *ngIf="scrollElements.length ">
     <div class="shipment-milestone" [class.first-milestone]="i == 0"
         *ngFor="let item of scrollElements.slice(0,scrollElements.length-1); let i = index">
         <div class="cargo-stream">
