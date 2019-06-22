@@ -15,9 +15,14 @@ const blockSchema = new mongoose.Schema({
   hash: String
 }, { timestamps: true });
 
-blockSchema.methods.getHash = function () {
-  return sha1(JSON.stringify(this.data) + this.prevHash + this.index + this.timestamp);
-}
+blockSchema.pre('save', function (next) {
+  const block = this;
+
+  helpers.LOGGER.debug(`${block} assigning a hash value`);
+  block.hash = sha1(JSON.stringify(this.data) + this.prevHash + this.index + this.timestamp);
+  block.timestamp = Math.floor(Date.now() / 1000);
+  next();
+});
 
 const Block = mongoose.model('Block', blockSchema);
 

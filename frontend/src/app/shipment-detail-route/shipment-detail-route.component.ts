@@ -8,6 +8,7 @@ import { getDirection, isMilestoneReached, checkTrackingEntityDetails } from '..
 })
 
 export class ShipmentDetailRouteComponent implements OnInit {
+    //public milestones=[{},{},{},{}]
     public milestones = [{
         "milestoneTitle": "CUV - Nas Couves",
         "milestoneType": "APUP",
@@ -74,7 +75,7 @@ export class ShipmentDetailRouteComponent implements OnInit {
     public iconUrl: string = 'assets/Icons/';
     public iconPath: string = '';
     public fixedElement;
-
+    public milestonesTags = ["ImportDoorGreen", "MainCarriageAirDarkGreyLeft", "LastAirportDarkGreyLeft", "ImportStationDarkGrey"]
     // milestone variables
     public milestonesWithDirection: string[] = [
         'OLD1',
@@ -96,6 +97,7 @@ export class ShipmentDetailRouteComponent implements OnInit {
             if (item.actualTime !== undefined && item.actualTime !== null) {
                 this.latestActualMilestone = index;
             }
+
             return item;
         });
         this.fixedElement = this.scrollElements[this.scrollElements.length - 1];
@@ -109,36 +111,10 @@ export class ShipmentDetailRouteComponent implements OnInit {
             this.latestActualMilestone) ? 'Green' : 'DarkGrey';
         let iconPath = this.iconUrl + milestoneDetail.iconTag + milestoneStatus + '.svg';
 
-        // calculate direction based on the following milestone
-        // if last milestone use direction of previous one
-        let direction: string = '';
-
-        if (index < this.milestones.length - 1) {
-            const nextMilestone = this.milestones[index + 1];
-
-            if (this.milestonesWithDirection.indexOf(milestoneDetail.milestoneType) > -1) {
-                if (this.milestonesWithDirection.indexOf(nextMilestone.milestoneType) > -1) {
-                    direction = getDirection(milestoneDetail, nextMilestone);
-                } else {
-                    //get previous milestone
-                    direction = getDirection(this.milestones[index - 1], milestoneDetail);
-                }
-                iconPath = this.iconUrl + milestoneDetail.iconTag +
-                    milestoneStatus + direction + '.svg';
-            }
-        } else {
-            //last milestone
-            if (this.milestonesWithDirection.indexOf(milestoneDetail.milestoneType) > -1) {
-                //get previous milestone
-                direction = getDirection(this.milestones[index - 1], milestoneDetail);
-                iconPath = this.iconUrl + milestoneDetail.iconTag +
-                    milestoneStatus + direction + '.svg';
-            }
-        }
         return iconPath;
     }
     public fillarray = (array) => {
-        while(array.length<4){
+        while (array.length < 4) {
             array.push({})
         }
         return array
