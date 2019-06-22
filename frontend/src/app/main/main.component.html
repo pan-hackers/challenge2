@@ -24,13 +24,21 @@
 </div>
 
 <div class="top" *ngIf="viewState==='details'">
-  <div class="title-text">Details</div>
+    
+  <div class="title-text">Details </div> 
   <div class="title-dot title-dot-green">&nbsp;</div>
 </div>
 <div class="page" *ngIf="viewState==='details'">
   <div class="page-content">
-    <div class="component-header">
-      <h2>Details</h2>
+    <div class="component-header"> 
+      <button class="button-go-back" (click)="onBackButtonClick()" >
+      <div class="button-go-back-image">
+        <img src="assets/Icons/BackIconNegative.svg" />
+      </div>
+      <div class="button-go-back-text">Go Back</div>
+    </button>
+      <h2>Details 
+          <span>&nbsp;{{ shipNum }}</span></h2>
     </div>
     <div class="grid-wrapper">
       <kosmos-shipment-detail></kosmos-shipment-detail>
