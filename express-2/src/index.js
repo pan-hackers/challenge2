@@ -11,6 +11,8 @@ import helpers from './helpers';
 import middlewares from './middlewares';
 import routes from './routes';
 
+import models from './models';
+
 import { connectDb } from './models';
 
 const app = express();
@@ -42,6 +44,21 @@ app.use('/api/blockchain', routes.blockchain);
 // Application global error handler
 app.use(middlewares.errorHandler);
 
+const eraseDatabaseOnSync = true;
+
 connectDb().then(async () => {
+  if (eraseDatabaseOnSync) {
+    await Promise.all([
+      models.ConsumableUnit.deleteMany({}),
+      models.TradeUnit.deleteMany({}),
+      models.LogisticUnit.deleteMany({}),
+      models.Location.deleteMany({}),
+      models.Event.deleteMany({}),
+      models.Milestone.deleteMany({}),
+      models.Shipment.deleteMany({}),
+      models.Company.deleteMany({}),
+    ]);
+  }
+
   app.listen(process.env.PORT, () => helpers.LOGGER.info(`Blockchain Supply Chain App is listening on port ${process.env.PORT}!`));
 });
