@@ -8,6 +8,7 @@ import ConsumableUnit from './consumableUnit';
 import TradeUnit from './tradeUnit';
 import LogisticUnit from './logisticUnit';
 import Shipment from './shipment';
+import Milestone from './milestone';
 import Event from './event';
 import Message from './message';
 import Coin from './coin';
@@ -18,7 +19,7 @@ const connectDb = () => mongoose.connect(process.env.DATABASE_URL, { useNewUrlPa
 
 const models = { User, Company, Location, ConsumableUnit, TradeUnit, 
     LogisticUnit, Shipment, Message, 
-    Event,
+    Event, Milestone,
     Coin, Block, Blockchain };
 
 export { connectDb, TokenKey };

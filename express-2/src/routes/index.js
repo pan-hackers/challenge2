@@ -6,7 +6,9 @@ import consumableUnit from './consumableUnit';
 import tradeUnit from './tradeUnit';
 import logisticUnit from './logisticUnit';
 import shipment from './shipment';
+import milestone from './milestone';
 import event from './event';
+import populate from './populate';
 import blockchain from './blockchain';
 
 export default {
@@ -18,6 +20,8 @@ export default {
   tradeUnit,
   logisticUnit,
   shipment,
+  milestone,
   event,
+  populate,
   blockchain
 };

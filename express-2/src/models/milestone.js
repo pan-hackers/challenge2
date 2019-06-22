@@ -1,10 +1,6 @@
 import mongoose from 'mongoose';
 
 const milestoneSchema = new mongoose.Schema({
-    eventName: {
-        type: String,
-        required: true
-    },
     code: {
         type: String,
         required: true
@@ -13,10 +9,28 @@ const milestoneSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    milestoneCategory: {
+    eta: {
+        type: Date,
+        required: false
+    },
+    ata: {
+        type: Date,
+        required: false
+    },
+    etd: {
+        type: Date,
+        required: false
+    },
+    atd: {
+        type: Date,
+        required: false
+    },
+    category: {
         type: String,
         required: true
-    }
+    },
+    shipment: { type: mongoose.Schema.Types.ObjectId, ref: 'Shipment' },
+    events: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Event' }]
 
 });
 

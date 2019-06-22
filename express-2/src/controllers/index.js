@@ -6,7 +6,9 @@ import logisticUnit from './logisticUnit';
 import company from './company';
 import shipment from './shipment';
 import location from './location';
+import milestone from './milestone';
 import event from './event';
+import populate from './populate';
 import blockchain from './blockchain';
 
 export default {
@@ -17,7 +19,9 @@ export default {
   company,
   location,
   shipment,
+  milestone,
   event,
   user,
+  populate,
   blockchain
 };
