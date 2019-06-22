@@ -9,6 +9,7 @@ router.post('/locations', controllers.populate.populateLocations);
 router.post('/consumableUnits', controllers.populate.populateConsumableUnits);
 router.post('/tradeUnits', controllers.populate.populateTradeUnits);
 router.post('/logisticUnits', controllers.populate.populateLogisticUnits);
+router.post('/milestones/pup', controllers.populate.populateMilestonePUP);
 router.delete('/all', controllers.populate.cleanAll);
 router.post('/all', controllers.populate.populateAll);
 

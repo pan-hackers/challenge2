@@ -32,7 +32,7 @@
     padding: 0;
     margin: 16px 16px;
     font-size: 15px;
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: 900;
   }
   h2 span {
@@ -58,7 +58,7 @@
   }
   dt {
     color: rgb(130, 130, 130);
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 12px;
   }
   dd {
@@ -112,7 +112,7 @@
     color: #fff;
     width: 100%;
     height: 60px;
-    text-transform: uppercase;
+    text-transform: none;
     border: 0;
     padding: 0;
     cursor: pointer;
@@ -298,7 +298,7 @@
     -webkit-transition: all 0.2s; /* Safari */
     transition: all 0.2s;
     text-align: left;
-    text-transform: uppercase;
+    text-transform: none;
     cursor: pointer;
   }
   
@@ -320,7 +320,7 @@
     -webkit-transition: all 0.2s; /* Safari */
     transition: all 0.2s;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: 600;
     cursor: pointer;
   }
@@ -335,7 +335,7 @@
     text-align: left;
     color: #000;
     font-weight: 900;
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 16px;
     text-decoration: none;
     background: #fff url('assets/Icons/ArrowRight.svg') no-repeat 16px center;
@@ -373,18 +373,20 @@
     padding: 0;
   }
   
-  .button-status{
+  .button-status, .scan-button{
       text-align: center;
       background: #2196f3;
       font-weight: 900;
-      text-transform: uppercase;
+      text-transform: none;
       color: #fff;
       padding: 0 16px;
       height: 40px;
       border: 0;
       cursor: pointer;
   }
-  
+
+  .scan-button-container{color: rgba(255,255,255,0.8);}
+  .scan-button{border-radius: 6px; margin-right: 8px; background: #fff; color: #000;}
   
   /* Scroll
   -------------------------*/
@@ -519,6 +521,9 @@
     height: 60px;
   }
   
+  .scan-page{display: flex; justify-content: flex-start; flex-wrap: wrap; color: #fff; padding: 5%}
+.scan-button-container{margin-bottom: 5%;}
+
   /* Component
   -------------------------*/
   
@@ -530,7 +535,10 @@
   display: flex;
   align-items: center;}
   
-  .top div.title-dot{width: 22px; height: 22px; border-radius: 50%; background: #41be41; margin-left: 8px;}
+  .top div.title-dot{width: 22px; height: 22px; border-radius: 50%; margin: 4px 0 0 8px;}
+  .title-dot-green{background: #41be41;}
+  .title-dot-blue{background: #959bff;}
+  .title-dot-orange{background: #FF7300;}
   
   .component-header,
   .component-search {
@@ -710,7 +718,7 @@
     display: block;
     color: #969696;
     font-size: 10px;
-    text-transform: uppercase;
+    text-transform: none;
     padding: 0 2px;
     float: right;
   }
@@ -740,7 +748,7 @@
   
   .track-modal-window{width: 100%; display: flex; margin-bottom: 20px; flex-wrap: wrap; color: #000;}
   .track-modal-window-row{width: 100%; display: flex; flex-wrap: wrap;}
-  .track-modal-window-column-left{width: 30%; font-size: 12px; text-transform: uppercase; font-weight: 300;}
+  .track-modal-window-column-left{width: 30%; font-size: 12px; text-transform: none; font-weight: 300;}
   .track-modal-window-column-right{width: 70%; font-weight: 600;}
   .track-modal-window button{position: absolute; right: 0; bottom: 0;}
   
@@ -1046,7 +1054,7 @@
   .green-label div.milestone-info-label,
   .red-label div.milestone-info-label {
     font-weight: 300;
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 12px;
     color: #000;
   }
@@ -1269,7 +1277,7 @@
     width: 100%;
   }
   .summary-label {
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 12px;
   }
   
@@ -1286,7 +1294,7 @@
     font-size: 24px;
     line-height: 26px;
     font-weight: 900;
-    text-transform: uppercase;
+    text-transform: none;
   }
   
   .summary-data-figure {
@@ -1452,7 +1460,7 @@
     display: flex;
     align-items: center;
     font-weight: 900;
-    text-transform: uppercase;
+    text-transform: none;
     color: #000;
   }
   
@@ -1595,7 +1603,7 @@
   
   .milestone-label-title, .milestone-info div.milestone-info-label, .light-grey-label div.milestone-info-label, .grey-label div.milestone-info-label, .green-label div.milestone-info-label, .red-label div.milestone-info-label {
     font-weight: 300;
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 12px;
     color: #000;
   }
@@ -1692,7 +1700,7 @@
   
   .k-tabstrip > .k-tabstrip-items .k-item .k-link {
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 14px;
   }
   .k-tabstrip-top > .k-tabstrip-items .k-item {
@@ -1746,7 +1754,7 @@
     background: #2196f3;
     color: #fff;
     font-weight: 900;
-    text-transform: uppercase;
+    text-transform: none;
     border-radius: 0;
   }
   td.k-command-cell button.k-button {
@@ -1816,10 +1824,19 @@
   .k-tabstrip > .k-tabstrip-items .k-item .k-link{font-size: 15px; font-weight: 900; padding: 16px;}
   
   
+  .k-widget, .k-block, .k-panel{background: transparent;}
   
   
-  
-  
+  .k-splitbar {
+    color: #fff;
+    background-color: rgba(255,255,255,0.2);
+}
+
+
+
+
+
+
   
   
   

@@ -103,6 +103,11 @@ class Populate {
         next(boom.badRequest(err));
       }
 
+      var i;
+      for (i = 0; i < 10; i++) { 
+        models.Milestone.events.push({what: "gtin", when: new Date(), where: "gln", why: "pallet arrived", action: "OBSERVE"})
+      }
+
       return res.status(201).json(objs);
     });
   }
