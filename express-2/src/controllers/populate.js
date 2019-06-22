@@ -366,12 +366,10 @@ class Populate {
     // temporary generation of SSCC
     const sscc = "7633333." + Math.floor(Math.random() * Math.floor(9999999999))
     const awb = "AWB-" + Math.floor(Math.random() * Math.floor(99999999999))
-
-
-
+    
     const shipment = models.Shipment({
       // TODO: This should be changed with better implementation
-      "awb": awb
+      "awb": awb,
       "SSCC": sscc,
       "from": "Basel",
       "to": "Atlanta"
