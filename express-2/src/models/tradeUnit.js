@@ -5,9 +5,14 @@ const tradeUnitSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    GLN: {
+    GTIN: {
         type: String,
-        required: true
+        required: true,
+        unique: true
+    },
+    SSCC: {
+        type: String,
+        required: false
     },
     consumableUnits: [ { type: mongoose.Schema.Types.ObjectId, ref: 'ConsumableUnit' } ]
 });

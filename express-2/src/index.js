@@ -32,6 +32,8 @@ app.use('/api/messages', routes.message);
 app.use('/api/companies', routes.company);
 app.use('/api/locations', routes.location);
 app.use('/api/consumableUnits', routes.consumableUnit);
+app.use('/api/tradeUnits', routes.tradeUnit);
+app.use('/api/logisticUnits', routes.logisticUnit);
 app.use('/api/blockchain', routes.blockchain);
 
 // Application global error handler

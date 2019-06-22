@@ -43,7 +43,7 @@ class ConsumableUnit {
     });
   }
 
-  static create(req, res) {
+  static create(req, res, next) {
     helpers.LOGGER.info("post - '/' - called");
     const cu = new models.ConsumableUnit(req.body);
 

@@ -7,10 +7,11 @@ const consumableUnit = new mongoose.Schema({
     },
     GTIN: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     }
 });
 
-const ConsumableUnit = mongoose.model('Consumable Unit', consumableUnit);
+const ConsumableUnit = mongoose.model('ConsumableUnit', consumableUnit);
 
 export default ConsumableUnit;

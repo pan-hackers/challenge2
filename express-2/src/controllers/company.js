@@ -53,7 +53,6 @@ class Company {
         next(boom.badImplementation(err));
       } 
       
-      helpers.LOGGER.info(`shit`);
       return res.status(201).json(c);
     });
   }
