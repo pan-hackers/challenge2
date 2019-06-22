@@ -788,10 +788,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"status\": \"Planning\",\n\t\"SSCC\": \"7611111SSCC01\"\n}"
+					"raw": "{\n\t\"status\": \"Planning\",\n\t\"from\": \"Paris\",\n\t\"to\": \"Milan\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/shipments/",
+					"raw": "http://localhost:3000/api/v1/shipments/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -799,6 +799,7 @@
 					"port": "3000",
 					"path": [
 						"api",
+						"v1",
 						"shipments",
 						""
 					]
@@ -1105,6 +1106,227 @@
 						"api",
 						"populates",
 						"tradeUnits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.createShipment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/populates/shipments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"populates",
+						"shipments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.populatePUP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/populates/shipments/5d0e8c49ecaf3e76a4de1a18/milestones/pup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"populates",
+						"shipments",
+						"5d0e8c49ecaf3e76a4de1a18",
+						"milestones",
+						"pup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.populatePOD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/populates/shipments/5d0e8c49ecaf3e76a4de1a18/milestones/pod",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"populates",
+						"shipments",
+						"5d0e8c49ecaf3e76a4de1a18",
+						"milestones",
+						"pod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "blockchain.getOne",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/blockchain/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"blockchain",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.populateARR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/populates/shipments/5d0e93131ac71078cacdc388/milestones/ARR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"populates",
+						"shipments",
+						"5d0e93131ac71078cacdc388",
+						"milestones",
+						"ARR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "populates.populateDEP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJteXVzZXIiLCJpYXQiOjE1NTk4MjIyOTN9.ZsmZhDjvVUS52tiQTKJsMxO52JwsmKNec02vGGVfa0w",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/populates/shipments/5d0e8c49ecaf3e76a4de1a18/milestones/ARR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"populates",
+						"shipments",
+						"5d0e8c49ecaf3e76a4de1a18",
+						"milestones",
+						"ARR"
 					]
 				}
 			},

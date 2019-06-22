@@ -72,7 +72,8 @@ class Populate {
         }
 
         for (let j = 0; j < objs.length; j++) {
-          models.LogisticUnit.findById("5d0e29a912c93a513833048a")
+          models.LogisticUnit
+            .findById("5d0e29a912c93a513833048a")
             .populate({
               path: 'tradeUnits',
               model: 'TradeUnit',
@@ -108,8 +109,6 @@ class Populate {
 
               // time to save the milestone
               await objs[j].save();
-
-              helpers.LOGGER.debug(`--> ${JSON.stringify(s._id)}`);
 
               controllers.blockchain.createMilestone1(JSON.stringify(objs[j]), s._id);
 
@@ -182,8 +181,6 @@ class Populate {
               // time to save the milestone
               await objs[j].save();
 
-              helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
-
               controllers.blockchain.createMilestone1(JSON.stringify(objs[j]), s._id);
 
               // Now I attach the milsetones to the shipment and save it
@@ -255,8 +252,6 @@ class Populate {
               // time to save the milestone
               await objs[j].save();
 
-              helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
-
               controllers.blockchain.createMilestone1(JSON.stringify(objs[j]), s._id);
 
               // Now I attach the milsetones to the shipment and save it
@@ -323,8 +318,6 @@ class Populate {
 
               // time to save the milestone
               await objs[j].save();
-
-              helpers.LOGGER.debug(`--> QQQ ${JSON.stringify(objs[j])}`);
 
               controllers.blockchain.createMilestone1(JSON.stringify(objs[j]), s._id);
 
