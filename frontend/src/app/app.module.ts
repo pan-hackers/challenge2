@@ -5,11 +5,13 @@ import { GridModule } from '@progress/kendo-angular-grid';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ShipmentDetailRouteComponent} from './shipment-detail-route/shipment-detail-route.component'
 import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ShipmentDetailRouteComponent
     MainComponent
   ],
   imports: [
