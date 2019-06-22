@@ -11,7 +11,7 @@ import { ShipmentService } from '../shipment.service';
 export class MainComponent implements OnInit {
   public viewState = 'main';
   public shipmentsArray = [];
-
+  public shipNum="LHR 12312312"
   constructor(
     private readonly shipmentService: ShipmentService
   ) { }
@@ -27,12 +27,13 @@ export class MainComponent implements OnInit {
   }
 
   public onBackButtonClick = () => {
-
+    this.viewState = 'main';
   }
 
   public getShipments() {
     this.shipmentService.getAllShipments().subscribe(
       (res) => {
+<<<<<<< HEAD
         if (this.shipmentsArray === undefined || this.shipmentsArray.length === 0) {
           this.shipmentsArray = data;
         } else {
@@ -41,6 +42,15 @@ export class MainComponent implements OnInit {
       }
     );
 
+=======
+        this.shipmentsArray = res;
+        if (this.shipmentsArray === undefined || this.shipmentsArray.length === 0) {
+          this.shipmentsArray = data;
+        }
+      }
+    );
+    
+>>>>>>> bc99630227f82ff89b2a500ef52194e89f574a9f
   }
 
 }
