@@ -9,7 +9,7 @@ import { ShipmentService } from '../shipment.service';
 })
 export class ScanComponent implements OnInit {
 
-  shipment = {};
+  public shipment = {};
 
   constructor(
     private readonly shipmentService: ShipmentService
@@ -18,7 +18,7 @@ export class ScanComponent implements OnInit {
   ngOnInit() {
   }
 
-  getShipment(id: string) {
+  public getShipment(id: string): void {
     this.shipmentService.getSingleShimpent(id).subscribe(
       res => {
         this.shipment = res;
@@ -26,11 +26,11 @@ export class ScanComponent implements OnInit {
     );
   }
 
-  addShipment() {
+  public addShipment(): void {
     this.shipmentService.createShipment().subscribe();
   }
 
-  addMilestone() {
+  public addMilestone(): void {
     this.shipmentService.createMilestone().subscribe();
   }
 }
