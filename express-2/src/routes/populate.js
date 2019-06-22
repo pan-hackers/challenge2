@@ -4,12 +4,12 @@ import controllers from '../controllers';
 
 const router = Router();
 
-router.get('/companies', controllers.populate.populateCompanies);
-router.get('/locations', controllers.populate.populateLocations);
-router.get('/consumableUnits', controllers.populate.populateConsumableUnits);
-router.get('/tradeUnits', controllers.populate.populateTradeUnits);
-router.get('/logisticUnits', controllers.populate.populateLogisticUnits);
+router.post('/companies', controllers.populate.populateCompanies);
+router.post('/locations', controllers.populate.populateLocations);
+router.post('/consumableUnits', controllers.populate.populateConsumableUnits);
+router.post('/tradeUnits', controllers.populate.populateTradeUnits);
+router.post('/logisticUnits', controllers.populate.populateLogisticUnits);
 router.delete('/all', controllers.populate.cleanAll);
-router.get('/all', controllers.populate.populateAll);
+router.post('/all', controllers.populate.populateAll);
 
 export default router;
