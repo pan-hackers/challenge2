@@ -13,7 +13,8 @@
       </div>
       <div class="grid-wrapper">
         <kendo-grid [data]="shipmentsArray">
-          <kendo-grid-column field="sscc" title="AWB" width="60"></kendo-grid-column>
+          <kendo-grid-column field="awb" title="AWB" width="60"></kendo-grid-column>
+          <kendo-grid-column field="SSCC" title="SSCC" width="60"></kendo-grid-column>
           <kendo-grid-column field="from" title="From" width="100"></kendo-grid-column>
           <kendo-grid-column field="to" title="To" width="100"></kendo-grid-column>
           <kendo-grid-column field="date" title="Date" width="100"></kendo-grid-column>
@@ -29,6 +30,6 @@
   </div>
 
   <div class="page" *ngIf="viewState==='details'">
-      <kosmos-shipment-detail [onBack]="onBackButtonClick"></kosmos-shipment-detail>
+    <kosmos-shipment-detail [onBack]="onBackButtonClick"></kosmos-shipment-detail>
   </div>
 </div>

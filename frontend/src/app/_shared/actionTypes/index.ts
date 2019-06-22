@@ -1,0 +1,2 @@
+export const UPDATE_SHIPMENTS = 'UPDATE_SHIPMENTS';
+export const UPDATE_BLOCKS = 'UPDATE_BLOCKS';

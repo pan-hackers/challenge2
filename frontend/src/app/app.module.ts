@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { LayoutModule } from '@progress/kendo-angular-layout';
+import { StoreModule } from '@ngrx/store';
+import { RootReducer } from './reducers/';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,7 +36,10 @@ import { ShipmentDetailComponent } from './shipment-detail/shipment-detail.compo
     BrowserAnimationsModule,
     LayoutModule,
     HttpClientModule,
-    ChartsModule
+    ChartsModule,
+    StoreModule.forRoot({
+      RootReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
