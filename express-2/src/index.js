@@ -4,6 +4,9 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import express from 'express';
 
+import swaggerUi from 'swagger-ui-express';
+import swaggerJsdoc from 'swagger-jsdoc';
+
 import helmet from 'helmet';
 //import morgan from 'morgan';
 
@@ -29,20 +32,21 @@ app.use('/static', express.static(__dirname + '/public'));
 /* Own middlewares */
 
 /* Own APIs */
-app.use('/api/messages', routes.message);
-app.use('/api/companies', routes.company);
-app.use('/api/locations', routes.location);
-app.use('/api/consumableUnits', routes.consumableUnit);
-app.use('/api/tradeUnits', routes.tradeUnit);
-app.use('/api/logisticUnits', routes.logisticUnit);
-app.use('/api/shipments', routes.shipment);
-app.use('/api/events', routes.event);
-app.use('/api/populates', routes.populate);
-app.use('/api/blockchain', routes.blockchain);
+app.use('/api/v1/messages', routes.message);
+app.use('/api/v1/companies', routes.company);
+app.use('/api/v1/locations', routes.location);
+app.use('/api/v1/consumableUnits', routes.consumableUnit);
+app.use('/api/v1/tradeUnits', routes.tradeUnit);
+app.use('/api/v1/logisticUnits', routes.logisticUnit);
+app.use('/api/v1/shipments', routes.shipment);
+app.use('/api/v1/events', routes.event);
+app.use('/api/v1/populates', routes.populate);
+app.use('/api/v1/blockchain', routes.blockchain);
 
 // Application global error handler
 app.use(middlewares.errorHandler);
 
+// erasing the db at start
 const eraseDatabaseOnSync = true;
 
 connectDb().then(async () => {

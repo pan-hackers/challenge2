@@ -2,7 +2,6 @@
 
 import { Router } from 'express';
 
-import middlewares from '../middlewares';
 import controllers from '../controllers';
 
 const router = Router();
