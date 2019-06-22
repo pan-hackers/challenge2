@@ -8,7 +8,7 @@ import Milestone from './milestone';
 const blockSchema = new mongoose.Schema({
   index: { type: Number, unique: true },
   timestamp: Number,
-  data: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Milestone' }],
+  data: [{ type: String }],
   prevHash: String,
   proofOfWork: Number,
   hash: String
@@ -18,10 +18,11 @@ blockSchema.methods.getHash = function () {
   return sha1(JSON.stringify(this.data) + this.prevHash + this.index + this.timestamp);
 }
 
+/*
 blockSchema.pre('save', function (next) {
   const block = this;
 
-  helpers.LOGGER.debug(`${block} saving all coins in memory`);
+  helpers.LOGGER.debug(`${block} saving all milestones in memory`);
 
   this.data.forEach(function (chain) {
 
@@ -37,6 +38,7 @@ blockSchema.pre('save', function (next) {
 }, (err) => {
   next(boom.badImplementation(err));
 });
+*/
 
 const Block = mongoose.model('Block', blockSchema);
 

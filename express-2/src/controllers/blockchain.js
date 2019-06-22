@@ -8,6 +8,7 @@ class Blockchain {
   constructor() {
   }
 
+  /*
   static loadBlockchain(req, res, next) {
     helpers.LOGGER.info("loadBlockchain - '/' - called");
 
@@ -33,6 +34,7 @@ class Blockchain {
 
     res.send('foo');
   }
+  */
 
   static newBlock(req, res, next) {
     helpers.LOGGER.info("newBlock - '/' - called");
@@ -60,22 +62,14 @@ class Blockchain {
     });
   };
 
-  static createTransaction(req, res, next) {
-    helpers.LOGGER.info("createTransaction - '/' - called");
-
-    const coin = new models.Coin({
-      sender: "Marcin",
-      receiver: "Piotr",
-      amount: 0
-    });
+  static createMilestone1(milestoneAsJson, next) {
+    helpers.LOGGER.info("createMilestone - '/' - called");
 
     models.Blockchain
       .findOne({})
       .populate('chain')
-      .populate('currentTransactions')
-      .populate('currentTransactions')
+      .populate('milestone')
       .populate('chain.data')
-      .populate('currentTransactions.data')
       .exec((err, blockchain) => {
         if (err) {
           next(boom.badImplementation(err));
@@ -85,7 +79,51 @@ class Blockchain {
           blockchain = new models.Blockchain();
         }
 
-        helpers.LOGGER.debug('creating new transaction');
+        helpers.LOGGER.debug('adding the milestone');
+        blockchain.milestone = milestoneAsJson;
+        helpers.LOGGER.debug('creating new block');
+        blockchain.newBlock();
+        //blockchain.milestone = {};
+
+        helpers.LOGGER.debug(`--> ${JSON.stringify(blockchain)}`);
+
+        blockchain.save((err, b) => {
+          if (err) {
+            next(boom.badImplementation(err));
+          } else {
+            helpers.LOGGER.debug(`blockchain saved to blocks collection.`);
+
+            return true;
+          }
+        });
+      });
+  }
+
+  static createMilestone(req, res, next) {
+    helpers.LOGGER.info("createMilestone - '/' - called");
+
+    // here to modify
+    const milestone = new models.Milestone({
+      sender: "Marcin",
+      receiver: "Piotr",
+      amount: 0
+    });
+
+    models.Blockchain
+      .findOne({})
+      .populate('chain')
+      .populate('milestone')
+      .populate('chain.data')
+      .exec((err, blockchain) => {
+        if (err) {
+          next(boom.badImplementation(err));
+        }
+
+        if (!blockchain) {
+          blockchain = new models.Blockchain();
+        }
+
+        helpers.LOGGER.debug('creating new milestone');
         blockchain.newTransaction(coin);
         helpers.LOGGER.debug('creating new block');
         blockchain.newBlock();

@@ -19,7 +19,20 @@ const shipmentSchema = new mongoose.Schema({
         unique: true
     },
     milestones: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Milestone' } ]
-});
+}/*, {
+    toObject: {
+      transform: function (doc, ret) {
+        delete ret._id;
+        delete ret._v;
+      }
+    },
+    toJSON: {
+      transform: function (doc, ret) {
+        delete ret._id;
+        delete ret._v;
+      }
+    }
+  }*/);
 
 const ShipmentSchema = mongoose.model('Shipment', shipmentSchema);
 
