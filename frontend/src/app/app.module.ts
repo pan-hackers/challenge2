@@ -11,7 +11,7 @@ import { MainComponent } from './main/main.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ShipmentDetailRouteComponent
+    ShipmentDetailRouteComponent,
     MainComponent
   ],
   imports: [
