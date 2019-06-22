@@ -35,8 +35,8 @@ export class ShipmentService {
     return this.http.post<any>(url, null);
   }
 
-  createMilestone(): Observable<any> {
-    const url = `${this.baseURL}populates/milestones`;
+  createMilestone(scanType: string, id: string): Observable<any> {
+    const url = `${this.baseURL}populates/shipments/${id}/milestones/${scanType}`;
     return this.http.post<any>(url, null);
   }
 }
