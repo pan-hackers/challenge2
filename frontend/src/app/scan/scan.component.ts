@@ -10,15 +10,18 @@ import { ShipmentService } from '../shipment.service';
 export class ScanComponent implements OnInit {
 
   public shipment = {};
-  public shipmentID: string;
-  public shimpentButtonsArray = { pup: false, dep: false, arr: false, pod: false };
+  public shipmentID = undefined;
+  public pup = true;
+  public dep = true;
+  public arr = true;
+  public pod = true;
+  public buttonNo = 0;
 
   constructor(
     private readonly shipmentService: ShipmentService
   ) { }
 
   ngOnInit() {
-    console.log(this.shimpentButtonsArray);
   }
 
   public getShipment(id: string): void {
@@ -34,6 +37,8 @@ export class ScanComponent implements OnInit {
       (res) => {
         this.shipmentID = res;
         console.log(this.shipmentID);
+        this.pup = false;
+        this.buttonNo = 1;
       }
     );
   }
@@ -41,5 +46,22 @@ export class ScanComponent implements OnInit {
   public addMilestone(scanType: string, id: string): void {
     id = this.shipmentID;
     this.shipmentService.createMilestone(scanType, id).subscribe();
+    this.buttonStateHandler(scanType);
+  }
+
+  public buttonStateHandler(scanType: string): void {
+    this.buttonNo++;
+    if (this.buttonNo === 2) {
+      this.pup = true;
+      this.dep = false;
+    } else if (this.buttonNo === 3) {
+      this.dep = true;
+      this.arr = false;
+    } else if (this.buttonNo === 4) {
+      this.arr = true;
+      this.pod = false;
+    } else if (this.buttonNo === 5) {
+      this.pod = true;
+    }
   }
 }

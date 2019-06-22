@@ -10,6 +10,7 @@ import { ShipmentService } from '../shipment.service';
 export class MainComponent implements OnInit {
   public viewState = 'main';
   public shipmentsArray = [];
+  public shipNum = 'LHR 12312312';
   constructor(
     private readonly shipmentService: ShipmentService
   ) { }
@@ -29,8 +30,8 @@ export class MainComponent implements OnInit {
   }
 
   public getShipments() {
-    this.shipmentsArray = data;
-   /**this.shipmentService.getAllShipments().subscribe(
+    // this.shipmentsArray = data;
+    this.shipmentService.getAllShipments().subscribe(
       (res) => {
         // if (this.shipmentsArray === undefined || this.shipmentsArray.length === 0) {
         //   this.shipmentsArray = data;
@@ -39,7 +40,7 @@ export class MainComponent implements OnInit {
         console.log(res);
         // }
       }
-    ); */ 
+    );
   }
 
 }
