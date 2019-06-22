@@ -5,7 +5,7 @@ import controllers from '../controllers';
 
 const router = Router();
 
-router.get('/', middlewares.auths.verifyToken, controllers.milestone.getAll);
-router.post('/', middlewares.auths.verifyToken, controllers.milestone.create);
+router.get('/', controllers.milestone.getAll);
+router.post('/', controllers.milestone.create);
 
 export default router;

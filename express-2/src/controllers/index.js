@@ -1,5 +1,4 @@
 import message from './message';
-import user from './user';
 import consumableUnit from './consumableUnit';
 import tradeUnit from './tradeUnit';
 import logisticUnit from './logisticUnit';
@@ -21,7 +20,6 @@ export default {
   shipment,
   milestone,
   event,
-  user,
   populate,
   blockchain
 };

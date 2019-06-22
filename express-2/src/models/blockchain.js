@@ -25,13 +25,6 @@ blockchainSchema.pre('save', function (next) {
     });
   });
   next();
-  /*
-  Block.updateMany(this.chain, {upsert: true}, function (err, res) {
-    if (err) throw err;
-  
-    helpers.LOGGER.debug(`Saving all chain in memory - ${JSON.stringify(res)}`);
-    next();
-  });*/
 }, (err) => {
   next(boom.badImplementation(err));
 });

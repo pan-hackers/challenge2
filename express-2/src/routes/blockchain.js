@@ -7,10 +7,10 @@ import controllers from '../controllers';
 
 const router = Router();
 
-router.get('/', middlewares.auths.verifyToken, controllers.blockchain.loadBlockchain)
-router.post('/', middlewares.auths.verifyToken, controllers.blockchain.saveBlockchain)
-router.post('/transactions/new', middlewares.auths.verifyToken, controllers.blockchain.createTransaction);
-router.post('/mine', middlewares.auths.verifyToken, controllers.blockchain.foo);
-router.get('/chain', middlewares.auths.verifyToken, controllers.blockchain.foo);
+router.get('/', controllers.blockchain.loadBlockchain)
+router.post('/', controllers.blockchain.saveBlockchain)
+router.post('/transactions/new', controllers.blockchain.createTransaction);
+router.post('/mine', controllers.blockchain.foo);
+router.get('/chain', controllers.blockchain.foo);
 
 export default router;
