@@ -1,0 +1,139 @@
+<kendo-tabstrip *ngIf="width < 2">
+    <kendo-tabstrip-tab [title]="'Route'" [selected]="true">
+        <ng-template kendoTabContent>
+            <div class="shipment-route">
+                <kosmos-shipment-detail-route  
+                    [latestActualMilestone]='this.latestActualMilestone' [showGreenGap]='showGreenGap'
+                    [navigateToMilestone]="navigateToMilestone">
+                </kosmos-shipment-detail-route>
+            </div>
+
+        </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab [title]="'Sensors'">
+        <ng-template kendoTabContent>
+            <kosmos-sensor-detail></kosmos-sensor-detail>
+        </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab [title]="'Details'">
+        <ng-template kendoTabContent>
+            <div class="surprise-section shipment-details">
+
+                <div class="surprise-section-item">
+                    <div class="row section-header">
+                        <h2>{{ trackingEntitiesDetails.shipNum }}</h2>
+                    </div>
+
+
+                    <div class="summary-row-group">
+                        <div class="summary-row">
+                            <div class="summary-label">From</div>
+                            <div class="summary-data">
+                                <!-- <span class="summary-data-big">Code Here</span> -->
+                                {{ trackingEntitiesDetails.mainFrom }}
+                            </div>
+                        </div>
+                        <div class="summary-row">
+                            <div class="summary-label">To</div>
+                            <div class="summary-data">
+                                <!-- <span class="summary-data-big">Code Here</span> -->
+                                {{ trackingEntitiesDetails.mainTo }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-label"
+                            *ngIf="trackingEntitiesDetails.entityType === 'OCAR' ||trackingEntitiesDetails. entityType === 'OFWO' || trackingEntitiesDetails.entityType === 'OCON'">
+                            Vessel / Voyage</div>
+                        <div class="summary-label"
+                            *ngIf="trackingEntitiesDetails.entityType === 'ACAR' || trackingEntitiesDetails.entityType === 'AFWO' || trackingEntitiesDetails.entityType === 'ADIR'">
+                            Flight Number</div>
+                        <div class="summary-data">
+                            {{
+                  checkTrackingEntityDetails(trackingEntitiesDetails,
+                  'voyageText')
+                  }}
+                        </div>
+                    </div>
+                    <div class="summary-row-group">
+                        <div class="summary-row summary-row-no-border-left">
+                            <div class="summary-label">Quantity (Packages)</div>
+                            <div class="summary-data summary-data-figure">
+                                {{
+                    checkTrackingEntityDetails(trackingEntitiesDetails,
+                    'pieces')
+                    }}
+                            </div>
+                        </div>
+                        <div class="summary-row">
+                            <div class="summary-label">
+                                Gross Weight ({{
+                    checkTrackingEntityDetails(
+                    trackingEntitiesDetails,
+                    'grosw'
+                    ).split(' ')[1]
+                    }})
+                            </div>
+                            <div class="summary-data summary-data-figure">
+                                {{
+                    checkTrackingEntityDetails(
+                    trackingEntitiesDetails,
+                    'grosw'
+                    ).split(' ')[0]
+                    }}
+                            </div>
+                        </div>
+                        <div class="summary-row">
+                            <div class="summary-label">
+                                Volume (
+                                {{
+                    checkTrackingEntityDetails(
+                    trackingEntitiesDetails,
+                    'volume'
+                    ).split(' ')[1]
+                    }})
+                            </div>
+                            <div class="summary-data summary-data-figure">
+                                {{
+                    checkTrackingEntityDetails(
+                    trackingEntitiesDetails,
+                    'volume'
+                    ).split(' ')[0]
+                    }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-label">Customer Reference</div>
+                        <div class="summary-data">
+                            {{
+                  customerReference
+                  }}
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="surprise-section-item" *ngFor="let result of checkTrackingEntityDetails(trackingEntitiesDetails,'partners');
+            let i = index">
+                    <div class="row section-header">
+                        <h2>{{ result.roleName }}</h2>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-label">Company Name</div>
+                        <div class="summary-data">{{ result.name }}</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-label">Address</div>
+                        <div class="summary-data">{{ result.address }}</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </ng-template>
+    </kendo-tabstrip-tab>
+
+</kendo-tabstrip>

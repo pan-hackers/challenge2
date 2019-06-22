@@ -67,11 +67,6 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "iconTag": "ImportStation"
     }];
 
-
-
-
-
-
     public scrollElements;
     @Input() public latestActualMilestone;
     @Input() public showGreenGap: boolean;

@@ -365,8 +365,8 @@
     cursor: pointer;
   }
   
- /* .button-close-page{height: 50px; width: 50px; background: rgba(0,0,0,0.6) url('assets/Icons/ModalWindowCloseNegative.svg') no-repeat center; position: absolute; top: 60px; right: 0; border: 0; cursor: pointer;}
-  */
+  .button-close-page{height: 50px; width: 50px; background: rgba(0,0,0,0.6) url('assets/Icons/ModalWindowCloseNegative.svg') no-repeat center; position: absolute; top: 60px; right: 0; border: 0; cursor: pointer;}
+  
   .button-expand-collapse.k-button{ 
     width: 16px;
     height: 16px;
