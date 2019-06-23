@@ -6,8 +6,8 @@ https://github.com/pan-hackers/challenge2
 ### Running app locally
 
 - Install MongoDB and start it up with default settings.
-- enter the 'express-2' folder and type 'npm install && npm start'
-- enter the 'frontend' folder and type 'npm install && npm start’
+- enter the `express-2` folder and type `npm install && npm start`
+- enter the `frontend` folder and type `npm install && npm start`
 - visit http://localhost:4200
 
 ## AWS demo url
