@@ -12,7 +12,7 @@ class Shipment {
     helpers.LOGGER.info("getAll - '/' - called");
 
     const query = {};
-    
+
     models.Shipment.find(query)
       .populate('milestones')
       .exec((err, objs) => {
@@ -41,16 +41,19 @@ class Shipment {
       query.SSCC = req.params.sscc;
     }
 
-    models.Shipment.findOne(query, (err, obj) => {
-      if (err) {
-        next(boom.badRequest(err));
-      }
+    models.Shipment.findOne(query)
+      .populate('milestones')
+      .populate('logisticUnits')
+      .exec((err, obj) => {
+        if (err) {
+          next(boom.badRequest(err));
+        }
 
-      if (obj) {
-        return res.json(obj);
-      }
-      next(boom.notFound('Shipment not found'));
-    });
+        if (obj) {
+          return res.json(obj);
+        }
+        next(boom.notFound('Shipment not found'));
+      });
   }
 
   static create(req, res, next) {
