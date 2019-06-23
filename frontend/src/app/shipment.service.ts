@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ShipmentService {
   public baseURL = 'http://localhost:3000/api/v1/';
+  // public baseURL = 'http://express2-env.29yafm5yqm.us-east-1.elasticbeanstalk.com/api/v1/';
 
   constructor(
     private readonly http: HttpClient

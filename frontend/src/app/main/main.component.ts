@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ShipmentService } from '../shipment.service';
-import { data } from '../_mock-data/mock-data';
 import { Store } from '@ngrx/store';
-import { updateShipments, updateBlocks } from '../_shared/actions/';
+
+import { updateBlocks, updateShipments } from '../_shared/actions/';
+import { ShipmentService } from '../shipment.service';
 
 // import { data } from '../_mock-data/mock-data';
 @Component({
@@ -22,15 +21,15 @@ export class MainComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.store)
+    console.log(this.store);
     this.getShipments();
     this.subscription = this.store.subscribe((newState) => {
-      console.log("old state",this.state)
-      console.log("STATE UPDATE IN MAIN!")
-      this.state=newState;
-      this.shipmentsArray = newState.RootReducer.shipmentState.shipments
-      console.log(newState.RootReducer.shipmentState.shipmets)
-      console.log(this.shipmentsArray)
+      console.log('old state', this.state);
+      console.log('STATE UPDATE IN MAIN!');
+      this.state = newState;
+      this.shipmentsArray = newState.RootReducer.shipmentState.shipments;
+      console.log(newState.RootReducer.shipmentState.shipmets);
+      console.log(this.shipmentsArray);
     });
     //this.store.dispatch(updateShipments({text: "uganda"}))
   }
@@ -57,7 +56,6 @@ export class MainComponent implements OnInit {
         // if (this.shipmentsArray === undefined || this.shipmentsArray.length === 0) {
         //   this.shipmentsArray = data;
         // } else {
-        console.log(res);
         // }
       }
     );
