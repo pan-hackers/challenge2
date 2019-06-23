@@ -22,15 +22,10 @@ export class MainComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.store);
     this.getShipments();
     this.subscription = this.store.subscribe((newState) => {
-      console.log("old state", this.state)
-      console.log("STATE UPDATE IN MAIN!")
       this.state = newState;
       this.shipmentsArray = newState.RootReducer.shipmentState.shipments
-      console.log(newState.RootReducer.shipmentState.shipmets)
-      console.log(this.shipmentsArray)
     });
     //this.store.dispatch(updateShipments({text: "uganda"}))
   }
