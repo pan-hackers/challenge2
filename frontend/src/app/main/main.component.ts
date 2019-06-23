@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ShipmentService } from '../shipment.service';
-import { data } from '../_mock-data/mock-data';
 import { Store } from '@ngrx/store';
-import { updateShipments, updateBlocks } from '../_shared/actions/';
+
+import { updateBlocks, updateShipments } from '../_shared/actions/';
+import { ShipmentService } from '../shipment.service';
 
 // import { data } from '../_mock-data/mock-data';
 @Component({
@@ -23,7 +22,7 @@ export class MainComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.store)
+    console.log(this.store);
     this.getShipments();
     this.subscription = this.store.subscribe((newState) => {
       console.log("old state", this.state)
@@ -57,7 +56,6 @@ export class MainComponent implements OnInit {
         // if (this.shipmentsArray === undefined || this.shipmentsArray.length === 0) {
         //   this.shipmentsArray = data;
         // } else {
-        console.log(res);
         // }
       }
     );
