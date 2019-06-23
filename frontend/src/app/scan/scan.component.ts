@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ShipmentService } from '../shipment.service';
+import { Store } from '@ngrx/store';
+import { addShipmet, updateShipments, updateBlocks } from '../_shared/actions'
 
 @Component({
   selector: 'app-scan',
@@ -18,6 +20,7 @@ export class ScanComponent implements OnInit {
   public buttonNo = 0;
 
   constructor(
+    private readonly store: Store<any>,
     private readonly shipmentService: ShipmentService
   ) { }
 
@@ -35,6 +38,12 @@ export class ScanComponent implements OnInit {
   public addShipment(): void {
     this.shipmentService.createShipment().subscribe(
       (res) => {
+        if (res !== undefined) {
+          this.shipmentService.getAllShipments().subscribe((allShipments) => {
+            this.store.dispatch(updateShipments(allShipments));
+
+          })
+        }
         this.shipmentID = res;
         console.log(this.shipmentID);
         this.pup = false;
@@ -45,7 +54,14 @@ export class ScanComponent implements OnInit {
 
   public addMilestone(scanType: string, id: string): void {
     id = this.shipmentID;
-    this.shipmentService.createMilestone(scanType, id).subscribe();
+    this.shipmentService.createMilestone(scanType, id).subscribe((res) => {
+      console.log("milestone created")
+
+      this.shipmentService.getBlockChain().subscribe((blockchain)=> {
+        console.log('loaded blockchain', blockchain);
+        this.store.dispatch(updateBlocks(JSON.parse(blockchain)));
+      });
+    });
     this.buttonStateHandler(scanType);
   }
 

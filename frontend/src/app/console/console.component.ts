@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Store } from '@ngrx/store';
 @Component({
   selector: 'app-console',
   templateUrl: './console.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsoleComponent implements OnInit {
 
-  constructor() { }
+  constructor(public readonly store: Store<any>) { }
 
   ngOnInit() {
+    this.store.subscribe((newState) => {
+      console.log("STATE UPDATED IN CONSOLE!")
+    })
   }
 
 }

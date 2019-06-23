@@ -1,10 +1,10 @@
-import { UPDATE_SHIPMENTS, UPDATE_BLOCKS } from '../../_shared/actionTypes'
+import { UPDATE_SHIPMENTS, UPDATE_BLOCKS, ADD_SHIPMENT } from '../../_shared/actionTypes'
 
 export const shipmentReducer = (state, action) => {
     console.log(action)
     if (!state) {
         return {
-            shipments: null,
+            shipments: [],
             blocks: null
         }
     }
@@ -14,12 +14,20 @@ export const shipmentReducer = (state, action) => {
 
             return {
                 shipments: action.payload,
-                blocks:state.blocks
+                blocks: state.blocks
             }
         }
         case UPDATE_BLOCKS: {
+
             return {
                 shipments: state.shipments,
+                blocks: action.payload
+            };
+        }
+        case ADD_SHIPMENT: {
+            let shipmentsArray=state.shipments;
+            return {
+                shipments: shipmentsArray.push(action.payload),
                 blocks: action.payload
             };
         }

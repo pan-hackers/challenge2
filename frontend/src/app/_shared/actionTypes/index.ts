@@ -1,2 +1,3 @@
 export const UPDATE_SHIPMENTS = 'UPDATE_SHIPMENTS';
 export const UPDATE_BLOCKS = 'UPDATE_BLOCKS';
+export const ADD_SHIPMENT = 'ADD_SHIPMENT';
