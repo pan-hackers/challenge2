@@ -15,6 +15,7 @@ export class MainComponent implements OnInit {
   public viewState = 'main';
   public shipmentsArray = [];
   private subscription;
+  public state;
   constructor(
     private store: Store<any>,
     private readonly shipmentService: ShipmentService
@@ -24,27 +25,29 @@ export class MainComponent implements OnInit {
     console.log(this.store)
     this.getShipments();
     this.subscription = this.store.subscribe((newState) => {
+      console.log("old state",this.state)
       console.log("STATE UPDATE IN MAIN!")
-      console.log(newState)
-      this.shipmentsArray=newState.RootReducer.shipmentState.shipments
+      this.state=newState;
+      this.shipmentsArray = newState.RootReducer.shipmentState.shipments
       console.log(newState.RootReducer.shipmentState.shipmets)
+      console.log(this.shipmentsArray)
     });
     //this.store.dispatch(updateShipments({text: "uganda"}))
   }
 
   public onDetailButtonClick = (id) => {
-  console.log(id);
-  this.viewState = 'details';
-  this.shipmentService.getBlockChain().subscribe((blockchain)=>{
-    console.log('loaded blockchain',blockchain);
-    this.store.dispatch(updateBlocks(blockchain));
-  });
-  console.log(this.viewState);
-}
+    console.log(id);
+    this.viewState = 'details';
+    this.shipmentService.getBlockChain().subscribe((blockchain) => {
+      console.log('loaded blockchain', blockchain);
+      this.store.dispatch(updateBlocks(blockchain));
+    });
+    console.log(this.viewState);
+  }
 
   public onBackButtonClick = () => {
-  this.viewState = 'main';
-}
+    this.viewState = 'main';
+  }
 
   public getShipments() {
     // this.shipmentsArray = data;

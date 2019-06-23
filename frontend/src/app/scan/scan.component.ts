@@ -59,7 +59,7 @@ export class ScanComponent implements OnInit {
 
       this.shipmentService.getBlockChain().subscribe((blockchain)=> {
         console.log('loaded blockchain', blockchain);
-        this.store.dispatch(updateBlocks(JSON.parse(blockchain)));
+        this.store.dispatch(updateBlocks(blockchain));
       });
     });
     this.buttonStateHandler(scanType);
