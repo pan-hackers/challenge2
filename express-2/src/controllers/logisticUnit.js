@@ -36,8 +36,10 @@ class LogisticUnit {
         next(boom.badRequest(err));
       }
 
+      helpers.LOGGER.info(`shipment found: ${sh}`);
+
       const query2 = {
-        shipment: {_id: sh._id}
+        'shipment': sh._id
       }
 
       models.LogisticUnit.find(query2)
@@ -49,10 +51,15 @@ class LogisticUnit {
             model: 'ConsumableUnit'
           }
         })
+        .populate({
+          path: 'shipment',
+          model: 'Shipment'
+        })
         .exec((err, objs) => {
           if (err) {
             next(boom.badRequest(err));
           }
+          helpers.LOGGER.info(`LU found: ${objs}`);
 
           if (objs) {
             return res.json(objs);

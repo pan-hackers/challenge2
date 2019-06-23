@@ -379,10 +379,14 @@ class Populate {
 
     shipment.logisticUnits.push(lu);
 
-    shipment.save((err, o) => {
+    shipment.save(async (err, o) => {
       if (err) {
         next(boom.badImplementation(err));
       } else {
+
+        lu.shipment = o;
+        await lu.save();
+
         return res.status(201).json(o._id);
       }
     });
