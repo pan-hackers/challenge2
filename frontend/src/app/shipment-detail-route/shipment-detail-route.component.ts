@@ -80,7 +80,7 @@ export class ShipmentDetailRouteComponent implements OnInit {
     public shipmentMilestones = [];
     public milestonesTagsGreen = ["ImportDoorGreen", "MainCarriageAirGreenLeft", "LastAirportGreenLeft", "ImportStationGreen"];
     public milestonesTagsGrey = ["ImportDoorDarkGreey", "MainCarriageAirDarkGreyLeft", "LastAirportDarkGreyLeft", "ImportStationDarkGrey"];
-    public  subscription;
+    public subscription;
     // milestone variables
     public milestonesWithDirection: string[] = [
         'OLD1',
@@ -99,10 +99,26 @@ export class ShipmentDetailRouteComponent implements OnInit {
 
     ngOnInit() {
         this.subscription = this.store.subscribe((newState) => {
-            console.log("newState: ", newState)
             this.shipment = newState.RootReducer.shipmentState.shipments.find((shipment) => {
                 return shipment._id === this.shipmentId;
             })
+            this.shipment.milestones.map((milestone, index) => {
+                console.log("milestone", milestone)
+                this.shipment.milestones[index] = this.milestones[index];
+            })
+            let iconIndex = this.shipment.milestones.length;
+            while (this.shipment.milestones.length < 4) {
+
+
+                if (this.shipment.milestones === undefined) {
+                    this.shipment.milestones = []
+                }
+                this.shipment.milestones.push({
+                    milestoneTitle: "SPC - Self-Pick Up by Customer",
+                    iconTag: this.milestonesTagsGrey[iconIndex]
+                })
+                iconIndex++;
+            }
             console.log(newState.RootReducer.shipmentState)
             console.log(this.shipment)
         });
