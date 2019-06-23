@@ -388,7 +388,7 @@
 
 
 .credits{
-  position: absolute;
+  position: fixed;
   bottom: 2%;
   right: 2%;
   color: #fff;
@@ -565,6 +565,9 @@
     height: 60px;
   }
   
+
+  .diagram{width: 100%; text-align: center;}
+  .diagram img{max-width: 1200px; width: 100%; margin: 0 auto 0 auto;}
  
 
   /* Component
