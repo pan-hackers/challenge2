@@ -360,13 +360,15 @@ class Populate {
     });
   }
 
-  static createShipment(req, res, next) {
+  static async createShipment(req, res, next) {
     helpers.LOGGER.info("createShipment - '/' - called");
 
     // temporary generation of SSCC
     const sscc = "7633333." + Math.floor(Math.random() * Math.floor(9999999999))
     const awb = "AWB-" + Math.floor(Math.random() * Math.floor(99999999999))
-    
+
+    const lu = await models.LogisticUnit.findOne({_id: "5d0e29a912c93a513833048a"});
+
     const shipment = models.Shipment({
       // TODO: This should be changed with better implementation
       "awb": awb,
@@ -374,6 +376,8 @@ class Populate {
       "from": "Basel",
       "to": "Atlanta"
     });
+
+    shipment.logisticUnits.push(lu);
 
     shipment.save((err, o) => {
       if (err) {

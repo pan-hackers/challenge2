@@ -22,7 +22,8 @@ const shipmentSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    milestones: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Milestone' } ]
+    milestones: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Milestone' } ],
+    logisticUnits: [ { type: mongoose.Schema.Types.ObjectId, ref: 'LogisticUnit' } ]
 }/*, {
     toObject: {
       transform: function (doc, ret) {

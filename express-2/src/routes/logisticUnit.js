@@ -6,6 +6,7 @@ import controllers from '../controllers';
 const router = Router();
 
 router.get('/', controllers.logisticUnit.getAll);
+router.get('/shipment/:sscc', controllers.logisticUnit.getAllBySSCC);
 router.get('/:gtin', controllers.logisticUnit.getByGTIN);
 router.post('/', controllers.logisticUnit.create);
 router.post('/:gtin', controllers.logisticUnit.attachTU);
