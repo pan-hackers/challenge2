@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, SimpleChange } from '@angular/core';
 import { getDirection, isMilestoneReached, checkTrackingEntityDetails } from '../_shared/constants/shipment-functions';
-
+import { Store } from '@ngrx/store'
 @Component({
     selector: 'kosmos-shipment-detail-route',
     templateUrl: './shipment-detail-route.component.html',
@@ -68,14 +68,19 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "iconTag": "ImportStation"
     }];
     public scrollElements;
+    public shipment;
     @Input() public latestActualMilestone;
+    @Input() public shipmentId: number;
     @Input() public showGreenGap: boolean;
     public finished: boolean;
     public previewLegLength: number = 30;
     public iconUrl: string = 'assets/Icons/';
     public iconPath: string = '';
     public fixedElement;
-    public milestonesTags = ["ImportDoorGreen", "MainCarriageAirDarkGreyLeft", "LastAirportDarkGreyLeft", "ImportStationDarkGrey"]
+    public shipmentMilestones = [];
+    public milestonesTagsGreen = ["ImportDoorGreen", "MainCarriageAirGreenLeft", "LastAirportGreenLeft", "ImportStationGreen"];
+    public milestonesTagsGrey = ["ImportDoorDarkGreey", "MainCarriageAirDarkGreyLeft", "LastAirportDarkGreyLeft", "ImportStationDarkGrey"];
+    public  subscription;
     // milestone variables
     public milestonesWithDirection: string[] = [
         'OLD1',
@@ -90,9 +95,18 @@ export class ShipmentDetailRouteComponent implements OnInit {
         'DDE3',
         'DAR2'];
 
-    constructor() { }
+    constructor(private readonly store: Store<any>) { }
 
     ngOnInit() {
+        this.subscription = this.store.subscribe((newState) => {
+            console.log("newState: ", newState)
+            this.shipment = newState.RootReducer.shipmentState.shipments.find((shipment) => {
+                return shipment._id === this.shipmentId;
+            })
+            console.log(newState.RootReducer.shipmentState)
+            console.log(this.shipment)
+        });
+
         this.scrollElements = this.milestones.map((item, index) => {
             if (item.actualTime !== undefined && item.actualTime !== null) {
                 this.latestActualMilestone = index;
@@ -101,8 +115,11 @@ export class ShipmentDetailRouteComponent implements OnInit {
             return item;
         });
         this.fixedElement = this.scrollElements[this.scrollElements.length - 1];
-        //public fixedElement = this.milestones.slice(0, this.milestones.length - 1);
-        console.log(this.fixedElement)
+
+
+
+
+
     }
 
     public getMilestoneIconPath(milestoneDetail, index): string {
@@ -113,6 +130,7 @@ export class ShipmentDetailRouteComponent implements OnInit {
 
         return iconPath;
     }
+
     public fillarray = (array) => {
         while (array.length < 4) {
             array.push({})
