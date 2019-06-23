@@ -79,7 +79,7 @@ export class ShipmentDetailRouteComponent implements OnInit {
     public fixedElement;
     public shipmentMilestones = [];
     public milestonesTagsGreen = ["ImportDoorGreen", "MainCarriageAirGreenLeft", "LastAirportGreenLeft", "ImportStationGreen"];
-    public milestonesTagsGrey = ["ImportDoorDarkGreey", "MainCarriageAirDarkGreyLeft", "LastAirportDarkGreyLeft", "ImportStationDarkGrey"];
+    public milestonesTagsGrey = ["ImportDoorDarkGrey", "MainCarriageAirDarkGreyLeft", "LastAirportDarkGreyLeft", "ImportStationDarkGrey"];
     public subscription;
     // milestone variables
     public milestonesWithDirection: string[] = [
@@ -102,17 +102,23 @@ export class ShipmentDetailRouteComponent implements OnInit {
             this.shipment = newState.RootReducer.shipmentState.shipments.find((shipment) => {
                 return shipment._id === this.shipmentId;
             })
+            this.scrollElements = this.milestones.map((item, index) => {
+                if (this.shipment.milestone!==undefined&&this.shipment.milestone[index]!==undefined) {
+                    this.latestActualMilestone = index;
+                }
+    
+                return item;
+            });
+            if (this.shipment.milestones === undefined) {
+                this.shipment.milestones = []
+            }
             this.shipment.milestones.map((milestone, index) => {
                 console.log("milestone", milestone)
-                this.shipment.milestones[index] = this.milestones[index];
+                this.shipment.milestones[index] = {...this.milestones[index],...this.shipment.milestones[index]};
+                this.shipment.milestones[index].iconTag = this.milestonesTagsGreen[index];
             })
             let iconIndex = this.shipment.milestones.length;
             while (this.shipment.milestones.length < 4) {
-
-
-                if (this.shipment.milestones === undefined) {
-                    this.shipment.milestones = []
-                }
                 this.shipment.milestones.push({
                     milestoneTitle: "SPC - Self-Pick Up by Customer",
                     iconTag: this.milestonesTagsGrey[iconIndex]
@@ -121,16 +127,10 @@ export class ShipmentDetailRouteComponent implements OnInit {
             }
             console.log(newState.RootReducer.shipmentState)
             console.log(this.shipment)
+            
+        this.fixedElement = this.shipment.milestones[this.scrollElements.length - 1];
         });
 
-        this.scrollElements = this.milestones.map((item, index) => {
-            if (item.actualTime !== undefined && item.actualTime !== null) {
-                this.latestActualMilestone = index;
-            }
-
-            return item;
-        });
-        this.fixedElement = this.scrollElements[this.scrollElements.length - 1];
 
 
 
@@ -142,7 +142,8 @@ export class ShipmentDetailRouteComponent implements OnInit {
 
         const milestoneStatus = isMilestoneReached(index,
             this.latestActualMilestone) ? 'Green' : 'DarkGrey';
-        let iconPath = this.iconUrl + milestoneDetail.iconTag + milestoneStatus + '.svg';
+        let iconPath = this.iconUrl + milestoneDetail.iconTag + 
+        '.svg';
 
         return iconPath;
     }
