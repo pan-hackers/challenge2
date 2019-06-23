@@ -116,6 +116,7 @@ export class ShipmentDetailRouteComponent implements OnInit {
                 console.log("milestone", milestone)
                 this.shipment.milestones[index] = {...this.milestones[index],...this.shipment.milestones[index]};
                 this.shipment.milestones[index].iconTag = this.milestonesTagsGreen[index];
+                this.shipment.milestones[index].isReached=true;
             })
             let iconIndex = this.shipment.milestones.length;
             while (this.shipment.milestones.length < 4) {
