@@ -1,42 +1,24 @@
-
 <div class="top">
-    <div class="title-dot title-dot-orange">&nbsp;</div><div class="title-text"><span>...</span>and blockchain</div>
-    <div class="intro">This is the console showing the generation of blocks and transactions in blockchain, triggered by each scan of GS1 code.</div>
+  <div class="title-dot title-dot-orange">&nbsp;</div>
+  <div class="title-text"><span>...</span>and blockchain</div>
+  <div class="intro">This is the console showing the generation of blocks and transactions in blockchain, triggered by
+    each scan of GS1 code.</div>
 </div>
 <div class="console-page">
   <div class="dotted-line">&nbsp;</div>
-  <div class="block">
-  <ul>
-    <li>Shipment AWB123456
-      <ul>
-        <li>Milestone PUP
-          <ul>
-            <li>Location</li>
-            <li>Scheduled</li>
-            <li>Estimated</li>
-            <li>Actual</li>
-            <li>Incident</li>
-            <li>Temperature Data</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
-<div class="block">
+  <div *ngFor="let block of blocksArray" class="block">
     <ul>
-      <li>Shipment AWB123456
+      <li>Shipment: {{blockObject.awb}}
         <ul>
-          <li>Milestone PUP
-            <ul>
-              <li>Location</li>
-              <li>Scheduled</li>
-              <li>Estimated</li>
-              <li>Actual</li>
-              <li>Incident</li>
-              <li>Temperature Data</li>
-            </ul>
-          </li>
+          <li>SSCC: {{blockObject.sscc}}</li>
+          <li>Milestone: {{blockObject.milestone}}</li>
+        </ul>
+      </li>
+      <li>Block
+        <ul>
+          <li>hash: {{blockObject.hash}}</li>
+          <li>prev hash: {{blockObject.prevHash}}</li>
+          <li>created: {{blockObject.created}}</li>
         </ul>
       </li>
     </ul>
