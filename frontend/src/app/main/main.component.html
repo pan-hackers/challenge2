@@ -20,7 +20,7 @@
           <kendo-grid-column field="date" title="Date" width="100"></kendo-grid-column>
           <kendo-grid-column title="" width="60" class="column-with-button">
             <ng-template kendoGridCellTemplate let-dataItem>
-              <button (click)="onDetailButtonClick(dataItem.id)" class="button-status button-radial-out"
+              <button (click)="onDetailButtonClick(dataItem._id)" class="button-status button-radial-out"
                 title="Go to detail view">Track</button>
             </ng-template>
           </kendo-grid-column>
@@ -30,6 +30,6 @@
   </div>
 
   <div class="page" *ngIf="viewState==='details'">
-    <kosmos-shipment-detail [onBack]="onBackButtonClick"></kosmos-shipment-detail>
+    <kosmos-shipment-detail [shipmentId]="selectedShipment" [onBack]="onBackButtonClick" style="width: 100%"></kosmos-shipment-detail>
   </div>
 </div>

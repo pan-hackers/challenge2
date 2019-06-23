@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, SimpleChange } from '@angular/core';
 import { getDirection, isMilestoneReached, checkTrackingEntityDetails } from '../_shared/constants/shipment-functions';
-
+import { Store } from '@ngrx/store'
 @Component({
     selector: 'kosmos-shipment-detail-route',
     templateUrl: './shipment-detail-route.component.html',
@@ -68,14 +68,19 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "iconTag": "ImportStation"
     }];
     public scrollElements;
+    public shipment;
     @Input() public latestActualMilestone;
+    @Input() public shipmentId: number;
     @Input() public showGreenGap: boolean;
     public finished: boolean;
     public previewLegLength: number = 30;
     public iconUrl: string = 'assets/Icons/';
     public iconPath: string = '';
     public fixedElement;
-    public milestonesTags = ["ImportDoorGreen", "MainCarriageAirDarkGreyLeft", "LastAirportDarkGreyLeft", "ImportStationDarkGrey"]
+    public shipmentMilestones = [];
+    public milestonesTagsGreen = ["ImportDoorGreen", "MainCarriageAirGreenLeft", "LastAirportGreenLeft", "ImportStationGreen"];
+    public milestonesTagsGrey = ["ImportDoorDarkGrey", "MainCarriageAirDarkGreyLeft", "LastAirportDarkGreyLeft", "ImportStationDarkGrey"];
+    public subscription;
     // milestone variables
     public milestonesWithDirection: string[] = [
         'OLD1',
@@ -90,29 +95,59 @@ export class ShipmentDetailRouteComponent implements OnInit {
         'DDE3',
         'DAR2'];
 
-    constructor() { }
+    constructor(private readonly store: Store<any>) { }
 
     ngOnInit() {
-        this.scrollElements = this.milestones.map((item, index) => {
-            if (item.actualTime !== undefined && item.actualTime !== null) {
-                this.latestActualMilestone = index;
+        this.subscription = this.store.subscribe((newState) => {
+            this.shipment = newState.RootReducer.shipmentState.shipments.find((shipment) => {
+                return shipment._id === this.shipmentId;
+            })
+            this.scrollElements = this.milestones.map((item, index) => {
+                if (this.shipment.milestone!==undefined&&this.shipment.milestone[index]!==undefined) {
+                    this.latestActualMilestone = index;
+                }
+    
+                return item;
+            });
+            if (this.shipment.milestones === undefined) {
+                this.shipment.milestones = []
             }
-
-            return item;
+            this.shipment.milestones.map((milestone, index) => {
+                console.log("milestone", milestone)
+                this.shipment.milestones[index] = {...this.milestones[index],...this.shipment.milestones[index]};
+                this.shipment.milestones[index].iconTag = this.milestonesTagsGreen[index];
+            })
+            let iconIndex = this.shipment.milestones.length;
+            while (this.shipment.milestones.length < 4) {
+                this.shipment.milestones.push({
+                    milestoneTitle: "SPC - Self-Pick Up by Customer",
+                    iconTag: this.milestonesTagsGrey[iconIndex]
+                })
+                iconIndex++;
+            }
+            console.log(newState.RootReducer.shipmentState)
+            console.log(this.shipment)
+            
+        this.fixedElement = this.shipment.milestones[this.scrollElements.length - 1];
         });
-        this.fixedElement = this.scrollElements[this.scrollElements.length - 1];
-        //public fixedElement = this.milestones.slice(0, this.milestones.length - 1);
-        console.log(this.fixedElement)
+
+
+
+
+
+
     }
 
     public getMilestoneIconPath(milestoneDetail, index): string {
 
         const milestoneStatus = isMilestoneReached(index,
             this.latestActualMilestone) ? 'Green' : 'DarkGrey';
-        let iconPath = this.iconUrl + milestoneDetail.iconTag + milestoneStatus + '.svg';
+        let iconPath = this.iconUrl + milestoneDetail.iconTag + 
+        '.svg';
 
         return iconPath;
     }
+
     public fillarray = (array) => {
         while (array.length < 4) {
             array.push({})

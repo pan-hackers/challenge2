@@ -55,11 +55,12 @@ export class ScanComponent implements OnInit {
   public addMilestone(scanType: string, id: string): void {
     id = this.shipmentID;
     this.shipmentService.createMilestone(scanType, id).subscribe((res) => {
-      console.log("milestone created")
 
-      this.shipmentService.getBlockChain().subscribe((blockchain)=> {
-        console.log('loaded blockchain', blockchain);
+      this.shipmentService.getBlockChain().subscribe((blockchain) => {
         this.store.dispatch(updateBlocks(blockchain));
+        this.shipmentService.getAllShipments().subscribe((res) => {
+          this.store.dispatch(updateShipments(res));
+        })
       });
     });
     this.buttonStateHandler(scanType);

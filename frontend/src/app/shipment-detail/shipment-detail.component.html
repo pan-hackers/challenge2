@@ -7,13 +7,13 @@
             <div class="button-go-back-text">Go Back</div>
         </button>
         <h2>Details
-            <span>&nbsp;{{ this.shipmentDetail.shipNum }}</span></h2>
+            <span>&nbsp;{{ this.shipment.awb }}</span></h2>
     </div>
     <kendo-tabstrip>
         <kendo-tabstrip-tab [title]="'Route'" [selected]="true">
             <ng-template kendoTabContent>
                 <div class="shipment-route">
-                    <kosmos-shipment-detail-route [showGreenGap]='showGreenGap'>
+                    <kosmos-shipment-detail-route [shipmentId]="shipmentId" [showGreenGap]='showGreenGap'>
                     </kosmos-shipment-detail-route>
                 </div>
 
@@ -30,7 +30,8 @@
 
                     <div class="surprise-section-item">
                         <div class="row section-header">
-                            <h2>{{ this.shipmentDetail.shipNum }}</h2>
+
+                            <h2>{{ this.shipment.shipment }}</h2>
                         </div>
 
 
@@ -39,14 +40,14 @@
                                 <div class="summary-label">From</div>
                                 <div class="summary-data">
                                     <!-- <span class="summary-data-big">Code Here</span> -->
-                                    {{ this.shipmentDetail.mainFrom }}
+                                    {{ this.shipment.from }}
                                 </div>
                             </div>
                             <div class="summary-row">
                                 <div class="summary-label">To</div>
                                 <div class="summary-data">
                                     <!-- <span class="summary-data-big">Code Here</span> -->
-                                    {{ this.shipmentDetail.mainTo }}
+                                    {{ this.shipment.to }}
                                 </div>
                             </div>
                         </div>
@@ -94,35 +95,19 @@
                             </div>
                             <div class="summary-row">
                                 <div class="summary-label">
-                                    Volume (
-                                    {{
-                    checkTrackingEntityDetails(
-                        this.shipmentDetail,
-                    'volume'
-                    ).split(' ')[1]
-                    }})
+                                    Volume (m3)
                                 </div>
                                 <div class="summary-data summary-data-figure">
-                                    {{
-                    checkTrackingEntityDetails(
-                        this.shipmentDetail,
-                    'volume'
-                    ).split(' ')[0]
-                    }}
+                                  
+                                        20  
                                 </div>
                             </div>
                         </div>
-                        <div class="summary-row-group">
-                            <div class="summary-row">
-                                <div class="summary-label">GTIN</div>
-                                <div class="summary-data">
-                                    xxxxxxxxxxxxxx
-                                </div>
+                        <div class="summary-row">
 
-                                <div class="summary-label">SSCC</div>
-                                <div class="summary-data">
-                                    xxxxxxxxxxxxxx
-                                </div>
+                            <div class="summary-label">SSCC</div>
+                            <div class="summary-data">
+                                {{this.shipment.SSCC}}
                             </div>
                         </div>
                     </div>

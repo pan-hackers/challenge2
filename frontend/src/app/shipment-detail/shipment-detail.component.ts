@@ -1,5 +1,6 @@
-import { Component, Input, OnInit, SimpleChange } from '@angular/core';
-import { checkTrackingEntityDetails, getDirection, isMilestoneReached } from '../_shared/constants/shipment-functions'
+import { Component, Input, OnInit } from '@angular/core';
+import { checkTrackingEntityDetails } from '../_shared/constants/shipment-functions'
+import { Store } from '@ngrx/store'
 @Component({
     selector: 'kosmos-shipment-detail',
     templateUrl: './shipment-detail.component.html',
@@ -8,6 +9,11 @@ import { checkTrackingEntityDetails, getDirection, isMilestoneReached } from '..
 
 export class ShipmentDetailComponent implements OnInit {
     @Input() public onBack: Function;
+    @Input() public shipmentId;
+    public shipment;
+    public subscription;
+    public state;
+
     public checkTrackingEntityDetails = checkTrackingEntityDetails;
     public milestones = [{
         "milestoneTitle": "CUV - Nas Couves",
@@ -99,16 +105,18 @@ export class ShipmentDetailComponent implements OnInit {
         "relations": [],
         "milestones": []
     };
-
-    constructor() { }
+    constructor(private readonly store: Store<any>) { }
 
     ngOnInit() {
-        console.log(this.shipmentDetail)
-        console.log("hello from shipment-detail");
+        this.subscription = this.store.subscribe((newState) => {
+            this.shipment = newState.RootReducer.shipmentState.shipments.find((shipment) => {
+                return shipment._id === this.shipmentId;
+            })
+            this.state = newState;
+        });
     }
 
     public onBackButtonClick = () => {
-        console.log("hello from onBackButtonClick");
         this.onBack();
     }
 
