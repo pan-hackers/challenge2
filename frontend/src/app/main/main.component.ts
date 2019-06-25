@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
-import { updateBlocks, updateShipments } from '../_shared/actions/';
+import { updateBlocks, updateShipments, changeLeftPanel } from '../_shared/actions/';
 import { ShipmentService } from '../shipment.service';
 
 // import { data } from '../_mock-data/mock-data';
@@ -25,22 +25,19 @@ export class MainComponent implements OnInit {
     this.getShipments();
     this.subscription = this.store.subscribe((newState) => {
       this.state = newState;
-      this.shipmentsArray = newState.RootReducer.shipmentState.shipments
+      console.log("newState: ", newState);
+      this.shipmentsArray = this.state.RootReducer.shipmentState.shipments;
+      this.viewState = this.state.RootReducer.navigationState.left;
     });
     //this.store.dispatch(updateShipments({text: "uganda"}))
   }
 
   public onDetailButtonClick = (id) => {
     this.selectedShipment = id;
-    this.viewState = 'details';
+    this.store.dispatch(changeLeftPanel('details'));
     this.shipmentService.getBlockChain().subscribe((blockchain) => {
       this.store.dispatch(updateBlocks(blockchain));
     });
-  }
-
-  public onBackButtonClick = () => {
-    this.selectedShipment = undefined
-    this.viewState = 'main';
   }
 
   public getShipments() {
