@@ -10,9 +10,6 @@ import { Block } from '../_shared/block.model';
 })
 export class ConsoleComponent implements OnInit {
 
-  public blockChain;
-  public block;
-  public blockObject = {} as Block;
   public blocksArray = [] as Block[];
 
   constructor(public readonly store: Store<any>) { }
@@ -20,25 +17,22 @@ export class ConsoleComponent implements OnInit {
   ngOnInit() {
     this.store.subscribe((newState) => {
       console.log('STATE UPDATED IN CONSOLE!');
-      this.blockChain = newState.RootReducer.shipmentState.blocks;
-      console.log('blockchain', this.blockChain);
-      if (this.blockChain !== null) {
-        this.block = this.blockChain.chain.map(
+      const blockChain = newState.RootReducer.shipmentState.blocks;
+      console.log('blockchain', blockChain);
+      if (blockChain !== null) {
+        blockChain.chain.map(
           (block) => {
-            this.blockObject.created = block.createdAt;
-            this.blockObject.hash = block.hash;
-            this.blockObject.prevHash = block.prevHash;
-            this.block = this.blockChain.chain.map(block => JSON.parse(block.data));
-            console.log('bloczek', this.block);
-            this.blockObject.awb = this.block[0].shipment.awb;
-            this.blockObject.sscc = this.block[0].shipment.SSCC;
-            this.blockObject.milestone = this.block[0].code;
-            this.blocksArray.push(this.blockObject);
-            console.log('TEEEEST', block.data[0]);
-
+            const blockObject = {} as Block;
+            blockObject.created = block.createdAt;
+            blockObject.hash = block.hash;
+            blockObject.prevHash = block.prevHash;
+            const events = JSON.parse(block.data);
+            blockObject.milestone = events.code;
+            blockObject.awb = events.shipment.awb;
+            blockObject.sscc = events.shipment.SSCC;
+            this.blocksArray.unshift(blockObject);
           }
         );
-        console.log('block', this.block);
         console.log('chainArray', this.blocksArray);
       }
     });

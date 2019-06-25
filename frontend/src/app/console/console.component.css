@@ -1,0 +1,20 @@
+label {
+  font-size: 15px;
+  text-transform: none;
+  font-weight: 500;
+}
+
+.block-header {
+  padding: 8px;
+}
+
+.block-content {
+  margin: 0;
+  padding: 8px 16px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.block-content {
+  list-style: none;
+}

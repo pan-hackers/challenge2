@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Store } from "@ngrx/store";
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,6 @@ import { Store } from "@ngrx/store";
 })
 export class AppComponent {
 
-  constructor(private store: Store<any>){}
-  public viewState = "track";
-} 
+  constructor(private store: Store<any>) { }
+  public viewState = 'track';
+}
