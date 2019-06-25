@@ -42,7 +42,7 @@ export class ScanComponent implements OnInit {
           this.shipmentService.getAllShipments().subscribe((allShipments) => {
             this.store.dispatch(updateShipments(allShipments));
 
-          })
+          });
         }
         this.shipmentID = res;
         console.log(this.shipmentID);
@@ -58,9 +58,9 @@ export class ScanComponent implements OnInit {
 
       this.shipmentService.getBlockChain().subscribe((blockchain) => {
         this.store.dispatch(updateBlocks(blockchain));
-        this.shipmentService.getAllShipments().subscribe((res) => {
-          this.store.dispatch(updateShipments(res));
-        })
+        this.shipmentService.getAllShipments().subscribe((allShimpnets) => {
+          this.store.dispatch(updateShipments(allShimpnets));
+        });
       });
     });
     this.buttonStateHandler(scanType);

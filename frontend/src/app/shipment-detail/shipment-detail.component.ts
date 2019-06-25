@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { checkTrackingEntityDetails } from '../_shared/constants/shipment-functions'
 import { Store } from '@ngrx/store'
+import { changeLeftPanel } from '../_shared/actions';
 @Component({
     selector: 'kosmos-shipment-detail',
     templateUrl: './shipment-detail.component.html',
@@ -16,8 +17,8 @@ export class ShipmentDetailComponent implements OnInit {
 
     public checkTrackingEntityDetails = checkTrackingEntityDetails;
     public milestones = [{
-        "milestoneTitle": "CUV - Nas Couves",
-        "milestoneType": "APUP",
+        "milestoneTitle": "pickup from shipper / supplier",
+        "milestoneType": "PUP",
         "scheduledLoc": "GBLON",
         "scheduledLocLong": "-0.12",
         "scheduledLocLat": "51.51",
@@ -35,7 +36,7 @@ export class ShipmentDetailComponent implements OnInit {
         "iconTag": "ImportDoor"
     }, {
         "milestoneTitle": "DEP - Goods confirmed on board of 1st Flight",
-        "milestoneType": "ADE1",
+        "milestoneType": "DEP",
         "scheduledLoc": "LHR",
         "scheduledLocLong": "-0.4614",
         "scheduledLocLat": "51.477500",
@@ -48,26 +49,26 @@ export class ShipmentDetailComponent implements OnInit {
         "iconTag": "MainCarriageAir"
     }, {
         "milestoneTitle": "ARR - Flight Arrival at Last Airport",
-        "milestoneType": "AARL",
-        "scheduledLoc": "MEX",
+        "milestoneType": "AAR",
+        "scheduledLoc": "ATL",
         "scheduledLocLong": "-99.0721",
         "scheduledLocLat": "19.436303",
         "scheduledTime": "2019-01-31T05:55:00Z",
         "estimatedLoc": "MEX",
-        "estimatedLocText": "Mexico City Juarez International",
+        "estimatedLocText": "Hartsfield-Jackson Atlanta",
         "estimatedLocLong": "-99.0721",
         "estimatedLocLat": "19.436303",
         "estimatedTime": "2019-01-31T05:55:00Z",
         "iconTag": "LastAirport"
     }, {
-        "milestoneTitle": "SPC - Self-Pick Up by Customer",
-        "milestoneType": "ASPO",
-        "scheduledLoc": "MEX",
+        "milestoneTitle": "Delivery to Door",
+        "milestoneType": "POD",
+        "scheduledLoc": "ATL",
         "scheduledLocLong": "-99.0721",
         "scheduledLocLat": "19.436303",
         "scheduledTime": "2019-02-01T05:55:00Z",
-        "estimatedLoc": "MEX",
-        "estimatedLocText": "Mexico City Juarez International",
+        "estimatedLoc": "ATL",
+        "estimatedLocText": "Atlanta",
         "estimatedLocLong": "-99.0721",
         "estimatedLocLat": "19.436303",
         "estimatedTime": "2019-02-01T05:55:00Z",
@@ -92,16 +93,6 @@ export class ShipmentDetailComponent implements OnInit {
         "volume": " ",
         "voyageText": "OOL MONTREAL EXPRESS / 303E",
         "partners": [],
-        "customerRefs": [{
-            "refType": "HSCD",
-            "reference": "851981"
-        }, {
-            "refType": "BPREFS",
-            "reference": "WORN CORE"
-        }, {
-            "refType": "SEALNO",
-            "reference": "UL3174404"
-        }],
         "relations": [],
         "milestones": []
     };
@@ -111,13 +102,13 @@ export class ShipmentDetailComponent implements OnInit {
         this.subscription = this.store.subscribe((newState) => {
             this.shipment = newState.RootReducer.shipmentState.shipments.find((shipment) => {
                 return shipment._id === this.shipmentId;
-            })
+            });
             this.state = newState;
         });
     }
 
     public onBackButtonClick = () => {
-        this.onBack();
+        this.store.dispatch(changeLeftPanel('main'));
     }
 
 }

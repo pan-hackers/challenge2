@@ -10,10 +10,9 @@
                     class="milestone-icon" />
             </div>
             <div class="cargo-stream-bullet-container 
-            {{item.isReached? 'green' : 'grey'}}-container">
-                <div class="cargo-stream-bullet" [class.green-bullet]="isReached
-            " [class.grey-bullet]="!isReached
-            ">
+            {{item.isReached===true? 'green' : 'grey'}}-container">
+                <div class="cargo-stream-bullet" [class.green-bullet]="item.isReached===true
+            " [class.grey-bullet]="item.isReached===false">
                     &nbsp;
                 </div>
             </div>
@@ -96,12 +95,10 @@
               fixedElement.iconTag !== null
             " class="milestone-icon" />
             </div>
-            <div class="cargo-stream-bullet-container last-bullet-container {{ (this.milestones.length === latestActualMilestone) ? ((latestActualMilestone === 1) ? 'transparent' : 'green') : 'grey'}}-container"
-                id="este">
-                <div class="cargo-stream-bullet last-bullet" [class.green-bullet]="isReached" [class.grey-bullet]="
-              fixedElement.actualTime === undefined ||
-              fixedElement.actualTime === null
-            ">
+            <div  style="height: 43px" class="cargo-stream-bullet-container last-bullet-container 
+            {{  fixedElement.isReached === true ?  'green' : 'grey'}}-container"
+                id="este" >
+                <div class="cargo-stream-bullet last-bullet" [class.green-bullet]="fixedElement.isReached" [class.grey-bullet]="fixedElement.isReached===false">
                     &nbsp;
                 </div>
             </div>
