@@ -1,5 +1,5 @@
 
-<div class="shipment-route-milestone-container" *ngIf="scrollElements.length ">
+<div class="shipment-route-milestone-container" >
     <div class="shipment-milestone" [class.first-milestone]="i == 0"
         *ngFor="let item of shipment.milestones.slice(0,shipment.milestones.length-1); let i = index">
         <div class="cargo-stream">
@@ -90,7 +90,7 @@
             <div class="cargo-stream-icon last-icon">
                 &nbsp;
 
-                <img src="{{getMilestoneIconPath(fixedElement, this.milestones.length -1)}}" *ngIf="
+                <img src="{{getMilestoneIconPath(fixedElement, this.shipment.milestones.length -1)}}" *ngIf="
               fixedElement.iconTag !== undefined &&
               fixedElement.iconTag !== null
             " class="milestone-icon" />

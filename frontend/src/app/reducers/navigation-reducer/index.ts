@@ -1,7 +1,6 @@
 import { CHANGE_LEFT_PANEL } from '../../_shared/actionTypes';
 
 export const navigationReducer = (state, action) => {
-    console.log(action);
     if (!state) {
         return {
             left: 'main'

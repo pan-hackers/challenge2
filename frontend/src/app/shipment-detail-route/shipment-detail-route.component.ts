@@ -22,8 +22,8 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "estimatedLocLat": "51.51",
         "estimatedTime": "2019-01-28T22:30:00Z",
         "actualTime": "2019-01-29T17:00:00Z",
-        "iconTag": "ImportDoor",
-        "isReached": "false"
+        "iconTag": "ImportDoorDarkGrey",
+        "isReached": false
     }, {
         "milestoneTitle": "DEP - Goods confirmed on board of 1st Flight",
         "milestoneType": "DEP",
@@ -36,8 +36,8 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "estimatedLocLong": "-0.4614",
         "estimatedLocLat": "51.477500",
         "estimatedTime": "2019-01-30T22:30:00Z",
-        "iconTag": "MainCarriageAir",
-        "isReached": "false"
+        "iconTag": "MainCarriageAirDarkGreyLeft",
+        "isReached": false
     }, {
         "milestoneTitle": "ARR - Flight Arrival at Last Airport",
         "milestoneType": "ARR",
@@ -50,8 +50,8 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "estimatedLocLong": "-99.0721",
         "estimatedLocLat": "19.436303",
         "estimatedTime": "2019-01-31T05:55:00Z",
-        "iconTag": "LastAirport",
-        "isReached": "false"
+        "iconTag": "LastAirportDarkGreyLeft",
+        "isReached": false
     }, {
         "milestoneTitle": "POD - Delivery to Door",
         "milestoneType": "POD",
@@ -64,8 +64,8 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "estimatedLocLong": "-99.0721",
         "estimatedLocLat": "19.436303",
         "estimatedTime": "2019-02-01T05:55:00Z",
-        "iconTag": "ImportStation",
-        "isReached": "false"
+        "iconTag": "ImportStationDarkGrey",
+        "isReached": false
     }];
     public milestones = [{
         "milestoneTitle": "PUP - Pickup form Shipper / Supplier ",
@@ -84,8 +84,8 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "actualLocLong": "-0.12",
         "actualLocLat": "51.51",
         "actualTime": "2019-01-29T17:00:00Z",
-        "iconTag": "ImportDoor",
-        "isReached": "false"
+        "iconTag": "ImportDoorGreen",
+        "isReached": true
     }, {
         "milestoneTitle": "DEP - Goods confirmed on board of 1st Flight",
         "milestoneType": "DEP",
@@ -98,8 +98,13 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "estimatedLocLong": "-0.4614",
         "estimatedLocLat": "51.477500",
         "estimatedTime": "2019-01-30T22:30:00Z",
-        "iconTag": "MainCarriageAir",
-        "isReached": "false"
+        "actualLoc": "GBLON",
+        "actualLocText": "London",
+        "actualLocLong": "-0.12",
+        "actualLocLat": "51.51",
+        "actualTime": "2019-01-30T22:30:00Z",
+        "iconTag": "MainCarriageAirGreenLeft",
+        "isReached": true
     }, {
         "milestoneTitle": "ARR - Flight Arrival at Last Airport",
         "milestoneType": "ARR",
@@ -112,8 +117,13 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "estimatedLocLong": "-99.0721",
         "estimatedLocLat": "19.436303",
         "estimatedTime": "2019-01-31T05:55:00Z",
-        "iconTag": "LastAirport",
-        "isReached": "false"
+        "actualLoc": "GBLON",
+        "actualLocText": "London",
+        "actualLocLong": "-0.12",
+        "actualLocLat": "51.51",
+        "actualTime": "2019-01-30T22:30:00Z",
+        "iconTag": "LastAirportGreenLeft",
+        "isReached": true
     }, {
         "milestoneTitle": "POD - Delivery to Door",
         "milestoneType": "POD",
@@ -126,11 +136,13 @@ export class ShipmentDetailRouteComponent implements OnInit {
         "estimatedLocLong": "-99.0721",
         "estimatedLocLat": "19.436303",
         "estimatedTime": "2019-02-01T05:55:00Z",
-        "iconTag": "ImportStation",
-        "isReached": "false"
+        "iconTag": "ImportStationGreen",
+        "isReached": true
     }];
     public scrollElements;
-    public shipment;
+    public shipment = {
+        milestones: []
+    };
     @Input() public latestActualMilestone;
     @Input() public shipmentId: number;
     @Input() public showGreenGap: boolean;
@@ -161,38 +173,36 @@ export class ShipmentDetailRouteComponent implements OnInit {
 
     ngOnInit() {
         this.subscription = this.store.subscribe((newState) => {
-            this.shipment = newState.RootReducer.shipmentState.shipments.find((shipment) => {
-                return shipment._id === this.shipmentId;
-            })
-            this.scrollElements = this.milestones.map((item, index) => {
-                if (this.shipment.milestone !== undefined && this.shipment.milestone[index] !== undefined) {
-                    this.latestActualMilestone = index;
-                }
-
-                return item;
+            const returnShipment = { milestones: this.defaultMilestones };
+            const shipment = newState.RootReducer.shipmentState.shipments.find((ship) => {
+                return ship._id === this.shipmentId;
             });
-            if (this.shipment.milestones === undefined) {
-                this.shipment.milestones = []
-            }
-            this.shipment.milestones.map((milestone, index) => {
-                console.log("milestone", milestone)
-                this.shipment.milestones[index] = { ...this.milestones[index], ...this.shipment.milestones[index] };
-                this.shipment.milestones[index].iconTag = this.milestonesTagsGreen[index];
-                this.shipment.milestones[index].isReached = true;
-            })
-            let iconIndex = this.shipment.milestones.length;
-            while (this.shipment.milestones.length < 4) {
-                this.shipment.milestones.push({
-                    milestoneTitle: this.milestones[this.milestones[iconIndex].milestoneTitle],
-                    iconTag: this.milestonesTagsGrey[iconIndex],
-                    isReached: false
-                })
-                iconIndex++;
-            }
-            console.log(newState.RootReducer.shipmentState)
-            console.log(this.shipment)
+            console.log('Shipment 1', shipment);
 
-            this.fixedElement = this.shipment.milestones[this.scrollElements.length - 1];
+
+            if (shipment.milestones === undefined || shipment.milestones.length === 0) {
+                console.log("was empty", shipment);
+                returnShipment.milestones = this.defaultMilestones;
+            } else {
+                console.log("executed alternative calculations")
+                shipment.milestones.map((milestone, index) => {
+                    console.log("milestone", milestone);
+                    returnShipment.milestones[index] = { ...this.milestones[index], ...returnShipment.milestones[index] };
+                    returnShipment.milestones[index].iconTag = this.milestonesTagsGreen[index];
+                    returnShipment.milestones[index].isReached = true;
+                });
+
+                let iconIndex = returnShipment.milestones.length;
+                while (returnShipment.milestones.length < 4) {
+                    returnShipment.milestones.push(this.defaultMilestones[iconIndex]);
+                    iconIndex++;
+                };
+            }
+            console.log('Shipment 2', shipment);
+
+
+            this.fixedElement = returnShipment.milestones[3];
+            this.shipment = returnShipment;
         });
 
 
