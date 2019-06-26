@@ -12,7 +12,7 @@ const blockchainSchema = new mongoose.Schema({
 blockchainSchema.pre('save', function (next) {
   const blockchain = this;
 
-  helpers.LOGGER.debug(`${blockchain} saving all block in memory`);
+  // helpers.LOGGER.debug(`${blockchain} saving all block in memory`);
 
   this.chain.forEach(function (block) {
 
@@ -20,7 +20,7 @@ blockchainSchema.pre('save', function (next) {
       if (err) {
         next(boom.badImplementation(err));
       } else {
-        helpers.LOGGER.debug(`${JSON.stringify(b)} saved to blocks collection.`);
+        // helpers.LOGGER.debug(`${JSON.stringify(b)} saved to blocks collection.`);
       }
     });
   });
@@ -31,7 +31,9 @@ blockchainSchema.pre('save', function (next) {
 
 blockchainSchema.methods.addBlock = function (data) {
   let index = this.chain.length;
-  let prevHash = this.chain.length > 0 ? this.chain[this.chain.length - 1].hash : 0;
+  let prevHash = this.chain.length > 0 ? this.chain[this.chain.length - 1].currHash : 0;
+  helpers.LOGGER.debug(`prev hash: ${prevHash} `);
+
   let block = new Block(index, data, prevHash);
 
   this.chain.push(block);
@@ -50,8 +52,10 @@ blockchainSchema.methods.newBlock = function (shipmentId) {
       proofOfWork: 100
     });
   } else {
-    let prevHash = this.chain[this.chain.length - 1].hash;
+    let prevHash = this.chain[this.chain.length - 1].currHash;
     let prevProof = this.chain[this.chain.length - 1].proofOfWork;
+
+    helpers.LOGGER.debug(`prev hash: ${prevHash} `);
 
     block = new Block({
       index: index,
@@ -85,10 +89,10 @@ blockchainSchema.methods.validProof = function (lastProof, proof) {
 blockchainSchema.methods.chainIsValid = function () {
 
   for (var i = 0; i < this.chain.length; i++) {
-    if (this.chain[i].hash !== this.chain[i].getHash())
+    if (this.chain[i].currHash !== this.chain[i].getHash())
       return false;
 
-    if (i > 0 && this.chain[i].prevHash !== this.chain[i - 1].hash)
+    if (i > 0 && this.chain[i].prevHash !== this.chain[i - 1].currHash)
       return false;
   }
   return true;

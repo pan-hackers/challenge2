@@ -146,7 +146,7 @@ class Blockchain {
       data: "data",
       prevHash: "prevHash",
       proofOfWork: 0,
-      hash: "hash"
+      currHash: "hash"
     });
 
     block.save((err, b) => {
