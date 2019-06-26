@@ -6,7 +6,7 @@ export const CHANGE_LEFT_PANEL = 'CHANGE_LEFT_PANEL';
 
 export const NEW_BUTTON_STATE = 'NEW_BUTTON_STATE';
 export const CREATE_SHIPMENT = 'CREATE_SHIPMENT';
-export const CREATE_PUPPUP = 'CREATE_PUPPUP';
+export const CREATE_PUP = 'CREATE_PUP';
 export const CREATE_DEP = 'CREATE_DEP';
 export const CREATE_ARR = 'CREATE_ARR';
 export const CREATE_POD = 'CREATE_POD';

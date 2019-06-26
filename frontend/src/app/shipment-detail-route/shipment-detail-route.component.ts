@@ -173,11 +173,11 @@ export class ShipmentDetailRouteComponent implements OnInit {
 
     ngOnInit() {
         this.subscription = this.store.subscribe((newState) => {
+            console.log("newState:",newState)
             const returnShipment = { milestones: this.defaultMilestones };
             const shipment = newState.RootReducer.shipmentState.shipments.find((ship) => {
                 return ship._id === this.shipmentId;
             });
-            console.log('Shipment 1', shipment);
 
 
             if (shipment.milestones === undefined || shipment.milestones.length === 0) {
@@ -198,7 +198,6 @@ export class ShipmentDetailRouteComponent implements OnInit {
                     iconIndex++;
                 };
             }
-            console.log('Shipment 2', shipment);
 
 
             this.fixedElement = returnShipment.milestones[3];
