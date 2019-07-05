@@ -28,7 +28,7 @@ export class ConsoleComponent implements OnInit {
             const blockObject = {} as Block;
             const events = JSON.parse(block.data);
             blockObject.created = block.createdAt;
-            blockObject.hash = block.hash;
+            blockObject.hash = block.currHash;
             blockObject.prevHash = block.prevHash;
             blockObject.milestone = events.code;
             blockObject.awb = events.shipment.awb;
